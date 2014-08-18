@@ -1,0 +1,44 @@
+﻿@model MackPortfolio.Models.NotFoundViewModel
+@{
+    ViewBag.Title = "Not Authorized - Access Denied";
+    var isHidden = !true;
+}
+
+<div class="row">
+    <div class="small-12 columns">
+        <hgroup class="panel">
+            <h1>@ViewBag.Title</h1>
+            <h2>Sorry, you do not have access to the action @Model.RequestedUrl.</h2>
+        </hgroup>
+    </div>
+</div>
+
+@if (Model.Exception != null)
+{
+    <div @if(isHidden) { <text>hidden="hidden"</text>} >
+        <div class="row">
+            <div class="small-12 columns">
+                <h3>@Model.Exception.GetType().Name</h3>
+                <br />
+                <p>
+                    <b>Controller:</b> @Model.ControllerName
+                    <br />
+                    <b>Action:</b> @Model.ActionName
+                    <br /><br />
+                    <b>Message:</b> @Model.Exception.Message
+                    <br />
+                    @if (Model.Exception.InnerException != null)
+                    {
+                        @Model.Exception.InnerException.Message
+                    }
+                </p>
+                <div><b>Url:</b>@Model.ReferrerUrl</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <p><b>Stack Trace:</b> @Model.Exception.StackTrace</p>
+            </div>
+        </div>
+    </div>
+}

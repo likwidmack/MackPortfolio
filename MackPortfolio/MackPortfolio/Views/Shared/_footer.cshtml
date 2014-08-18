@@ -1,0 +1,19 @@
+﻿@model MackPortfolio.Models.ActionLayoutModel
+<div class="row">
+    <div class="small-11 small-centered columns">
+        <ul class="inline-list">
+            <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+            <li>@Html.ActionLink("Resume", "Index", "About", new { area = "" }, null)</li>
+            <li>@Html.ActionLink("Canvas", "Index", "Palette", new { area = "" }, null)</li>
+            <li>@Html.ActionLink("Activities", "Index", "Activity", new { area = "" }, null)</li>
+            <li>@Html.ActionLink("Codes", "Index", "Random", new { area = "" }, null)</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, null)</li>
+        </ul>
+    </div>
+</div>
+<p>
+    &copy; @DateTime.Now.Year - @(Model.MainTitle), 
+    <strong>Work In Progress</strong> Last Modified: <span id="RetrieveLinkerTimestamp">@Model.WIP</span>
+</p>
+@if (Model.isDebugMode)
+{ <div id="isDebugMode" class="alert alert-box"><span>Debug Enabled</span></div> }

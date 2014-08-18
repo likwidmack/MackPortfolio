@@ -1,0 +1,28 @@
+﻿<section class="canvas-panel side-canvas-panel" data-bind="visible:!disableCanvas,with:canvas">
+    <label for="ObjectCount4Palette">Choose maximum count (5 to 500): </label>
+    <div class="row collapse">
+        <div class="small-4 medium-6 large-8 columns">
+            <input type="text" min="5" max="500" id="ObjectCount4Palette" data-bind="value:maxNum" />
+        </div>
+        <div class="small-4 medium-3 large-2 columns">
+            <button class="button css-gradient3d-w2bv secondary postfix" title="Map selected number of objects to canvas" data-bind="click:mapCanvas">Run</button>
+        </div>
+        <div class="small-4 medium-3 large-2 columns">
+            <button class="button css-gradient3d-w2bv postfix radius" title="Shift canvas cbjects' colors & shapes" data-bind="click:shiftObjects">Shift</button>
+        </div>
+    </div>
+    <div class="row collapse">
+        <div class="small-6 medium-4 columns">
+            <label for="valVarianceNum" class="prefix radius">Variance</label>
+        </div>
+        <div class="small-6 medium-4 columns">
+            <input id="valVarianceNum" type="number" min="0" max="99" title="Determine the ratio of circles to rectangles" data-bind="value:variance" />
+        </div>
+        <div class="medium-4 columns">
+            <label class="button css-gradient3d-w2bv postfix radius" for="chkRandomNum" title="Use random numbers with the above value as max." data-bind="css:{secondary:!isRandom(),alert:isRandom}">
+                <input id="chkRandomNum" type="checkbox" style="display:none" data-bind="checked:isRandom" />
+                <span data-bind="text:isRandom()?'Random On':'Random Off'"></span>
+            </label>
+        </div>
+    </div>
+</section>

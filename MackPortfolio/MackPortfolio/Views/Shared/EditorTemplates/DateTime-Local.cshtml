@@ -1,0 +1,7 @@
+﻿@model DateTime?
+@{
+    Layout = "~/Views/Shared/EditorTemplates/_LayoutDateTime.cshtml";
+    var htmlAttr = (ViewDataDictionary)ViewData["htmlAttr"];
+    htmlAttr["type"] = "datetime-local";
+}
+@(Html.Kendo().DateTimePickerFor(m => m).HtmlAttributes((htmlAttr))

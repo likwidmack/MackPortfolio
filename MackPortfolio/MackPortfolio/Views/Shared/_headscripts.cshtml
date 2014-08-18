@@ -1,0 +1,23 @@
+﻿
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
+@Styles.Render("~/Content/css", "~/Content/kendo/2014.2.716/css")
+@Scripts.Render("~/libs/modernizr")
+<script>
+    Modernizr.addTest('backgroundcliptext', function () {
+        var testEl = document.createElement('div');
+        var supportsWebkitBackgroundClipText = typeof testEl.style.webkitBackgroundClip !== "undefined"
+            && (testEl.style.webkitBackgroundClip = "text", testEl.style.webkitBackgroundClip === "text");
+        return supportsWebkitBackgroundClipText;
+    });
+</script>
+
+@Scripts.Render("~/libs/jquery")
+@if (Request.IsIE(9))
+{
+    @Scripts.Render("~/libs/jqueryLegacyIE", "~/libs/respond")
+    <script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="http://html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js" type="text/javascript"></script>
+}
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/mootools/1.4.5/mootools-core-full-compat-yc.js" type="text/javascript"></script>
+@Scripts.Render("~/libs/kendo")

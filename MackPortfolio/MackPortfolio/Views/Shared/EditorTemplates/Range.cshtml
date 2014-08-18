@@ -1,0 +1,25 @@
+﻿@{
+    object values = ViewData["Model"];
+    var htmlAttr = new ViewDataDictionary();
+
+    foreach (System.ComponentModel.PropertyDescriptor descriptor in System.ComponentModel.TypeDescriptor.GetProperties(values))
+    {
+        htmlAttr[descriptor.Name.Replace("_", "-")] = descriptor.GetValue(values);
+    }
+    htmlAttr["type"] = "range";
+    
+    if (!htmlAttr.ContainsKey("min"))
+    {
+        htmlAttr.Add("min", 0);
+    }
+    if (!htmlAttr.ContainsKey("max"))
+    {
+        htmlAttr.Add("max", 100);
+    }
+    if (!htmlAttr.ContainsKey("step"))
+    {
+        htmlAttr.Add("step", 5);
+    }
+}
+@Html.TextBox("", ViewData.TemplateInfo.FormattedModelValue, htmlAttr)
+

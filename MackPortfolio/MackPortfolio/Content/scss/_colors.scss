@@ -1,0 +1,142 @@
+///** Switch based on main background shade **///
+///** $darken: unquote('darken');**///
+///** $lighten: unquote('lighten');**///
+
+$isInverted: false;
+
+@function invertShade($type,$color,$pct){
+	@if $isInverted { 
+        $pct: if($type == lighten, -($pct), $pct);
+	} @else {
+        $pct: if($type == darken, -($pct), $pct);
+	}
+	@return scale-color($color,$lightness:$pct);
+}
+
+@function invertColor($color){
+	@if $isInverted { 
+		@return invert($color);
+	}
+	@return $color;
+}
+
+@function z-scale-color($color,$red:false,$green:false,$blue:false,$saturation:false,$lightness:false,$alpha:false) {
+	@if $isInverted {
+		@if $lightness {
+			$lightness: if($lightness < 0, abs($lightness), -($lightness));
+		}
+	}
+	@if $red { $color: scale-color($color,$red:$red); }
+	@if $green { $color: scale-color($color,$green:$green); }
+	@if $blue { $color:  scale-color($color,$blue:$blue); }
+	@if $saturation {  $color: scale-color($color,$saturation:$saturation); }
+	@if $lightness { $color: scale-color($color,$lightness:$lightness); }
+	@if $alpha { $color: scale-color($color,$alpha:$alpha); }
+
+	@return $color;
+}
+
+$mainsite-color: #d18929; // #8C1717;
+$mainsite-prime: #fefefe;
+$mainsite-prime-alt: invert($mainsite-prime);
+
+/**
+$primary-color: #008CBA;
+$secondary-color: #e7e7e7;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+**////
+
+$site-primary: $mainsite-color;
+$site-secondary: mix($mainsite-color, $mainsite-prime, 25%);
+$site-alert: adjust-hue($mainsite-color, 270deg);
+$site-success: complement($mainsite-color);
+$site-warning: mix(adjust-hue($mainsite-color, 315deg), $mainsite-prime, 25%);
+$site-info: adjust-hue($mainsite-color, 90deg);
+
+$subst-white:invertColor(#fff);
+$subst-black:invertColor(#000);
+
+
+//Primary Colors From all sections of Foundation
+$z000:$subst-black;
+$z111:invertShade(lighten, $z000, 8%);
+$z222:invertShade(lighten, $z000, 13.3%);  //#222;
+$z272727:invertShade(lighten, $z000, 15.3%);  //#272727;
+$z333:invertShade(lighten, $z000, 20%);  //#333;
+$z444:invertShade(lighten, $z000, 26.6%);  //#444;
+$z555:invertShade(lighten, $z000, 33.3%);  //#555;
+$z666:invertShade(lighten, $z000, 40%); //#666;
+$z777:invertShade(lighten, $z000, 46.6%);  //#777;
+
+$zfff:$subst-white;
+$zfafafa:invertShade(darken, $zfff, 2%);  //#fafafa;
+$zf9f9f9:invertShade(darken, $zfff, 2.5%);  //#f9f9f9;
+$zf6f6f6:invertShade(darken, $zfff, 3.5%);  //#f6f6f6;
+$zf5f5f5:invertShade(darken, $zfff, 4%);  //#f5f5f5;
+$zefefef:invertShade(darken, $zfff, 6.25%);  //#efefef;
+$zeee:invertShade(darken, $zfff, 6.75%);  //#eee;
+$zddd:invertShade(darken, $zfff, 13.3%);  //#ddd;
+$zccc:invertShade(darken, $zfff, 20%);  //#ccc;
+$zbbb:invertShade(darken, $zfff, 26.6%);  //#bbb;
+$zaaa:invertShade(darken, $zfff, 33.3%);  //#aaa;
+$z999:invertShade(darken, $zfff, 40%);  //#999;
+$z888:invertShade(darken, $zfff, 46.6%);  //#888;
+
+
+$mainbg-color: invertColor($mainsite-prime);
+$altbg-color: invertColor($mainsite-prime-alt);
+$mainribbon-color: adjust-hue($mainsite-color, 90deg);
+$mainhighlight-color: adjust-hue($mainsite-color, 270deg);
+
+
+$shade5-color: mix($z000, $mainbg-color, 5%);
+$shade10-color: mix($z000, $mainbg-color, 10%);
+$shade15-color: mix($z000, $mainbg-color, 15%);
+$shade25-color: mix($z000, $mainbg-color, 25%);
+$shade30-color: mix($z000, $mainbg-color, 30%);
+$shade50-color: mix($z000, $mainbg-color, 50%);
+$shade60-color: mix($z000, $mainbg-color, 60%);
+$shade75-color: mix($z000, $mainbg-color, 75%);
+$shade85-color: mix($z000, $mainbg-color, 85%);
+
+
+$shade5-accent: mix($altbg-color,$mainhighlight-color,5%);
+$shade10-accent: mix($altbg-color,$mainhighlight-color,10%);
+$shade15-accent: mix($altbg-color,$mainhighlight-color,15%);
+$shade25-accent: mix($altbg-color,$mainhighlight-color,25%);
+$shade50-accent: mix($altbg-color,$mainhighlight-color,50%);
+$shadow-accent: mix($z000,$mainhighlight-color,85%);
+
+$shade10-ribbon: mix($altbg-color,$mainribbon-color,10%);
+$shade25-ribbon:  mix($altbg-color,$mainribbon-color,25%);
+$shade50-ribbon:  mix($altbg-color,$mainribbon-color,50%);
+$shadow-ribbon: mix($z000,$mainribbon-color,85%);
+
+$mainheader-color: $mainsite-color;
+$maintext-color: $shade75-color;
+$alttext-color: mix($zfff, $mainbg-color, 30%);
+$buttontext-color: $alttext-color;
+$altbutton-color: $maintext-color;
+
+$mainborder-color: invertShade(darken, $mainbg-color, 13.3%);
+
+$main-topbar-bg-color: $altbg-color;
+$main-topbar-text-color: mix($zfff,$main-topbar-bg-color, 90%);
+
+$border-invisible: 1px solid transparent;
+$border-std: 1px solid $mainborder-color;
+$border-hover: 1px solid invertShade(lighten, $mainborder-color, 13.5%);
+
+$layout-box-shadow: $shade25-color;
+
+$box-shadow-std: 0px 1px 2px 0 $layout-box-shadow;
+$box-shadow-hover: 1px 1px 1px 0 $layout-box-shadow;
+
+$text-shadow-color: invert($maintext-color);
+
+$transition-std: all 200ms linear;
+
+$border-radius-std: 4px;

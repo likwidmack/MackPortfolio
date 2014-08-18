@@ -1,0 +1,30 @@
+
+
+@mixin gradient($orientation: vertical, $stoplist: 0% 100%, $colorlist: #555 #333, $backColor: false){
+	$list: ();
+	$count: length($stoplist);
+	@for $i from 1 through $count {
+		$stop: nth($stoplist, $i);
+		$color: nth($colorlist, $i);
+		$color-stop: $color $stop;
+		$list: append($list, $color-stop,comma);
+	}
+
+	@if $orientation == vertical {
+		$v-gradient: compact(top,$list);
+		@include linear-gradient(top,$list,$fallback:$backColor);
+
+		
+	} @else if $orientation == horizontal {
+		$h-gradient: compact(left,$list);
+		@include linear-gradient(left,$list,$fallback:$backColor);
+		
+	} @else if $orientation == radial {
+		$r-gradient: compact($list);
+		@include radial-gradient($r-gradient,$fallback:$backColor);
+
+	} @else {
+		$d-gradient: compact($orientation,$list);
+		@include linear-gradient(to right,$d-gradient,$fallback:$backColor);
+	}
+}

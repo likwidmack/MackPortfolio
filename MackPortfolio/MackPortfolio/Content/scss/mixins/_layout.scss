@@ -1,0 +1,88 @@
+
+// reset the box model
+@mixin reset-box-model {
+  margin: 0;
+  padding: 0;
+  border: 0 none; 
+}
+
+// stretch element height to specified top and bottom position
+@mixin stretch-y($offset-top:0, $offset-bottom:0) {
+  @include stretch($offset-top, false, $offset-bottom, false);
+}
+
+
+// stretch element width to specified left and right position
+@mixin stretch-x($offset-left:0, $offset-right:0) {
+  @include stretch(false, $offset-right, false, $offset-left);
+}
+
+
+// shorthand to stretch element height and width
+@mixin stretch($offset-top:0, $offset-right:0, $offset-bottom:0, $offset-left:0) {
+  position: absolute;
+  @if $offset-top { top: $offset-top; }
+  @if $offset-bottom { bottom: $offset-bottom; }
+  @if $offset-left { left: $offset-left; }
+  @if $offset-right { right: $offset-right; }
+}
+
+//Border Radius
+@mixin border-radius($radius){
+	@include prefixer(border-radius, $radius, spec);
+}
+
+//Opacity
+@mixin opacity($opacity) {
+     opacity: $opacity;
+
+	$opacityIE: $opacity * 100;
+	 .lt-ie9 & {
+		 filter: alpha(opacity=$opacityIE);
+	 }
+}
+
+//Inline Navigation List
+@mixin navigation-list($padding:.25em, $margin:auto){
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+	> li {
+		display:block;
+		float:left;
+		&:last-child {
+			margin-right:0px;
+		}
+	}
+}
+	
+//Simple Transition
+@mixin simple-transition($transition) {
+  @if type-of($transition) == string { $transition: unquote($transition); }
+    @include prefixer(transition, $transition, webkit moz o ms spec);
+}
+
+//Force Word Wrap
+@mixin force-wrap {
+  white-space: pre;           // CSS 2.0
+  white-space: pre-wrap;      // CSS 2.1
+  white-space: pre-line;      // CSS 3.0
+  white-space: -pre-wrap;     // Opera 4-6
+  white-space: -o-pre-wrap;   // Opera 7
+  white-space: -moz-pre-wrap; // Mozilla
+  white-space: -hp-pre-wrap;  // HP Printers
+  word-wrap: break-word;      // IE 5+
+}
+
+//Ellipsis
+@mixin ellipsis($no-wrap: true) {
+  @if $no-wrap { white-space: nowrap; }
+  overflow: hidden;
+  @include prefixer(text-overflow, ellipsis, o ms spec);
+}
+
+//Background Clip
+@mixin background-clip($type:border-box){
+	@include prefixer(background-clip,$type, webkit moz spec);
+}

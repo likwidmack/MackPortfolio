@@ -1,0 +1,32 @@
+﻿@{
+    var brw = Request.Browser;
+    var baseModel = ViewBag.BaseModel as MackPortfolio.Models.ActionLayoutModel;
+    var mainTitle = baseModel.MainTitle;
+}
+<!DOCTYPE html>
+<html class="@Request.GetHtmlClass()" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title | @(mainTitle)</title>
+    <meta name="title" content="@(ViewBag.Title) | @(mainTitle)" />
+    <meta name="keywords" content="Portfolio, Resume, HTML5, CSS3, JavaScript, jQuery, Web Development, Responsive Design, Single Page Application" />
+    <meta name="author" content="likwidmack.com" />
+    @Html.Partial("_headscripts")
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div id="mainapp" class="page">
+        <header>@Html.Partial("_header", baseModel)</header>
+        <div id="mainbody" class="container body-content">
+            @RenderBody()
+        </div>
+        <footer class="main-footer">
+            @Html.Partial("_footer", baseModel)
+        </footer>
+    </div>
+    @Html.Partial("_footscripts", baseModel)
+    @RenderSection("scripts", required: false)
+</body>
+</html>

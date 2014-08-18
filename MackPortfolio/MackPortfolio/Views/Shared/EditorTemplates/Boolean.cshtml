@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/EditorTemplates/_Layout.cshtml";
+
+    bool? value = null;
+    var htmlAttr = new ViewDataDictionary();
+    if (ViewData.Model != null)
+    {
+        value = Convert.ToBoolean(ViewData.Model, System.Globalization.CultureInfo.InvariantCulture);
+        object values = ViewData.Model;
+
+        foreach (System.ComponentModel.PropertyDescriptor descriptor in System.ComponentModel.TypeDescriptor.GetProperties(values))
+        {
+            htmlAttr[descriptor.Name.Replace("_", "-")] = descriptor.GetValue(values);
+        }
+    }
+
+    var mdata = ViewData.ModelMetadata;
+    if (String.IsNullOrEmpty(mdata.Description))
+    {
+        htmlAttr["title"] = mdata.Description;
+    }
+    if (String.IsNullOrEmpty(mdata.Watermark))
+    {
+        htmlAttr["placeholder"] = mdata.Watermark;
+    }
+}
+
+@if (ViewData.ModelMetadata.IsNullableValueType)
+{
+    htmlAttr["class"] = "list-box tri-state";
+
+    var triStateValues = new List<SelectListItem>
+    {
+        new SelectListItem {Text = "Not Set", Value = String.Empty, Selected = !value.HasValue},
+        new SelectListItem {Text = "True", Value = "true", Selected = value.HasValue && value.Value},
+        new SelectListItem {Text = "False", Value = "false", Selected = value.HasValue && !value.Value},
+    };
+    @Html.DropDownList("", triStateValues, htmlAttr)
+}
+else
+{
+    htmlAttr["class"] = "check-box";
+    @Html.CheckBox("", value ?? false, htmlAttr)
+}

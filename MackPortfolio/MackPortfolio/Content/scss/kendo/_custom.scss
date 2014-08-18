@@ -1,0 +1,2364 @@
+//colors
+$k787878: rgb(120, 120, 120);
+$kfff: rgb(255, 255, 255);
+$kdadada: rgb(218, 218, 218);
+$kf5f5f5: rgb(245, 245, 245);
+$k8ebc00: rgb(142, 188, 0);  //PRIMARY
+$k7ea700: rgb(126, 167, 0);
+$kccc: rgb(204, 204, 204);
+$ke5e5e5: rgb(229, 229, 229);
+$k445b00: rgb(68, 91, 0);
+$kf4f4f4: rgb(103, 103, 103);
+$kf4f4f4: rgb(244, 244, 244);
+$kfbfbfb: rgb(251, 251, 251);
+$ke20000: rgb(226, 0, 0);
+$k000: rgb(0, 0, 0);
+$k99c319: rgb(153, 195, 25);
+$kffe13a: rgb(255, 225, 58);
+$k06c: rgb(0, 102, 204);
+$kd0f8ff: rgb(208, 248, 255);
+$k28760b: rgb(40, 118, 11);
+$kddffd0: rgb(221, 255, 208);
+$kc00: rgb(204, 0, 0);
+$kffded7: rgb(255, 222, 215);
+$k8ab600: rgb(138, 182, 0);
+$krgba0_03: rgba(0, 0, 0, 0.3);
+$krgba128_03: rgba(128, 128, 128, 0.3);
+$ke5f5fa: rgb(229, 245, 250);
+$k0487c4: rgb(4, 135, 196);
+$kb7e1f0: rgb(183, 225, 240);
+$keaf7ec: rgb(234, 247, 236);
+$k349946: rgb(52, 153, 70);
+$kc3e8ca: rgb(195, 232, 202);
+$kfff4d9: rgb(255, 244, 217);
+$kfff0c8: rgb(255, 240, 200);
+$kffe0d9: rgb(255, 224, 217);
+$kef470a: rgb(239, 71, 10);
+$kffb7a8: rgb(255, 183, 168);
+$k8e8e8e: rgb(142, 142, 142);
+$kred: rgb(255, 0, 0);
+$kwhite3: rgba(255, 255, 255, .3);
+$kwhite15: rgba(255, 255, 255, .15);
+$k900: rgb(153, 0, 0);
+$kefefef: rgb(239, 239, 239);
+$kd1dfa3: rgb(209, 223, 163);
+$k8bb019: rgb(139, 176, 25);
+
+//@extend-elements
+//original selectors
+//.k-header, .k-grid-header, .k-toolbar, .k-dropdown-wrap, .k-picker-wrap, .k-numeric-wrap, .k-grouping-header, .k-pager-wrap, .k-textbox, .k-button, .k-progressbar, .k-draghandle, .k-autocomplete, .k-state-highlight, .k-tabstrip-items .k-item, .km-pane-wrapper>.km-pane>.km-view>.km-content
+%extend_1 {
+	background-image: none;
+	background-position: 50% 50%;
+	background-color: $kfff;
+}
+
+//original selectors
+//.k-mobile-list .k-check:checked, .k-mobile-list .k-edit-field [type=checkbox]:checked, .k-mobile-list .k-edit-field [type=radio]:checked
+%extend_2 {
+	opacity: 1;
+	background-image: url('Metro/sprite.png');
+	border-color: transparent;
+}
+
+//original selectors
+//.k-button[disabled], .k-button.k-state-disabled, .k-state-disabled .k-button, .k-state-disabled .k-button:hover, .k-button.k-state-disabled:hover, .k-state-disabled .k-button:active, .k-button.k-state-disabled:active
+%extend_3 {
+	color: $kccc;
+	border-color: $ke5e5e5;
+	background-color: $kfff;
+	background-image: none;
+}
+
+//original selectors
+//.k-panelbar .k-content, .k-panelbar .k-panel, .k-panelbar .k-item
+%extend_4 {
+	background-color: $kfff;
+	color: $k787878;
+	border-color: $kdadada;
+}
+
+//original selectors
+//.k-state-active, .k-state-active:hover, .k-active-filter, .k-tabstrip .k-state-active
+%extend_5 {
+	background-color: $kfff;
+	border-color: $k7ea700;
+	color: $k000;
+}
+
+//original selectors
+//.k-state-selected, .k-state-selected:link, .k-state-selected:visited, .k-list>.k-state-selected, .k-list>.k-state-highlight, .k-panel>.k-state-selected, .k-ghost-splitbar-vertical, .k-ghost-splitbar-horizontal, .k-draghandle.k-state-selected:hover, .k-scheduler .k-scheduler-toolbar .k-state-selected, .k-scheduler .k-today.k-state-selected, .k-marquee-color
+%extend_6 {
+	color: $kfff;
+	background-color: $k7ea700;
+	border-color: $k7ea700;
+}
+
+//original selectors
+//.k-state-hover, .k-state-hover:hover, .k-splitbar-horizontal-hover:hover, .k-splitbar-vertical-hover:hover, .k-list>.k-state-hover, .k-scheduler .k-scheduler-toolbar ul li.k-state-hover, .k-pager-wrap .k-link:hover, .k-dropdown .k-state-focused, .k-imagebrowser-dropzone, .k-mobile-list .k-item>.k-link:active, .k-mobile-list .k-item>.k-label:active, .k-mobile-list .k-edit-label.k-check:active, .k-mobile-list .k-recur-view .k-check:active
+%extend_7 {
+	color: $kfff;
+	background-color: $k8ebc00;
+	border-color: $k8ebc00;
+}
+
+//original selectors
+//.k-autocomplete.k-state-hover, .k-autocomplete.k-state-focused, .k-picker-wrap.k-state-hover, .k-picker-wrap.k-state-focused, .k-numeric-wrap.k-state-hover, .k-numeric-wrap.k-state-focused, .k-dropdown-wrap.k-state-hover, .k-dropdown-wrap.k-state-focused
+%extend_8 {
+	background-color: $k8ebc00;
+	background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+	background-position: 50% 50%;
+	border-color: $kdadada;
+}
+
+//original selectors
+//.k-tile-empty.k-state-selected, .k-loading-mask.k-state-selected
+%extend_9 {
+	border-width: 0;
+	background-image: none;
+	background-color: transparent;
+}
+
+//original selectors
+//.input-prepend .k-tooltip-validation, .input-append .k-tooltip-validation
+%extend_10 {
+	font-size: 12px;
+	position: relative;
+	top: 3px;
+}
+
+//original selectors
+//.km-actionsheet .k-grid-delete, .km-actionsheet .k-scheduler-delete, .km-pane-wrapper .k-scheduler-delete, .km-pane-wrapper .k-filter-menu .k-button[type=reset]
+%extend_11 {
+	color: $kfff;
+	border-color: $ke20000;
+	background-color: $kred;
+	background-image: linear-gradient(to bottom,$kwhite3,$kwhite15);
+}
+
+//original selectors
+//.k-autocomplete.k-state-default, .k-picker-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-dropdown-wrap.k-state-default
+%extend_12 {
+	background-image: none;
+	background-position: 50% 50%;
+	background-color: $kfff;
+	border-color: $kdadada;
+}
+
+//original selectors
+//.k-autocomplete.k-state-hover, .k-picker-wrap.k-state-hover, .k-numeric-wrap.k-state-hover, .k-dropdown-wrap.k-state-hover
+%extend_13 {
+	background-color: $k8ebc00;
+	background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+	background-position: 50% 50%;
+	border-color: $kdadada;
+}
+
+//original selectors
+//.k-autocomplete.k-state-focused, .k-picker-wrap.k-state-focused, .k-numeric-wrap.k-state-focused, .k-dropdown-wrap.k-state-focused, .k-multiselect.k-header.k-state-focused
+%extend_14 {
+	background-color: $k8ebc00;
+	background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+	background-position: 50% 50%;
+	border-color: $kdadada;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+}
+
+//original selectors
+//.k-tabstrip-items .k-state-active, .k-ie7 .k-tabstrip-items .k-state-active .k-loading
+%extend_15 {
+	background-color: $kfff;
+	background-image: none;
+	border-color: $k7ea700;
+}
+
+//original selectors
+//.k-grouping-row td, .k-group-footer td, .k-grid-footer td
+%extend_16 {
+	color: $k787878;
+	border-color: $kdadada;
+	font-weight: bold;
+}
+
+//original selectors
+//.k-primary:focus, .k-primary.k-state-focused
+%extend_17 {
+	color: $kfff;
+	border-color: $k000;
+	background-image: none;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+}
+
+//original selectors
+//.k-primary.k-state-disabled, .k-state-disabled .k-primary, .k-primary.k-state-disabled:hover, .k-state-disabled .k-primary:hover, .k-primary.k-state-disabled:hover, .k-state-disabled .k-primary:active, .k-primary.k-state-disabled:active
+%extend_18 {
+	color: $kd1dfa3;
+	border-color: $k8bb019;
+	background-color: $k8bb019;
+	background-image: none;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+}
+
+
+.k-progressbar {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	@extend %extend_1;
+}
+.k-rtl {
+	.k-progressbar-horizontal {
+		.k-last {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+		.k-first {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+		&.k-progressbar-reverse>.k-state-selected {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+		&.k-progressbar-reverse .k-last {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	.k-tool {
+		&.k-group-start {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+		&.k-group-end {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	.k-dropdown-wrap {
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+		.k-select {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	.k-picker-wrap {
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+		.k-select {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	.k-numeric-wrap {
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+		.k-select {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	.k-scheduler-toolbar {
+		.k-nav-next {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+			.k-link {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 0;
+			}
+		}
+		ul+ul li:last-child {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+			.k-link {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 0;
+			}
+		}
+	}
+	.k-progressbar-horizontal>.k-state-selected {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-progressbar>.k-state-selected.k-complete {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-colorpicker .k-selected-color {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-datetimepicker .k-select+.k-select {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-list-container.k-state-border-right {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-scheduler-toolbar>ul li:first-child {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-link {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+}
+.k-progressbar-horizontal {
+	.k-first {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-last {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-progressbar-reverse>.k-state-selected {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-progressbar-vertical {
+	.k-first {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-last {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-progressbar-reverse>.k-state-selected {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-in {
+	border-color: transparent;
+}
+.k-item {
+	border-color: transparent;
+}
+.k-window-action {
+	border-color: transparent;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-block {
+	background-color: $kfff;
+	border-color: $kdadada;
+	color: $k787878;
+	color: $k787878;
+	background-color: $kfff;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-widget {
+	background-color: $kfff;
+	border-color: $kdadada;
+	color: $k787878;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	.k-status {
+		background-color: $kfff;
+	}
+	&.k-popup {
+		background-color: $kfff;
+	}
+	&.k-tooltip {
+		background-image: none;
+		border-color: $k99c319;
+		background-color: $k99c319;
+		color: $kfff;
+	}
+	&.k-tooltip-validation {
+		border-color: $kffe13a;
+		background-color: $kffe13a;
+		color: $k787878;
+	}
+}
+.k-input {
+	border-color: $kdadada;
+	background-color: $kfff;
+	color: $k787878;
+}
+.k-textbox {
+	border-color: $kdadada;
+	border-color: $kdadada;
+	background-color: $kfff;
+	@extend %extend_1;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&:hover {
+		background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+		border-color: $k8ebc00;
+	}
+}
+.k-group {
+	border-color: $kdadada;
+	background-color: $kfff;
+}
+.k-content {
+	border-color: $kdadada;
+	background-color: $kfff;
+	color: $k787878;
+}
+.k-header {
+	border-color: $kdadada;
+	color: $k787878;
+	@extend %extend_1;
+	background-color: $kfff;
+	border-color: $kdadada;
+}
+.k-editable-area {
+	border-color: $kdadada;
+	background-color: $kfff;
+}
+.k-separator {
+	border-color: $kdadada;
+	background-color: $kf5f5f5;
+}
+.k-colorpicker {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	.k-i-arrow-s {
+		border-color: $kdadada;
+	}
+	.k-selected-color {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-textbox>input {
+	border-color: $kdadada;
+	border-color: $kdadada;
+	background: 0;
+	background-color: $kfff;
+	color: $k787878;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-autocomplete {
+	border-color: $kdadada;
+	@extend %extend_1;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&.k-header {
+		border-color: $kdadada;
+		background-color: $kfff;
+	}
+	.k-input {
+		border-color: $kdadada;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-state-active {
+		background-image: none;
+	}
+	&.k-state-hover {
+		@extend %extend_8;
+		@extend %extend_13;
+	}
+	&.k-state-border-down {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 2px 0 $krgba0_03;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	&.k-state-border-up {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 2px 0 $krgba0_03;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	&.k-state-default {
+		@extend %extend_12;
+	}
+	&.k-state-focused .k-input {
+		border-color: $kdadada;
+	}
+}
+.k-dropdown-wrap {
+	border-color: $kdadada;
+	@extend %extend_1;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&.k-state-active {
+		border-color: $kdadada;
+		background-color: $kfff;
+		background-image: none;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 2px 0 $krgba0_03;
+	}
+	.k-input {
+		border-color: $kdadada;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-state-hover {
+		@extend %extend_8;
+		@extend %extend_13;
+	}
+	&.k-state-border-up {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	&.k-state-border-down {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	.k-select {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-state-default {
+		@extend %extend_12;
+	}
+	&.k-state-focused .k-input {
+		border-color: $kdadada;
+	}
+}
+.k-toolbar {
+	border-color: $kdadada;
+	border-color: $kdadada;
+	background-color: $kfff;
+	@extend %extend_1;
+	background-color: $kfff;
+}
+.k-grid-footer {
+	border-color: $kdadada;
+	background-color: $kfff;
+	td {
+		@extend %extend_16;
+	}
+}
+.k-state-default {
+	border-color: $kdadada;
+	.k-select {
+		border-color: $kdadada;
+	}
+}
+.k-state-disabled {
+	border-color: $kdadada;
+	filter: alpha(opacity=70);
+	opacity: .7;
+	color: $kccc;
+	.k-icon {
+		opacity: 1;
+	}
+	.k-button {
+		@extend %extend_3;
+		color: $kccc;
+		&:hover {
+			@extend %extend_3;
+		}
+		&:active {
+			@extend %extend_3;
+		}
+	}
+	.k-link {
+		color: $kccc;
+	}
+	.k-primary {
+		@extend %extend_18;
+		&:hover {
+			@extend %extend_18;
+		}
+		&:active {
+			@extend %extend_18;
+		}
+	}
+}
+.k-grid-header {
+	border-color: $kdadada;
+	@extend %extend_1;
+	background-color: $kfff;
+	border-color: $kdadada;
+	th.k-state-focused {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 0 0 0 1px $k8ebc00;
+	}
+}
+.k-grid-header-wrap {
+	border-color: $kdadada;
+	border-color: $kdadada;
+}
+.k-grid-header-locked {
+	border-color: $kdadada;
+}
+.k-grid-footer-locked {
+	border-color: $kdadada;
+}
+.k-grid-content-locked {
+	border-color: $kdadada;
+}
+.k-grid {
+	td {
+		border-color: $kdadada;
+		&.k-state-selected {
+			border-color: $kdadada;
+			&.k-state-focused {
+				background-color: $k8ab600;
+			}
+		}
+		&.k-state-focused {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 0 0 1px inset 0 0 0 1px $k8ebc00;
+		}
+	}
+	.k-filter-options {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 2px 0 $krgba0_03;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-grouping-header {
+		border-color: $kdadada;
+	}
+	.k-slider .k-button {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 13px;
+	}
+	.k-hierarchy-cell .k-icon {
+		background-color: transparent;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-grid-footer-wrap {
+	border-color: $kdadada;
+}
+.k-pager-wrap {
+	border-color: $kdadada;
+	background-color: $kfff;
+	@extend %extend_1;
+	background-color: $kfff;
+	background-color: $kfff;
+	color: $k787878;
+	border-color: $kdadada;
+	.k-link {
+		border-color: $kdadada;
+		border-color: $kdadada;
+		&:hover {
+			@extend %extend_7;
+			background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+		}
+	}
+	.k-textbox {
+		border-color: $kdadada;
+	}
+}
+.k-pager-refresh {
+	border-color: $kdadada;
+}
+.k-grouping-header {
+	border-color: $kdadada;
+	background-color: $kfff;
+	@extend %extend_1;
+	background-color: $kfff;
+	color: $k787878;
+	.k-group-indicator {
+		border-color: $kdadada;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		border-color: $kdadada;
+	}
+}
+.k-panel> {
+	&.k-state-selected {
+		@extend %extend_6;
+	}
+	&.k-item>.k-link {
+		border-color: $kdadada;
+	}
+}
+.k-panelbar {
+	.k-panel {
+		border-color: $kdadada;
+		@extend %extend_4;
+	}
+	.k-content {
+		border-color: $kdadada;
+		@extend %extend_4;
+	}
+	.k-item {
+		@extend %extend_4;
+	}
+	.k-tabstrip-items .k-item {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-state-focused.k-state-hover {
+		background: $k8ebc00;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+	}
+}
+.k-calendar {
+	th {
+		border-color: $kdadada;
+		background-color: $kfff;
+		background-color: $kfff;
+	}
+	.k-link {
+		color: $k787878;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		&.k-nav-fast {
+			color: $k787878;
+		}
+		&.k-state-hover {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	.k-footer {
+		padding: 0;
+		.k-nav-today {
+			color: $k787878;
+			text-decoration: none;
+			background-color: $kfff;
+			&:hover {
+				background-color: $kfff;
+				text-decoration: underline;
+			}
+			&.k-state-hover {
+				background-color: $kfff;
+				text-decoration: underline;
+			}
+			&:active {
+				background-color: $kfff;
+			}
+		}
+		.k-link {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	td {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-nav-fast.k-state-hover {
+		text-decoration: none;
+		background-color: $k8ebc00;
+		color: $kfff;
+	}
+}
+.k-slider-track {
+	border-color: $kdadada;
+	background-color: $kdadada;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-splitbar {
+	border-color: $kdadada;
+	background-color: $kdadada;
+}
+.k-dropzone-active {
+	border-color: $kdadada;
+}
+.k-tiles {
+	border-color: $kdadada;
+	background-color: $kfff;
+	li {
+		&.k-state-hover {
+			border-color: $k8ebc00;
+		}
+		&.k-state-selected {
+			border-color: $k7ea700;
+		}
+	}
+}
+.k-tooltip {
+	border-color: $kdadada;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 2px 0 $krgba0_03;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-upload-files {
+	border-color: $kdadada;
+}
+.k-dropzone-hovered {
+	background-color: $kfff;
+}
+.k-grouping-row {
+	td {
+		background-color: $kfff;
+		@extend %extend_16;
+	}
+	.k-state-focused {
+		border-color: $k8ebc00;
+	}
+}
+td {
+	&.k-group-cell {
+		background-color: $kfff;
+	}
+	&.k-state-focused {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 0 0 0 1px $k8ebc00;
+		&.k-state-selected {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 0 3px 1px $k445b00;
+		}
+	}
+}
+.k-resize-handle-inner {
+	background-color: $kfff;
+}
+.k-list-container {
+	border-color: $kdadada;
+	background-color: $kfff;
+	color: $k787878;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&.k-state-border-up {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-state-border-down {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-state-border-right {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-panelbar>li {
+	&.k-item {
+		background-color: $kfff;
+	}
+	&.k-state-default>.k-link {
+		color: $k787878;
+		&.k-state-selected {
+			color: $kfff;
+		}
+		&.k-state-hover {
+			color: $kfff;
+		}
+	}
+	&.k-state-hover>.k-link {
+		color: $kfff;
+	}
+}
+.k-alt {
+	background-color: $kf5f5f5;
+}
+.k-picker-wrap {
+	@extend %extend_1;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&.k-state-active {
+		border-color: $kdadada;
+		background-color: $kfff;
+		background-image: none;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 2px 0 $krgba0_03;
+	}
+	&.k-state-hover {
+		@extend %extend_8;
+		@extend %extend_13;
+	}
+	&.k-state-border-up {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+		.k-selected-color {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	&.k-state-border-down {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+		.k-selected-color {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	.k-input {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-select {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-state-default {
+		@extend %extend_12;
+	}
+	&.k-state-focused .k-input {
+		border-color: $kdadada;
+	}
+}
+.k-numeric-wrap {
+	@extend %extend_1;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&.k-state-active {
+		border-color: $kdadada;
+		background-color: $kfff;
+		background-image: none;
+	}
+	&.k-state-hover {
+		@extend %extend_8;
+		@extend %extend_13;
+	}
+	&.k-state-border-up {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	&.k-state-border-down {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-input {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	.k-input {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-link {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		&.k-state-selected {
+			background-color: $k7ea700;
+		}
+	}
+	.k-select {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-state-default {
+		@extend %extend_12;
+	}
+	&.k-state-focused .k-input {
+		border-color: $kdadada;
+	}
+	.k-link+.k-link {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-expand-padding .k-input {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-multiselect-wrap {
+	background-color: $kfff;
+	color: $k787878;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-input[readonly] {
+	background-color: $kfff;
+	color: $k787878;
+}
+.k-popup {
+	color: $k787878;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 2px 0 $krgba0_03;
+}
+.k-dropdown {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	.k-input {
+		color: $k787878;
+		color: $k787878;
+	}
+	.k-state-focused {
+		@extend %extend_7;
+		.k-input {
+			color: $k787878;
+			color: $k787878;
+		}
+	}
+	.k-state-hover .k-input {
+		color: $kfff;
+	}
+}
+.k-link {
+	&:link {
+		color: $k787878;
+	}
+	&:visited {
+		color: $k787878;
+	}
+}
+.k-tabstrip-items {
+	.k-link {
+		color: $k787878;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-item {
+		@extend %extend_1;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-state-active {
+		@extend %extend_15;
+	}
+	.k-state-default .k-link {
+		color: $k787878;
+	}
+	.k-state-hover .k-link {
+		color: $kfff;
+	}
+}
+.k-panelbar>li> {
+	&.k-link {
+		color: $k787878;
+		color: $k787878;
+	}
+	&.k-state-selected {
+		color: $kfff;
+	}
+}
+.k-button {
+	@extend %extend_1;
+	background-color: $kfff;
+	color: $k787878;
+	border-color: $kdadada;
+	background-color: $kfff;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&:focus {
+		border-color: $kdadada;
+		background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+		&:not(.k-state-disabled):not([disabled]) {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 0 0 1px $k8ebc00;
+		}
+		&:active:not(.k-state-disabled):not([disabled]) {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 0 3px 1px $k445b00;
+		}
+	}
+	&.k-state-focused {
+		border-color: $kdadada;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 0 0 0 1px $k8ebc00;
+		background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+	}
+	&:hover {
+		color: $kfff;
+		border-color: $k8ebc00;
+		background-color: $k8ebc00;
+		background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+	}
+	&:active {
+		color: $kfff;
+		background-color: $k7ea700;
+		border-color: $k7ea700;
+		background-image: none;
+		background-position: 50% 50%;
+		background-image: none;
+	}
+	&.k-state-disabled {
+		@extend %extend_3;
+		&:hover {
+			@extend %extend_3;
+		}
+		&:active {
+			@extend %extend_3;
+		}
+	}
+}
+.k-draghandle {
+	@extend %extend_1;
+	background-color: $kfff;
+	border-color: $k8ebc00;
+	background-color: $k8ebc00;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 1px 0 $k676767;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&:hover {
+		border-color: $k7ea700;
+		background-color: $k7ea700;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 1px 1px 0 $k676767;
+		background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+	}
+	&.k-state-selected:hover {
+		@extend %extend_6;
+		background-image: none;
+		background-position: 50% 50%;
+	}
+}
+.k-state-highlight {
+	@extend %extend_1;
+	background: $kfff;
+	color: $k000;
+}
+.k-state-hover {
+	@extend %extend_7;
+	background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	.k-icon {
+		opacity: 1;
+	}
+	.k-loading {
+		background-image: url('Metro/loading.gif');
+		background-position: 50% 50%;
+	}
+	&:hover {
+		@extend %extend_7;
+		background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+	}
+}
+.k-state-selected {
+	@extend %extend_6;
+	background-image: none;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	.k-icon {
+		opacity: 1;
+	}
+	&:link {
+		@extend %extend_6;
+	}
+	&:visited {
+		@extend %extend_6;
+	}
+}
+.k-state-focused {
+	border-color: $k8ebc00;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 0 0 1px $k8ebc00;
+	.k-icon {
+		opacity: 1;
+	}
+	&.k-state-selected {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 0 0 3px 1px $k445b00;
+	}
+}
+.k-column-menu {
+	border-color: $kdadada;
+	.k-sprite {
+		opacity: 1;
+		background-image: url('Metro/sprite.png');
+		border-color: transparent;
+	}
+	.k-item {
+		border-color: $kdadada;
+	}
+	.k-separator {
+		border-color: $kdadada;
+		background-color: transparent;
+	}
+	.k-state-hover .k-sprite {
+		opacity: 1;
+	}
+	.k-state-active .k-sprite {
+		opacity: 1;
+	}
+}
+.k-mobile-list {
+	.k-edit-field {
+		[type=checkbox]:checked {
+			@extend %extend_2;
+		}
+		[type=radio]:checked {
+			@extend %extend_2;
+		}
+	}
+	.k-item> {
+		&.k-link:active {
+			@extend %extend_7;
+		}
+		&.k-label:active {
+			@extend %extend_7;
+		}
+	}
+	.k-check:checked {
+		@extend %extend_2;
+	}
+	.k-edit-label.k-check:active {
+		@extend %extend_7;
+	}
+	.k-recur-view .k-check:active {
+		@extend %extend_7;
+	}
+	.k-scheduler-timezones .k-edit-field:nth-child(2):active {
+		color: $kfff;
+		background-color: $k8ebc00;
+		border-color: $k8ebc00;
+	}
+}
+.k-tool {
+	border-color: transparent;
+	text-align: center;
+	vertical-align: middle;
+	&.k-group-start {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-group-end {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-tool-icon {
+	background-image: url('Metro/sprite.png');
+	border-color: transparent;
+	background-image: url('Metro/sprite.png');
+}
+.k-grouping-dropclue {
+	background-image: url('Metro/sprite.png');
+	border-color: transparent;
+}
+.k-drop-hint {
+	background-image: url('Metro/sprite.png');
+	border-color: transparent;
+}
+.k-grid-mobile {
+	.k-resize-handle-inner {
+		&:before {
+			background-image: url('Metro/sprite.png');
+			border-color: transparent;
+		}
+		&:after {
+			background-image: url('Metro/sprite.png');
+			border-color: transparent;
+		}
+	}
+	.k-column-active+th.k-header {
+		border-left-color: $k787878;
+	}
+}
+.k-loading {
+	background-image: url('Metro/loading.gif');
+	background-position: 50% 50%;
+}
+.k-loading-image {
+	background-image: url('Metro/loading-image.gif');
+}
+.k-loading-color {
+	background-color: $kfff;
+}
+.k-button[disabled] {
+	@extend %extend_3;
+}
+.k-scheduler {
+	color: $kfff;
+	background-color: $kfff;
+	.k-scheduler-toolbar {
+		.k-state-selected {
+			@extend %extend_6;
+		}
+		ul li.k-state-hover {
+			@extend %extend_7;
+		}
+	}
+	.k-today.k-state-selected {
+		@extend %extend_6;
+	}
+	div.k-scheduler-footer {
+		.k-link {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+		ul li {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+}
+.k-scheduler-layout {
+	color: $k787878;
+}
+.k-scheduler-datecolumn {
+	background-color: $kfff;
+	color: $k787878;
+}
+.k-scheduler-groupcolumn {
+	background-color: $kfff;
+	color: $k787878;
+}
+.k-scheduler-times {
+	border-color: $kdadada;
+	tr {
+		border-color: $kdadada;
+	}
+	th {
+		border-color: $kdadada;
+	}
+}
+.k-scheduler-table {
+	td {
+		border-color: $kdadada;
+	}
+	.k-today {
+		background-color: $kfbfbfb;
+	}
+	.k-icon {
+		background-color: transparent;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-state-hover .k-icon {
+		background-color: transparent;
+	}
+}
+.k-scheduler-header-wrap {
+	border-color: $kdadada;
+}
+.k-nonwork-hour {
+	background-color: $kf4f4f4;
+}
+.k-today> {
+	&.k-scheduler-datecolumn {
+		background-color: $kfbfbfb;
+	}
+	&.k-scheduler-groupcolumn {
+		background-color: $kfbfbfb;
+	}
+}
+.k-scheduler-now-arrow {
+	border-left-color: $ke20000;
+}
+.k-scheduler-now-line {
+	background-color: $ke20000;
+}
+.k-event {
+	border-color: $k7ea700;
+	background: $k7ea700 0 -257px none repeat-x;
+	color: $kfff;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&.k-state-selected {
+		background-position: 0 0;
+	}
+	.k-link {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-resize-handle:after {
+		background-color: $k787878;
+	}
+}
+.k-event-inverse {
+	color: $k787878;
+}
+.k-ie7 {
+	.k-button {
+		&:focus {
+			background-color: $k8ebc00;
+		}
+		&.k-state-focused {
+			background-color: $k8ebc00;
+		}
+	}
+	.k-tabstrip-items {
+		.k-state-default .k-loading {
+			border-color: $kdadada;
+		}
+		.k-state-hover .k-loading {
+			border-color: $k8ebc00;
+		}
+		.k-state-active .k-loading {
+			@extend %extend_15;
+		}
+	}
+	.k-event .k-resize-handle {
+		background-color: $k787878;
+	}
+	.k-panelbar span.k-state-focused {
+		background-color: $k8ebc00;
+	}
+	.k-menu li.k-state-focused {
+		background-color: $k8ebc00;
+	}
+	.k-listview>.k-state-focused {
+		background-color: $k8ebc00;
+	}
+	.k-grid-header th.k-state-focused {
+		background-color: $k8ebc00;
+	}
+	td.k-state-focused {
+		background-color: $k8ebc00;
+	}
+	.k-tool.k-state-hover {
+		background-color: $k8ebc00;
+	}
+	.k-window-titlebar .k-state-hover {
+		border-color: $k8ebc00;
+	}
+}
+.k-scheduler-marquee {
+	&:before {
+		border-color: $k7ea700;
+	}
+	&:after {
+		border-color: $k7ea700;
+	}
+}
+.k-state-active {
+	@extend %extend_5;
+	background-image: none;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	&:hover {
+		@extend %extend_5;
+		background-image: none;
+	}
+}
+.k-active-filter {
+	@extend %extend_5;
+}
+.k-tabstrip {
+	.k-state-active {
+		@extend %extend_5;
+	}
+	.k-content.k-state-active {
+		background-color: $kfff;
+		color: $k787878;
+	}
+}
+.k-menu {
+	.k-group {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 2px 0 $krgba0_03;
+		border-color: $kdadada;
+	}
+	.k-popup {
+		color: $k787878;
+	}
+	&.k-header {
+		border-color: $kdadada;
+	}
+	.k-item {
+		border-color: $kdadada;
+	}
+	.k-state-hover>.k-state-active {
+		background-color: transparent;
+	}
+}
+.k-calendar-container {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&.k-group {
+		border-color: $kdadada;
+	}
+	&.k-state-border-up {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	&.k-state-border-down {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-list> {
+	&.k-state-selected {
+		@extend %extend_6;
+		&.k-state-focused {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+	}
+	&.k-state-highlight {
+		@extend %extend_6;
+	}
+	&.k-state-focused {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 0 0 0 1px $k8ebc00;
+		&.k-state-selected {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: inset 0 0 3px 1px $k445b00;
+		}
+	}
+	&.k-state-hover {
+		@extend %extend_7;
+	}
+}
+.k-ghost-splitbar-vertical {
+	@extend %extend_6;
+}
+.k-ghost-splitbar-horizontal {
+	@extend %extend_6;
+}
+.k-marquee-color {
+	@extend %extend_6;
+}
+.k-marquee-text {
+	color: $kfff;
+}
+.k-ie8 {
+	.k-button {
+		&:focus {
+			background-color: $k8ebc00;
+		}
+		&.k-state-focused {
+			background-color: $k8ebc00;
+		}
+	}
+	.k-panelbar span.k-state-focused {
+		background-color: $k8ebc00;
+	}
+	.k-menu li.k-state-focused {
+		background-color: $k8ebc00;
+	}
+	.k-listview>.k-state-focused {
+		background-color: $k8ebc00;
+	}
+	.k-grid-header th.k-state-focused {
+		background-color: $k8ebc00;
+	}
+	td.k-state-focused {
+		background-color: $k8ebc00;
+	}
+	.k-tool.k-state-hover {
+		background-color: $k8ebc00;
+	}
+	.k-window-titlebar .k-state-hover {
+		border-color: $k8ebc00;
+	}
+}
+.k-imagebrowser-dropzone {
+	@extend %extend_7;
+}
+.k-state-hover> {
+	&.k-select {
+		border-color: $k8ebc00;
+		border-color: $kdadada;
+	}
+	&.k-link {
+		color: $kfff;
+	}
+}
+.k-other-month {
+	color: $kccc;
+	.k-link {
+		color: $kccc;
+	}
+	&.k-state-hover .k-link {
+		background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+		color: $kfff;
+	}
+}
+.km-pane-wrapper {
+	.k-mobile-list {
+		textarea {
+			color: $k787878;
+		}
+		.k-item {
+			color: $k787878;
+			background-color: $kfff;
+			border-top: 1px solid $kdadada;
+			&.k-state-selected {
+				background-color: $k7ea700;
+				border-top-color: $k7ea700;
+			}
+			&:last-child {
+				//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+				box-shadow: inset 0 -1px 0 $kdadada;
+			}
+		}
+		.k-edit-label {
+			color: $k787878;
+		}
+		.k-edit-field {
+			color: $k787878;
+			background-color: $kfff;
+			border-top: 1px solid $kdadada;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 1px 1px $kdadada;
+		}
+		.k-recur-view> {
+			&.k-edit-field .k-check {
+				background-color: $kfff;
+				border-top: 1px solid $kdadada;
+				&:first-child {
+					border-top-color: transparent;
+				}
+			}
+			&.k-edit-label:nth-child(3) {
+				color: $k8e8e8e;
+			}
+		}
+		input:not([type="checkbox"]):not([type="radio"]) {
+			color: $k787878;
+		}
+	}
+	.k-scheduler-delete {
+		@extend %extend_11;
+		&:active {
+			background-color: $k900;
+		}
+	}
+	.km-pane .k-mobile-list select:not([multiple]) {
+		color: $k787878;
+	}
+	.k-mobile-list>ul>li>.k-link {
+		color: $k8e8e8e;
+		border-bottom: 1px solid $kdadada;
+	}
+	#recurrence .km-scroll-container>.k-edit-label:first-child {
+		color: $k8e8e8e;
+	}
+	.k-filter-menu .k-button[type=reset] {
+		@extend %extend_11;
+		&:active {
+			background-color: $k900;
+		}
+	}
+}
+.k-state-error {
+	border-color: $ke20000;
+	background-color: $kfff;
+	color: $ke20000;
+}
+.k-tile-empty {
+	&.k-state-selected {
+		@extend %extend_9;
+	}
+	strong {
+		color: $kccc;
+	}
+}
+.k-dropzone {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	em {
+		color: $kccc;
+	}
+	.k-upload-status {
+		color: $kccc;
+	}
+}
+.k-slider {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	.k-draghandle {
+		color: $kccc;
+	}
+	.k-button {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 13px;
+	}
+}
+.k-progressbar-indeterminate {
+	background: url('Metro/indeterminate.gif');
+	.k-progress-status-wrap {
+		display: none;
+	}
+	.k-state-selected {
+		display: none;
+	}
+}
+.k-slider-selection {
+	background-color: $k7ea700;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-callout-n {
+	border-bottom-color: $k99c319;
+}
+.k-callout-w {
+	border-right-color: $k99c319;
+}
+.k-callout-s {
+	border-top-color: $k99c319;
+}
+.k-callout-e {
+	border-left-color: $k99c319;
+}
+.k-tooltip-validation {
+	.k-callout-n {
+		border-bottom-color: $kffe13a;
+	}
+	.k-callout-w {
+		border-right-color: $kffe13a;
+	}
+	.k-callout-s {
+		border-top-color: $kffe13a;
+	}
+	.k-callout-e {
+		border-left-color: $kffe13a;
+	}
+}
+.k-restricted-size-vertical {
+	background-color: $ke20000;
+}
+.k-restricted-size-horizontal {
+	background-color: $ke20000;
+}
+.k-file {
+	background-color: $kfff;
+	border-color: $kdadada;
+}
+.k-file-progress {
+	color: $k06c;
+	.k-progress {
+		background-color: $kd0f8ff;
+	}
+}
+.k-file-success {
+	color: $k28760b;
+	.k-progress {
+		background-color: $kddffd0;
+	}
+}
+.k-file-error {
+	color: $kc00;
+	.k-progress {
+		background-color: $kffded7;
+	}
+}
+.k-tile {
+	border-color: $kfff;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	.k-folder {
+		background-image: url('Metro/imagebrowser.png');
+	}
+	.k-file {
+		background-image: url('Metro/imagebrowser.png');
+	}
+}
+.k-treeview {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	.k-in {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		border-color: transparent;
+	}
+	.k-icon {
+		background-color: transparent;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-upload {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-time-popup {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 2px 0 $krgba0_03;
+}
+.k-datepicker-calendar {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 2px 0 $krgba0_03;
+}
+.k-multiselect {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&.k-state-focused {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 2px 0 $krgba0_03;
+	}
+	&.k-state-border-up {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-multiselect-wrap {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	&.k-state-border-down {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		.k-multiselect-wrap {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+		}
+	}
+	&.k-header {
+		border-color: $kdadada;
+		&.k-state-hover {
+			border-color: $kdadada;
+		}
+		&.k-state-focused {
+			@extend %extend_14;
+		}
+	}
+}
+.k-window {
+	border-color: $krgba0_03;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 1px 7px 1px $krgba128_03;
+	background-color: $kfff;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&.k-state-focused {
+		border-color: $krgba0_03;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 1px 1px 7px 1px $krgba0_03;
+	}
+	&.k-window-maximized {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-window-maximized {
+	.k-window-titlebar {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-window-content {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-shadow {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 2px 0 $krgba0_03;
+}
+.k-inset {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 1px 1px $krgba0_03;
+}
+.k-notification {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	&.k-notification-info {
+		background-color: $ke5f5fa;
+		color: $k0487c4;
+		border-color: $kb7e1f0;
+	}
+	&.k-notification-success {
+		background-color: $keaf7ec;
+		color: $k349946;
+		border-color: $kc3e8ca;
+	}
+	&.k-notification-warning {
+		background-color: $kfff4d9;
+		color: $k0487c4;
+		border-color: $kfff0c8;
+	}
+	&.k-notification-error {
+		background-color: $kffe0d9;
+		color: $kef470a;
+		border-color: $kffb7a8;
+	}
+}
+.k-drag-clue {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-touch-scrollbar {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-inline-block {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-combobox {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-datepicker {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-timepicker {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-datetimepicker {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	.k-select+.k-select {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-numerictextbox {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-window-content {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-filter-menu {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-list {
+	.k-state-hover {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-state-focused {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-state-highlight {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-state-selected {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-scheduler-toolbar {
+	.k-nav-next {
+		//Instead of the line below you could use @include border-top-right-radius($radius)
+		border-top-right-radius: 0;
+		//Instead of the line below you could use @include border-bottom-right-radius($radius)
+		border-bottom-right-radius: 0;
+		.k-link {
+			//Instead of the line below you could use @include border-top-right-radius($radius)
+			border-top-right-radius: 0;
+			//Instead of the line below you could use @include border-bottom-right-radius($radius)
+			border-bottom-right-radius: 0;
+		}
+	}
+	ul+ul li:last-child {
+		//Instead of the line below you could use @include border-top-right-radius($radius)
+		border-top-right-radius: 0;
+		//Instead of the line below you could use @include border-bottom-right-radius($radius)
+		border-bottom-right-radius: 0;
+		.k-link {
+			//Instead of the line below you could use @include border-top-right-radius($radius)
+			border-top-right-radius: 0;
+			//Instead of the line below you could use @include border-bottom-right-radius($radius)
+			border-bottom-right-radius: 0;
+		}
+	}
+}
+.k-more-events {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+@media screen and(-ms-high-contrast:active) and(-ms-high-contrast:none) {
+	div.km-pane-wrapper a {
+		color: $k787878;
+	}
+	.km-pane-wrapper .k-icon {
+		background-image: url('Metro/sprite_2x.png');
+		background-size: 21.2em 21em;
+	}
+}
+.km-actionsheet {
+	.k-grid-delete {
+		@extend %extend_11;
+		&:active {
+			background-color: $k900;
+		}
+	}
+	.k-scheduler-delete {
+		@extend %extend_11;
+		&:active {
+			background-color: $k900;
+		}
+	}
+}
+.k-primary {
+	color: $kfff;
+	border-color: $k7ea700;
+	background-image: none;
+	background-position: 50% 50%;
+	background-color: $k7ea700;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	&:focus {
+		@extend %extend_17;
+		&:active:not(.k-state-disabled):not([disabled]) {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+		&:not(.k-state-disabled):not([disabled]) {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+	}
+	&.k-state-focused {
+		@extend %extend_17;
+	}
+	&:hover {
+		color: $kfff;
+		border-color: $k8ebc00;
+		background-image: none;
+		background-color: $k8ebc00;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+	}
+	&:active {
+		color: $kfff;
+		border-color: $k7ea700;
+		background-image: none;
+		background-color: $k7ea700;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+	}
+	&.k-state-disabled {
+		@extend %extend_18;
+		&:hover {
+			@extend %extend_18;
+			@extend %extend_18;
+		}
+		&:active {
+			@extend %extend_18;
+		}
+	}
+}
+@media only screen and(-webkit-min-device-pixel-ratio:2),only screen and(min-device-pixel-ratio:2) {
+	.k-grouping-dropclue {
+		background-image: url('Metro/sprite_2x.png');
+		background-size: 340px 336px;
+	}
+	.k-drop-hint {
+		background-image: url('Metro/sprite_2x.png');
+		background-size: 340px 336px;
+	}
+	.k-callout {
+		background-image: url('Metro/sprite_2x.png');
+		background-size: 340px 336px;
+	}
+	.k-tool-icon {
+		background-image: url('Metro/sprite_2x.png');
+		background-size: 340px 336px;
+	}
+	.k-state-active {
+		.k-tool-icon {
+			background-image: url('Metro/sprite_2x.png');
+			background-size: 340px 336px;
+		}
+		&.k-state-hover .k-tool-icon {
+			background-image: url('Metro/sprite_2x.png');
+			background-size: 340px 336px;
+		}
+	}
+	.k-state-selected {
+		.k-tool-icon {
+			background-image: url('Metro/sprite_2x.png');
+			background-size: 340px 336px;
+		}
+		&.k-state-hover .k-tool-icon {
+			background-image: url('Metro/sprite_2x.png');
+			background-size: 340px 336px;
+		}
+	}
+	.k-mobile-list {
+		.k-edit-field {
+			[type=checkbox]:checked {
+				background-image: url('Metro/sprite_2x.png');
+				background-size: 340px 336px;
+			}
+			[type=radio]:checked {
+				background-image: url('Metro/sprite_2x.png');
+				background-size: 340px 336px;
+			}
+		}
+		.k-check:checked {
+			background-image: url('Metro/sprite_2x.png');
+			background-size: 340px 336px;
+		}
+	}
+	.k-icon:not(.k-loading) {
+		background-image: url('Metro/sprite_2x.png');
+		background-size: 340px 336px;
+	}
+	.k-state-hover .k-tool-icon {
+		background-image: url('Metro/sprite_2x.png');
+		background-size: 340px 336px;
+	}
+	.k-column-menu .k-sprite {
+		background-image: url('Metro/sprite_2x.png');
+		background-size: 340px 336px;
+	}
+	.k-dropdown-wrap .k-input {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-picker-wrap .k-input {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-numeric-wrap .k-input {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+@media screen and(-ms-high-contrast:active) {
+	.k-editor-toolbar-wrap {
+		.k-dropdown-wrap.k-state-focused {
+			border-color: $kfff;
+		}
+		.k-button-group .k-tool:focus {
+			border-color: $kfff;
+		}
+	}
+}
+.k-progressbar-horizontal>.k-state-selected {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-progressbar-vertical>.k-state-selected {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-progressbar>.k-state-selected.k-complete {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-group-footer td {
+	border-color: $kdadada;
+	background-color: $kfff;
+	@extend %extend_16;
+}
+.k-footer-template td {
+	border-color: $kdadada;
+	background-color: $kfff;
+}
+.k-panelbar>.k-item> {
+	&.k-link {
+		border-color: $kdadada;
+		border-color: $kdadada;
+	}
+	&.k-state-focused {
+		background-image: none;
+	}
+}
+.k-button-group .k-tool {
+	border-color: $kdadada;
+}
+.k-panel>li.k-item {
+	background-color: $kfff;
+	background-color: $kfff;
+}
+input.k-textbox {
+	background: 0;
+	background-color: $kfff;
+	color: $k787878;
+	&:hover {
+		background: 0;
+		background-color: $kfff;
+		color: $k787878;
+	}
+}
+textarea.k-textbox {
+	background: 0;
+	background-color: $kfff;
+	color: $k787878;
+	&:hover {
+		background: 0;
+		background-color: $kfff;
+		color: $k787878;
+	}
+}
+.k-nav-current.k-state-hover .k-link {
+	color: $k787878;
+}
+.km-pane-wrapper>.km-pane>.km-view>.km-content {
+	@extend %extend_1;
+}
+html .km-pane-wrapper {
+	.k-header {
+		background-color: $kfff;
+	}
+	.km-widget {
+		color: $k787878;
+	}
+}
+.k-icon:hover {
+	opacity: 1;
+}
+.k-scheduler-header th {
+	border-color: $kdadada;
+}
+.k-window-titlebar .k-link {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-listview>.k-state-focused {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 0 0 1px $k8ebc00;
+	&.k-state-selected {
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: inset 0 0 3px 1px $k445b00;
+	}
+}
+.k-state-selected>.k-link {
+	color: $kfff;
+}
+.k-splitbar-horizontal-hover:hover {
+	@extend %extend_7;
+}
+.k-splitbar-vertical-hover:hover {
+	@extend %extend_7;
+}
+.k-state-focused>.k-select {
+	border-color: $k8ebc00;
+	border-color: $kdadada;
+}
+div.k-imagebrowser-dropzone em {
+	background-image: none,linear-gradient(to bottom,$k8ebc00 0,$k8ebc00 100%);
+	color: $kfff;
+}
+.k-state-active>.k-link {
+	background-image: none;
+}
+.k-loading-mask.k-state-selected {
+	@extend %extend_9;
+}
+.k-slider-horizontal .k-tick {
+	background-image: url('Metro/slider-h.gif');
+}
+.k-slider-vertical .k-tick {
+	background-image: url('Metro/slider-v.gif');
+}
+.input-prepend .k-tooltip-validation {
+	@extend %extend_10;
+}
+.input-append .k-tooltip-validation {
+	@extend %extend_10;
+}
+.k-imagebrowser .k-image {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 2px 0 $krgba0_03;
+}
+.k-editor-inline : {
+	&:selection {
+		background-color: $k7ea700;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: none;
+		color: $kfff;
+	}
+	&:-moz-selection {
+		background-color: $k7ea700;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: none;
+		color: $kfff;
+	}
+}
+.k-window-titleless .k-window-content {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-group-start.k-group-end.k-tool {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-block>.k-header {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-scheduler-toolbar>ul li:first-child {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	.k-link {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.km-view.k-popup-edit-form .k-scheduler-toolbar>ul li:last-child {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	.k-link {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-scheduler-phone .k-scheduler-toolbar>ul li.k-nav-today {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+	.k-link {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-edit-field>.k-scheduler-navigation {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+.k-scheduler-mobile .k-event {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: -1;
+}
+.k-ie .km-pane-wrapper {
+	.k-widget {
+		color: $k787878;
+	}
+	.k-group {
+		color: $k787878;
+	}
+	.k-content {
+		color: $k787878;
+	}
+	.k-header {
+		color: $k787878;
+	}
+	.k-popup-edit-form .k-edit-field .k-button {
+		color: $k787878;
+	}
+}
+.k-state-default>.k-select {
+	border-color: $kdadada;
+}
+.k-grid-filter.k-state-active {
+	background-color: $kefefef;
+}
+.k-pager-numbers .k-link {
+	border-color: transparent;
+}
+a:focus {
+	outline: 0;
+}
+button:focus {
+	outline: 0;
+}
+.k-editor .k-tool:focus {
+	outline: 0;
+	border-color: $kdadada;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: inset 0 0 0 1px $k8ebc00;
+}

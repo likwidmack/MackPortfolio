@@ -1,0 +1,74 @@
+
+#canvas {
+	z-index: 0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	@include reset-box-model;
+	@include stretch;
+	background: {
+		color: transparent;
+		position: center;
+		repeat: repeat;
+		attachment: fixed;
+		image: url(/);
+		origin:border-box;
+		clip:border-box;
+	}
+
+	.lt-ie9 & {
+		zoom:1;
+		z-index:-1;
+	}
+
+	+ .row, + #body {
+		z-index:1;
+	}
+}
+
+#paletteCanvasContainer {
+    position: relative;
+    overflow: hidden;
+    -webkit-text-shadow: 1px 1px 1px rgb(255,255,255), 0px 2px 3px rgba(0,0,0,.75);
+    text-shadow: 1px 1px 1px rgb(255,255,255), 0px 2px 3px rgba(0,0,0,.75);
+
+    .canvas-panel p {
+        -webkit-text-shadow: 0px -1px 0 rgba(255,255,255,.75);
+        text-shadow: 0px -1px 0 rgba(255,255,255,.75);
+        font-size: 1.1em;
+    }
+
+    .side-canvas-panel {
+        background-color: rgba(75,0,130,0.5);
+    }
+
+    .rgb-sliders, 
+    .hsl-sliders {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    #sldRed {
+        .ui-slider-range, 
+        .ui-slider-handle {
+            border: 1px solid #770000;
+            background: #ff0000;
+        }
+    }
+
+    #sldGreen {
+        .ui-slider-range,
+        .ui-slider-handle {
+            border: 1px solid #007700;
+            background: #00ff00;
+        }
+    }
+
+    #sldBlue {
+        .ui-slider-range,
+        .ui-slider-handle {
+            border: 1px solid #000077;
+            background: #0000ff;
+        }
+    }
+}

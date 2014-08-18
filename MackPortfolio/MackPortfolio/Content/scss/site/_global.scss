@@ -1,0 +1,179 @@
+$abs-footer: rem-calc(60px);
+$header-border-bottom: 5px;
+
+html, body {
+	height:100%;
+}
+
+#mainapp {
+	min-height:100%;
+	position:relative;
+
+	.lt-ie7 & {
+		height:100%;
+	}
+}
+
+#mainbody {
+	margin: -($topbar-margin-bottom) auto 0;
+	padding-top:$topbar-margin-bottom;
+	padding-bottom:$abs-footer;
+	@include text-shadow-engraved($text-shadow-color);
+
+    .ie & , .button {
+        text-shadow: none;
+    }
+}
+
+
+header {
+    border-bottom: $header-border-bottom solid $site-primary;
+    h1, h2, h3 {
+        text-transform: uppercase;
+    }
+
+    > nav {
+        overflow:hidden !important;
+    }
+}
+
+footer.main-footer {
+	padding:.5em;
+	text-align:center;
+	overflow: hidden;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:$abs-footer;
+	background-color:rgba($z000,0.05);
+	@include text-shadow-embossed(rgba($z000,.5),rgba($zfff,.5));
+
+	hr {
+		margin:.2em !important;
+	}
+	ul {
+		display:inline-block;
+		font-size:.85em;
+		margin-bottom: 0 !important;
+
+        a[href], a[href]:hover {
+            border-bottom: 0 none;
+        }
+	}
+	p {
+		font-size:.75em;
+	}
+}
+
+hgroup {
+	h1, h2, h3, h4, h5, h6 {
+		margin: {
+		    top:0;
+		    bottom:0;
+		}
+	}
+}
+
+a, h1, h2, h3, h4, h5, h6 {
+	&.clipped {
+		background-color: mix($zfff,$z000,5%);
+		color: transparent !important;
+		text-shadow: 0 3px 3px mix($z000,$site-primary, 10%);
+		@include background-clip(text);
+		padding: {
+			right: rem-calc(10);
+			left: rem-calc(10);
+		}
+
+		&.flip {
+			background-color: $site-primary;
+			text-shadow: 0 2px 2px mix($zfff,$z000,5%);
+
+			.no-backgroundcliptext & {
+				background-color: transparent;
+				color: mix($z000,$mainsite-color, 10%) !important;
+			}
+		}
+
+		.no-backgroundcliptext & {
+			background-color: transparent;
+			color: mix($z000,$mainsite-color, 10%) !important;
+			text-shadow: 0 1px 1px mix($zfff,$z000,5%);
+		}
+	}
+}
+
+hr {
+	border-width: 1px 0;
+	border-color: $shade60-color transparent $hr-border-color transparent;
+
+    &.transparent {
+        margin:0;
+	    border-color: transparent transparent transparent transparent;
+    }
+}
+
+
+a {
+	@include simple-transition($transition-std);
+
+    &[href]:not(.button) {
+        border-bottom: 1px solid $anchor-font-color;
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+
+label.checkbox {
+    padding-left: rem-calc(20);
+    margin-bottom: rem-calc(8);
+    position: relative;
+    @include clearfix;
+
+    input {
+        &[type="checkbox"], 
+        &[type="radio"] {
+            margin: rem-calc(5 7 0 2);
+            position:absolute;
+            left:2px;
+        }
+    }
+
+    span {
+        display: inline-block;
+    }
+}
+
+#isDebugMode {
+	position: absolute;
+	right:0;
+	bottom:0;
+	padding: 0% 2%;
+	background-color:$site-alert;
+	border:3px ridge shade($site-alert,25%);
+	span {
+		font-size:1.2em;
+		display:block;
+		padding:0.25em 0;
+		margin:auto;
+	}
+}
+
+.divider.short {
+    margin:15px 0;
+    height:30px !important;
+}
+
+.close {
+//Kendo Fix 
+*[class*="k-"] {
+    @include box-sizing(content-box !important);
+    &:before, &:after {
+        @include box-sizing(content-box !important);
+    }
+    > table {
+        margin-bottom: 0px !important;
+    }
+}
+}

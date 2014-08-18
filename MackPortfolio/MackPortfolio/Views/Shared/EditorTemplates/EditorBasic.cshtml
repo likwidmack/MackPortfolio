@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/EditorTemplates/_LayoutEditor.cshtml";
+
+    object values = ViewData["Model"];
+    var htmlValue = HttpUtility.HtmlDecode(ViewData.TemplateInfo.FormattedModelValue.ToString());
+    var mdata = ViewData.ModelMetadata;
+}
+<script type="text/javascript">
+    (function () {
+        $(function () {
+            $('#@ViewData.TemplateInfo.GetFullHtmlFieldId(string.Empty)').redactor({
+                changeCallback: function (html) {
+                    var _encoded = htmlEncode(html);
+                    $('#@ViewData.TemplateInfo.GetFullHtmlFieldId(String.Empty)').val(_encoded);
+                },
+                minHeight: 300,
+                buttons: ['bold', 'italic', '|', 'link']
+            });
+        });
+    })();
+</script>
+
+<textarea id="@ViewData.TemplateInfo.GetFullHtmlFieldId("editor")" title="@mdata.Description" placeholder="@mdata.Watermark" class="html-editor">@htmlValue</textarea>
+@*@Html.TextArea("editor", htmlValue, htmlAttr)*@
+@Html.HiddenFor(m => m)

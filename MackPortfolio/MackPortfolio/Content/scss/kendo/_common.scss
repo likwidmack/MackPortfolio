@@ -1,0 +1,9680 @@
+//colors
+$color_0: rgb(255, 0, 0);
+$color_1: rgb(80, 127, 80);
+$color_2: rgb(208, 223, 208);
+$color_3: rgb(240, 255, 240);
+$color_4: rgb(80, 96, 127);
+$color_5: rgb(208, 217, 223);
+$color_6: rgb(240, 249, 255);
+$color_7: rgb(127, 80, 80);
+$color_8: rgb(223, 208, 208);
+$color_9: rgb(255, 240, 240);
+$color_10: rgb(138, 138, 138);
+$color_11: rgb(133, 133, 133);
+$color_12: rgb(255, 255, 255);
+$color_13: rgb(0, 0, 0);
+$color_14: rgb(255, 192, 203);
+$color_15: rgb(170, 170, 170);
+$color_16: rgb(197, 197, 197);
+$color_17: rgb(238, 238, 238);
+$color_18: rgb(68, 68, 68);
+$color_19: rgb(153, 153, 153);
+$color_20: rgb(255, 255, 0);
+$color_21: rgb(0, 255, 0);
+$color_22: rgb(0, 255, 255);
+$color_23: rgb(0, 0, 255);
+$color_24: rgb(255, 0, 255);
+$color_25: rgb(255, 0, 4);
+$color_26: rgb(51, 51, 51);
+$color_27: rgba(0, 0, 0, 0.6);
+
+//fonts
+$font_0: inherit;
+$font_1: Consolas;
+$font_2: Ubuntu Mono;
+$font_3: Lucida Console;
+$font_4: Courier New;
+$font_5: monospace;
+$font_6: sans-serif;
+
+//@extend-elements
+//original selectors
+//.k-floatwrap:after, .k-slider-items:after, .k-grid-toolbar:after
+%extend_1 {
+	content: "";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+}
+
+//original selectors
+//.k-textbox>input, .k-input[type="text"], .k-input[type="number"], .k-textbox, .k-picker-wrap .k-input, .k-button
+%extend_2 {
+	font-size: 100%;
+	font-family: $font_0;
+	border-style: solid;
+	border-width: 1px;
+}
+
+//original selectors
+//.k-icon, .k-sprite, .k-button-group .k-tool-icon
+%extend_3 {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+}
+
+//original selectors
+//.k-loading, .k-loading-image
+%extend_4 {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+//original selectors
+//.k-edit-label, .k-edit-form-container .editor-label
+%extend_5 {
+	float: left;
+	clear: both;
+	width: 30%;
+	padding: .4em 0 1em;
+	margin-left: 2%;
+	text-align: right;
+}
+
+//original selectors
+//.k-edit-field, .k-edit-form-container .editor-field
+%extend_6 {
+	float: right;
+	clear: right;
+	width: 60%;
+	margin-right: 2%;
+	padding: 0 0 .6em;
+}
+
+//original selectors
+//.k-block>.k-header, .k-window-titlebar
+%extend_7 {
+	position: absolute;
+	width: 100%;
+	height: 1.1em;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin-top: -2em;
+	padding: .4em 0;
+	font-size: 1.2em;
+	white-space: nowrap;
+	min-height: 16px;
+}
+
+//original selectors
+//.k-tabstrip-items .k-item, .k-panelbar .k-tabstrip-items .k-item
+%extend_8 {
+	list-style-type: none;
+	display: inline-block;
+	position: relative;
+	border-style: solid;
+	border-width: 1px 1px 0;
+	margin: 0 -1px 0 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+//original selectors
+//.k-tabstrip-items .k-link, .k-panelbar .k-tabstrip-items .k-link
+%extend_9 {
+	display: inline-block;
+	border-bottom-width: 0;
+	padding: .5em .92em;
+}
+
+//original selectors
+//.k-tabstrip>.k-content, .k-panelbar .k-tabstrip>.k-content
+%extend_10 {
+	position: static;
+	border-style: solid;
+	border-width: 1px;
+	margin: 0 .29em .3em;
+	padding: .3em .92em;
+	zoom: 1;
+}
+
+//original selectors
+//.k-panelbar>.k-item, .k-panel>.k-item
+%extend_11 {
+	list-style-type: none;
+	display: block;
+	border-width: 0;
+	margin: 0;
+	zoom: 1;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+
+//original selectors
+//.k-panelbar .k-image, .k-panelbar .k-sprite
+%extend_12 {
+	float: left;
+	margin-top: 4px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+//original selectors
+//.k-panelbar>.k-item>.k-link, .k-panel>.k-item>.k-link
+%extend_13 {
+	display: block;
+	position: relative;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding: 0 1em;
+	line-height: 2.34em;
+	text-decoration: none;
+	zoom: 1;
+}
+
+//original selectors
+//.k-panelbar-expand, .k-panelbar-collapse
+%extend_14 {
+	position: absolute;
+	top: 50%;
+	right: 4px;
+	margin-top: -8px;
+}
+
+//original selectors
+//.k-panelbar .k-panel, .k-panelbar .k-content
+%extend_15 {
+	position: relative;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin: 0;
+	padding: 0;
+	zoom: 1;
+}
+
+//original selectors
+//.k-menu, .k-menu .k-group
+%extend_16 {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	zoom: 1;
+}
+
+//original selectors
+//.k-menu .k-item .k-item, ul.k-menu-vertical>.k-item
+%extend_17 {
+	display: block;
+	float: none;
+	border-width: 0;
+}
+
+//original selectors
+//.k-menu .k-item, .k-widget.k-menu-horizontal>.k-item
+%extend_18 {
+	position: relative;
+	float: left;
+	border-style: solid;
+	border-width: 0 1px 0 0;
+	vertical-align: top;
+	zoom: 1;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: content-box;
+}
+
+//original selectors
+//ul.k-menu-vertical .k-separator, .k-menu .k-group .k-separator
+%extend_19 {
+	padding: 0;
+	height: 1px;
+	width: 100%;
+	border-width: 1px 0 0;
+}
+
+//original selectors
+//.k-grid-header-wrap, .k-grid-footer-wrap
+%extend_20 {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 0 1px 0 0;
+	zoom: 1;
+}
+
+//original selectors
+//div.k-grid-header, div.k-grid-footer
+%extend_21 {
+	padding-right: 17px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	zoom: 1;
+}
+
+//original selectors
+//.k-grid-header-locked, .k-grid-content-locked, .k-grid-footer-locked
+%extend_22 {
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	position: relative;
+	border-style: solid;
+	border-width: 0 1px 0 0;
+}
+
+//original selectors
+//.k-grid .k-pager-numbers, .k-pager-numbers .k-link, .k-pager-numbers .k-state-selected
+%extend_23 {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 1px;
+}
+
+//original selectors
+//.k-header>.k-grid-filter, .k-header>.k-header-column-menu
+%extend_24 {
+	float: right;
+	margin: -0.5em -0.6em -0.4em;
+	padding: .5em .2em .4em;
+	position: relative;
+	z-index: 1;
+}
+
+//original selectors
+//.k-grouping-header, .k-grid-toolbar
+%extend_25 {
+	margin: 0;
+	padding: .22em .2em .28em;
+	cursor: default;
+}
+
+//original selectors
+//.k-marquee-color, .k-marquee-text
+%extend_26 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+//original selectors
+//.k-calendar .k-header, .k-calendar .k-footer
+%extend_27 {
+	position: relative;
+	text-align: center;
+	zoom: 1;
+}
+
+//original selectors
+//.k-widget.k-calendar .k-nav-prev, .k-widget.k-calendar .k-nav-next
+%extend_28 {
+	position: absolute;
+	top: .16666em;
+	line-height: 1.8333em;
+	height: 1.8333em;
+}
+
+//original selectors
+//.k-calendar .k-footer .k-nav-today, .k-calendar .k-footer>.k-state-disabled
+%extend_29 {
+	display: block;
+	height: 100%;
+	padding: .5em 0;
+}
+
+//original selectors
+//.k-treeview>.k-group, .k-treeview .k-item>.k-group, .k-treeview .k-content
+%extend_30 {
+	margin: 0;
+	padding: 0;
+	background: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+//original selectors
+//.k-treeview .k-plus, .k-treeview .k-minus, .k-treeview .k-plus-disabled, .k-treeview .k-minus-disabled
+%extend_31 {
+	margin-top: .25em;
+	margin-left: -16px;
+	cursor: pointer;
+}
+
+//original selectors
+//.k-autocomplete, .k-combobox, .k-datepicker, .k-timepicker, .k-datetimepicker, .k-colorpicker, .k-numerictextbox, .k-dropdown, .k-selectbox, .k-textbox
+%extend_32 {
+	position: relative;
+	display: inline-block;
+	width: 12.4em;
+	overflow: visible;
+	border-width: 0;
+	vertical-align: middle;
+}
+
+//original selectors
+//.k-popup.k-list-container, .k-popup.k-calendar-container
+%extend_33 {
+	padding: 2px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+//original selectors
+//.k-textbox, .k-autocomplete, .k-dropdown-wrap, .k-picker-wrap, .k-numeric-wrap
+%extend_34 {
+	border-width: 1px;
+	border-style: solid;
+	padding: 0 1.9em 0 0;
+}
+
+//original selectors
+//.k-picker-wrap .k-input, .k-numeric-wrap .k-input, .k-dropdown-wrap .k-input, .k-selectbox .k-input
+%extend_35 {
+	font-family: $font_0;
+	border-width: 0;
+	outline: 0;
+}
+
+//original selectors
+//.k-dropdown .k-input, .k-selectbox .k-input
+%extend_36 {
+	background: transparent;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+//original selectors
+//.k-picker-wrap .k-select, .k-numeric-wrap .k-select, .k-dropdown-wrap .k-select
+%extend_37 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: inline-block;
+	text-decoration: none;
+	min-height: 1.65em;
+	line-height: 2em;
+	vertical-align: middle;
+	text-align: center;
+	width: 1.9em;
+	height: 100%;
+}
+
+//original selectors
+//.k-combobox .k-select, .k-picker-wrap .k-select, .k-numeric-wrap .k-select
+%extend_38 {
+	border-style: solid;
+	border-width: 0 0 0 1px;
+	border-color: inherit;
+}
+
+//original selectors
+//.k-dropdown .k-select, .k-selectbox .k-select
+%extend_39 {
+	overflow: hidden;
+	border: 0;
+	text-decoration: none;
+	font: inherit;
+	color: inherit;
+}
+
+//original selectors
+//.k-textbox>input, .k-autocomplete .k-input, .k-picker-wrap .k-input, .k-numeric-wrap .k-input, .k-dropdown-wrap .k-input, .k-selectbox .k-input
+%extend_40 {
+	height: 1.65em;
+	line-height: 1.65em;
+	padding: .177em 0;
+	text-indent: .33em;
+	border: 0;
+	margin: 0;
+}
+
+//original selectors
+//.k-webkit .k-combobox .k-dropdown-wrap:before, .k-webkit .k-picker-wrap:before, .k-webkit .k-numeric-wrap:before
+%extend_41 {
+	content: "\a0";
+	display: inline-block;
+	width: 0;
+	height: 1.65em;
+	padding-bottom: .4em;
+}
+
+//original selectors
+//.k-ie7 .k-picker-wrap .k-icon, .k-ie7 .k-dropdown-wrap .k-icon
+%extend_42 {
+	line-height: 2em;
+	font-size: 1em;
+	padding-top: 16px;
+	height: 0;
+}
+
+//original selectors
+//.k-popup .k-list .k-state-hover, .k-popup .k-list .k-state-focused, .k-popup .k-list .k-state-selected
+%extend_43 {
+	padding: 0 4px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+//original selectors
+//.k-autocomplete .k-loading, .k-multiselect .k-loading
+%extend_44 {
+	position: absolute;
+	right: 3px;
+	bottom: 4px;
+}
+
+//original selectors
+//.k-flatcolorpicker .k-hsv-rectangle .k-draghandle:hover, .k-flatcolorpicker .k-hsv-rectangle .k-draghandle:focus
+%extend_45 {
+	background: transparent;
+	border-color: $color_12;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 5px $color_13;
+}
+
+//original selectors
+//.k-flatcolorpicker .k-hue-slider .k-draghandle, .k-flatcolorpicker .k-transparency-slider .k-draghandle
+%extend_46 {
+	background: transparent;
+	border: 3px solid $color_17;
+	margin-top: 1px;
+	height: 8px;
+	width: 8px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 4px $color_18;
+}
+
+//original selectors
+//.k-flatcolorpicker .k-hue-slider .k-draghandle:hover, .k-flatcolorpicker .k-transparency-slider .k-draghandle:hover, .k-flatcolorpicker .k-hue-slider .k-draghandle:focus, .k-flatcolorpicker .k-transparency-slider .k-draghandle:focus
+%extend_47 {
+	background: transparent;
+	border-color: $color_12;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 5px $color_13;
+	border-width: 2px;
+	padding: 1px;
+}
+
+
+.fake {
+	color: $color_0;
+}
+.k-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+}
+.k-grid-toolbar {
+	display: block;
+	border-style: solid;
+	border-width: 1px 0 0;
+	@extend %extend_25;
+	&:after {
+		@extend %extend_1;
+	}
+	&:first-child {
+		border-width: 0 0 1px;
+	}
+	.k-button {
+		vertical-align: middle;
+	}
+}
+.k-block {
+	background-repeat: repeat;
+	background-position: 0 center;
+	border-style: solid;
+	border-width: 1px;
+	line-height: normal;
+	outline: 0;
+	padding: 2px;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	outline: 0;
+	.k-header {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: content-box;
+	}
+}
+.k-button {
+	background-repeat: repeat;
+	background-position: 0 center;
+	@extend %extend_2;
+	display: inline-block;
+	margin: 0;
+	padding: 2px 7px 2px;
+	font-family: $font_0;
+	line-height: 1.66em;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: middle;
+	&.k-state-disabled {
+		cursor: default;
+		&:hover {
+			cursor: default;
+		}
+		&:active {
+			cursor: default;
+		}
+	}
+	&.k-button-icontext {
+		.k-icon {
+			vertical-align: text-top;
+		}
+		.k-image {
+			vertical-align: text-top;
+		}
+	}
+	&:hover {
+		.k-state-selected {
+			.k-i-arrow-n {
+				background-position: -32px 0;
+			}
+			.k-i-arrow-s {
+				background-position: -32px -32px;
+			}
+		}
+		.k-i-arrow-n {
+			background-position: -16px 0;
+		}
+		.k-i-arrow-e {
+			background-position: -16px -16px;
+		}
+		.k-i-arrow-s {
+			background-position: -16px -32px;
+		}
+		.k-i-arrow-w {
+			background-position: -16px -48px;
+		}
+		.k-i-seek-n {
+			background-position: -16px -64px;
+		}
+		.k-i-seek-e {
+			background-position: -16px -80px;
+		}
+		.k-i-seek-s {
+			background-position: -16px -96px;
+		}
+		.k-i-seek-w {
+			background-position: -16px -112px;
+		}
+		.k-si-arrow-n {
+			background-position: -16px -129px;
+		}
+		.k-si-arrow-e {
+			background-position: -16px -144px;
+		}
+		.k-si-arrow-s {
+			background-position: -16px -159px;
+		}
+		.k-si-arrow-w {
+			background-position: -16px -176px;
+		}
+		.k-i-arrowhead-n {
+			background-position: -16px -256px;
+		}
+		.k-i-arrowhead-e {
+			background-position: -16px -272px;
+		}
+		.k-i-arrowhead-s {
+			background-position: -16px -288px;
+		}
+		.k-i-arrowhead-w {
+			background-position: -16px -304px;
+		}
+		.k-i-expand {
+			background-position: -16px -192px;
+		}
+		.k-plus {
+			background-position: -16px -192px;
+		}
+		.k-plus-disabled {
+			background-position: -16px -192px;
+		}
+		.k-i-expand-w {
+			background-position: -16px -208px;
+		}
+		.k-rtl {
+			.k-i-expand {
+				background-position: -16px -208px;
+			}
+			.k-plus {
+				background-position: -16px -208px;
+			}
+			.k-plus-disabled {
+				background-position: -16px -208px;
+			}
+			.k-i-collapse {
+				background-position: -16px -240px;
+			}
+			.k-minus {
+				background-position: -16px -240px;
+			}
+			.k-minus-disabled {
+				background-position: -16px -240px;
+			}
+		}
+		.k-i-collapse {
+			background-position: -16px -224px;
+		}
+		.k-minus {
+			background-position: -16px -224px;
+		}
+		.k-minus-disabled {
+			background-position: -16px -224px;
+		}
+		.k-i-collapse-w {
+			background-position: -16px -240px;
+		}
+		.k-i-pencil {
+			background-position: -48px 0;
+		}
+		.k-edit {
+			background-position: -48px 0;
+		}
+		.k-i-close {
+			background-position: -48px -16px;
+		}
+		.k-delete {
+			background-position: -48px -16px;
+		}
+		.k-group-delete {
+			background-position: -48px -16px;
+		}
+		.k-si-close {
+			background-position: -176px -80px;
+		}
+		.k-i-tick {
+			background-position: -48px -32px;
+		}
+		.k-insert {
+			background-position: -48px -32px;
+		}
+		.k-update {
+			background-position: -48px -32px;
+		}
+		.k-i-cancel {
+			background-position: -48px -48px;
+		}
+		.k-cancel {
+			background-position: -48px -48px;
+		}
+		.k-denied {
+			background-position: -48px -48px;
+		}
+		.k-i-plus {
+			background-position: -48px -64px;
+		}
+		.k-add {
+			background-position: -48px -64px;
+		}
+		.k-i-funnel {
+			background-position: -48px -80px;
+		}
+		.k-filter {
+			background-position: -48px -80px;
+		}
+		.k-i-funnel-clear {
+			background-position: -48px -96px;
+		}
+		.k-clear-filter {
+			background-position: -48px -96px;
+		}
+		.k-i-lock {
+			background-position: -80px 0;
+		}
+		.k-i-unlock {
+			background-position: -80px -16px;
+		}
+		.k-i-refresh {
+			background-position: -48px -112px;
+		}
+		.k-i-exception {
+			background-position: -176px -304px;
+		}
+		.k-i-restore {
+			background-position: -48px -128px;
+		}
+		.k-i-maximize {
+			background-position: -48px -144px;
+		}
+		.k-i-minimize {
+			background-position: -80px -288px;
+		}
+		.k-i-pin {
+			background-position: -176px -256px;
+		}
+		.k-i-unpin {
+			background-position: -176px -272px;
+		}
+		.k-resize-se {
+			background-position: -48px -160px;
+		}
+		.k-i-calendar {
+			background-position: -48px -176px;
+		}
+		.k-i-clock {
+			background-position: -48px -192px;
+		}
+		.k-si-plus {
+			background-position: -48px -208px;
+		}
+		.k-si-minus {
+			background-position: -48px -224px;
+		}
+		.k-i-search {
+			background-position: -48px -240px;
+		}
+		.k-i-custom {
+			background-position: -141px -113px;
+		}
+		.k-i-insert-n {
+			background-position: -176px -32px;
+		}
+		.k-insert-top {
+			background-position: -176px -32px;
+		}
+		.k-i-insert-m {
+			background-position: -176px -48px;
+		}
+		.k-insert-middle {
+			background-position: -176px -48px;
+		}
+		.k-i-insert-s {
+			background-position: -176px -64px;
+		}
+		.k-insert-bottom {
+			background-position: -176px -64px;
+		}
+		.k-i-note {
+			background-position: -176px -240px;
+		}
+		.k-warning {
+			background-position: -176px -240px;
+		}
+		.k-i-sort-asc {
+			background-position: -128px -240px;
+		}
+		.k-i-sort-desc {
+			background-position: -128px -256px;
+		}
+		.k-i-group {
+			background-position: -128px -272px;
+		}
+		.k-i-ungroup {
+			background-position: -128px -288px;
+		}
+		.k-i-columns {
+			background-position: -128px -304px;
+		}
+		.k-file {
+			background-position: -16px 0;
+		}
+		.k-i-folder-add {
+			background-position: -48px -272px;
+		}
+		.k-addfolder {
+			background-position: -48px -272px;
+		}
+		.k-i-folder-up {
+			background-position: -48px -288px;
+		}
+		.k-goup {
+			background-position: -48px -288px;
+		}
+		.k-si-refresh {
+			background-position: -176px -128px;
+		}
+		.k-si-tick {
+			background-position: -176px -96px;
+		}
+		.k-success {
+			background-position: -176px -96px;
+		}
+		.k-si-cancel {
+			background-position: -176px -112px;
+		}
+		.k-check:checked {
+			background-position: -48px -32px;
+		}
+		.k-mobile-list .k-edit-field {
+			[type=checkbox] {
+				background-position: -48px -32px;
+			}
+			[type=radio] {
+				background-position: -48px -32px;
+			}
+		}
+		.k-file>.k-icon {
+			background-position: -128px -288px;
+		}
+	}
+	&:active {
+		.k-state-selected {
+			.k-i-arrow-n {
+				background-position: -32px 0;
+			}
+			.k-i-arrow-s {
+				background-position: -32px -32px;
+			}
+		}
+		.k-i-arrow-n {
+			background-position: -16px 0;
+		}
+		.k-i-arrow-e {
+			background-position: -16px -16px;
+		}
+		.k-i-arrow-s {
+			background-position: -16px -32px;
+		}
+		.k-i-arrow-w {
+			background-position: -16px -48px;
+		}
+		.k-i-seek-n {
+			background-position: -16px -64px;
+		}
+		.k-i-seek-e {
+			background-position: -16px -80px;
+		}
+		.k-i-seek-s {
+			background-position: -16px -96px;
+		}
+		.k-i-seek-w {
+			background-position: -16px -112px;
+		}
+		.k-si-arrow-n {
+			background-position: -16px -129px;
+		}
+		.k-si-arrow-e {
+			background-position: -16px -144px;
+		}
+		.k-si-arrow-s {
+			background-position: -16px -159px;
+		}
+		.k-si-arrow-w {
+			background-position: -16px -176px;
+		}
+		.k-i-arrowhead-n {
+			background-position: -16px -256px;
+		}
+		.k-i-arrowhead-e {
+			background-position: -16px -272px;
+		}
+		.k-i-arrowhead-s {
+			background-position: -16px -288px;
+		}
+		.k-i-arrowhead-w {
+			background-position: -16px -304px;
+		}
+		.k-i-expand {
+			background-position: -16px -192px;
+		}
+		.k-plus {
+			background-position: -16px -192px;
+		}
+		.k-plus-disabled {
+			background-position: -16px -192px;
+		}
+		.k-i-expand-w {
+			background-position: -16px -208px;
+		}
+		.k-rtl {
+			.k-i-expand {
+				background-position: -16px -208px;
+			}
+			.k-plus {
+				background-position: -16px -208px;
+			}
+			.k-plus-disabled {
+				background-position: -16px -208px;
+			}
+			.k-i-collapse {
+				background-position: -16px -240px;
+			}
+			.k-minus {
+				background-position: -16px -240px;
+			}
+			.k-minus-disabled {
+				background-position: -16px -240px;
+			}
+		}
+		.k-i-collapse {
+			background-position: -16px -224px;
+		}
+		.k-minus {
+			background-position: -16px -224px;
+		}
+		.k-minus-disabled {
+			background-position: -16px -224px;
+		}
+		.k-i-collapse-w {
+			background-position: -16px -240px;
+		}
+		.k-i-pencil {
+			background-position: -48px 0;
+		}
+		.k-edit {
+			background-position: -48px 0;
+		}
+		.k-i-close {
+			background-position: -48px -16px;
+		}
+		.k-delete {
+			background-position: -48px -16px;
+		}
+		.k-group-delete {
+			background-position: -48px -16px;
+		}
+		.k-si-close {
+			background-position: -176px -80px;
+		}
+		.k-i-tick {
+			background-position: -48px -32px;
+		}
+		.k-insert {
+			background-position: -48px -32px;
+		}
+		.k-update {
+			background-position: -48px -32px;
+		}
+		.k-i-cancel {
+			background-position: -48px -48px;
+		}
+		.k-cancel {
+			background-position: -48px -48px;
+		}
+		.k-denied {
+			background-position: -48px -48px;
+		}
+		.k-i-plus {
+			background-position: -48px -64px;
+		}
+		.k-add {
+			background-position: -48px -64px;
+		}
+		.k-i-funnel {
+			background-position: -48px -80px;
+		}
+		.k-filter {
+			background-position: -48px -80px;
+		}
+		.k-i-funnel-clear {
+			background-position: -48px -96px;
+		}
+		.k-clear-filter {
+			background-position: -48px -96px;
+		}
+		.k-i-lock {
+			background-position: -80px 0;
+		}
+		.k-i-unlock {
+			background-position: -80px -16px;
+		}
+		.k-i-refresh {
+			background-position: -48px -112px;
+		}
+		.k-i-exception {
+			background-position: -176px -304px;
+		}
+		.k-i-restore {
+			background-position: -48px -128px;
+		}
+		.k-i-maximize {
+			background-position: -48px -144px;
+		}
+		.k-i-minimize {
+			background-position: -80px -288px;
+		}
+		.k-i-pin {
+			background-position: -176px -256px;
+		}
+		.k-i-unpin {
+			background-position: -176px -272px;
+		}
+		.k-resize-se {
+			background-position: -48px -160px;
+		}
+		.k-i-calendar {
+			background-position: -48px -176px;
+		}
+		.k-i-clock {
+			background-position: -48px -192px;
+		}
+		.k-si-plus {
+			background-position: -48px -208px;
+		}
+		.k-si-minus {
+			background-position: -48px -224px;
+		}
+		.k-i-search {
+			background-position: -48px -240px;
+		}
+		.k-i-custom {
+			background-position: -141px -113px;
+		}
+		.k-i-insert-n {
+			background-position: -176px -32px;
+		}
+		.k-insert-top {
+			background-position: -176px -32px;
+		}
+		.k-i-insert-m {
+			background-position: -176px -48px;
+		}
+		.k-insert-middle {
+			background-position: -176px -48px;
+		}
+		.k-i-insert-s {
+			background-position: -176px -64px;
+		}
+		.k-insert-bottom {
+			background-position: -176px -64px;
+		}
+		.k-i-note {
+			background-position: -176px -240px;
+		}
+		.k-warning {
+			background-position: -176px -240px;
+		}
+		.k-i-sort-asc {
+			background-position: -128px -240px;
+		}
+		.k-i-sort-desc {
+			background-position: -128px -256px;
+		}
+		.k-i-group {
+			background-position: -128px -272px;
+		}
+		.k-i-ungroup {
+			background-position: -128px -288px;
+		}
+		.k-i-columns {
+			background-position: -128px -304px;
+		}
+		.k-file {
+			background-position: -16px 0;
+		}
+		.k-i-folder-add {
+			background-position: -48px -272px;
+		}
+		.k-addfolder {
+			background-position: -48px -272px;
+		}
+		.k-i-folder-up {
+			background-position: -48px -288px;
+		}
+		.k-goup {
+			background-position: -48px -288px;
+		}
+		.k-si-refresh {
+			background-position: -176px -128px;
+		}
+		.k-si-tick {
+			background-position: -176px -96px;
+		}
+		.k-success {
+			background-position: -176px -96px;
+		}
+		.k-si-cancel {
+			background-position: -176px -112px;
+		}
+		.k-check:checked {
+			background-position: -48px -32px;
+		}
+		.k-mobile-list .k-edit-field {
+			[type=checkbox] {
+				background-position: -48px -32px;
+			}
+			[type=radio] {
+				background-position: -48px -32px;
+			}
+		}
+		.k-file>.k-icon {
+			background-position: -128px -288px;
+		}
+	}
+}
+.k-header {
+	background-repeat: repeat;
+	background-position: 0 center;
+}
+.k-grid-header {
+	background-repeat: repeat;
+	background-position: 0 center;
+	.k-header {
+		text-align: left;
+		overflow: hidden;
+		border-style: solid;
+		border-width: 0 0 1px 1px;
+		padding: .5em .6em .4em .6em;
+		font-weight: normal;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		.k-icon {
+			position: static;
+		}
+		&:first-child {
+			border-left-width: 0;
+		}
+	}
+	table {
+		table-layout: fixed;
+	}
+	span.k-link {
+		cursor: default;
+	}
+	.k-link:hover span {
+		&.k-i-arrow-n {
+			background-position: 0 0;
+		}
+		&.k-i-arrow-s {
+			background-position: 0 -32px;
+		}
+	}
+	.k-header>.k-link {
+		display: block;
+		min-height: 18px;
+		line-height: 18px;
+		margin: -0.5em -0.6em -0.4em -0.6em;
+		padding: .5em .6em .4em .6em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.k-with-icon .k-link {
+		margin-right: 1.3em;
+	}
+	.k-link>.k-icon {
+		vertical-align: text-top;
+	}
+}
+.k-toolbar {
+	background-repeat: repeat;
+	background-position: 0 center;
+}
+.k-grouping-header {
+	background-repeat: repeat;
+	background-position: 0 center;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	line-height: 2;
+	@extend %extend_25;
+	.k-group-indicator {
+		display: inline-block;
+		border-style: solid;
+		border-width: 1px;
+		margin: 0 3px;
+		padding: .15em .15em .15em .4em;
+		line-height: 1.5em;
+	}
+	.k-link {
+		display: inline-block;
+		border-width: 0;
+		padding: 0;
+		line-height: normal;
+		text-decoration: none;
+		.k-icon {
+			margin: 0 0 0 -3px;
+		}
+	}
+	.k-button {
+		border: 0;
+		padding: 0;
+		background: transparent;
+		line-height: 1;
+		display: inline-block;
+		vertical-align: middle;
+		.k-icon {
+			margin: 0 0 0 3px;
+		}
+	}
+	a {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.k-tooltip {
+	background-repeat: repeat;
+	background-position: 0 center;
+	position: absolute;z-index:12000;border-style:solid;border-width:1px;padding:4px 5px 4px 6px;background-repeat:repeat-x;min-width:20px;text-align:center;
+}
+.k-pager-wrap {
+	background-repeat: repeat;
+	background-position: 0 center;
+	white-space: normal;
+	clear: both;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 1px;
+	line-height: 2.0em;
+	padding: .333em 0 .333em .250em;
+	.k-pager-refresh {
+		float: right;
+		margin-right: .5em;
+		border-width: 0;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+	.k-textbox {
+		width: 3.333em;
+		margin: 0 .4em 0;
+	}
+	.k-dropdown {
+		width: 4.500em;
+	}
+	.k-widget {
+		margin: 0 .4em 0;
+	}
+}
+.k-tabstrip-items {
+	.k-item {
+		background-repeat: repeat;
+		background-position: 0 center;
+		@extend %extend_8;
+		.k-image {
+			margin: -3px 3px 0 -6px;
+			vertical-align: middle;
+		}
+		.k-sprite {
+			margin: -3px 3px 0 -6px;
+			vertical-align: middle;
+		}
+	}
+	.k-tab-on-top {
+		margin-bottom: -1px;
+		padding-bottom: 1px;
+		z-index: 1;
+	}
+	.k-state-active {
+		margin-bottom: -1px;
+		padding-bottom: 1px;
+	}
+	.k-link {
+		@extend %extend_9;
+	}
+	.k-icon {
+		margin: -1px 4px 0 -3px;
+		vertical-align: top;
+	}
+	.k-loading {
+		top: 0;
+		left: 0;
+		height: 0;
+		width: 20%;
+		position: absolute;
+		background: transparent;
+		border-top: 1px solid transparent;
+		border-color: inherit;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: "width 200ms linear";
+		animation: k-tab-loader 1s ease-in-out infinite;
+		&.k-complete {
+			width: 100%;
+			animation: none;
+		}
+	}
+	.k-progress {
+		animation: none;
+	}
+}
+.k-link {
+	cursor: pointer;
+	outline: 0;
+	text-decoration: none;
+	&.k-state-hover {
+		background-repeat: repeat;
+		background-position: 0 center;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	&:not(.k-state-disabled):hover> {
+		&.k-state-selected {
+			.k-i-arrow-n {
+				background-position: -32px 0;
+			}
+			.k-i-arrow-s {
+				background-position: -32px -32px;
+			}
+		}
+		&.k-i-arrow-n {
+			background-position: -16px 0;
+		}
+		&.k-i-arrow-e {
+			background-position: -16px -16px;
+		}
+		&.k-i-arrow-s {
+			background-position: -16px -32px;
+		}
+		&.k-i-arrow-w {
+			background-position: -16px -48px;
+		}
+		&.k-i-seek-n {
+			background-position: -16px -64px;
+		}
+		&.k-i-seek-e {
+			background-position: -16px -80px;
+		}
+		&.k-i-seek-s {
+			background-position: -16px -96px;
+		}
+		&.k-i-seek-w {
+			background-position: -16px -112px;
+		}
+		&.k-si-arrow-n {
+			background-position: -16px -129px;
+		}
+		&.k-si-arrow-e {
+			background-position: -16px -144px;
+		}
+		&.k-si-arrow-s {
+			background-position: -16px -159px;
+		}
+		&.k-si-arrow-w {
+			background-position: -16px -176px;
+		}
+		&.k-i-arrowhead-n {
+			background-position: -16px -256px;
+		}
+		&.k-i-arrowhead-e {
+			background-position: -16px -272px;
+		}
+		&.k-i-arrowhead-s {
+			background-position: -16px -288px;
+		}
+		&.k-i-arrowhead-w {
+			background-position: -16px -304px;
+		}
+		&.k-i-expand {
+			background-position: -16px -192px;
+		}
+		&.k-plus {
+			background-position: -16px -192px;
+		}
+		&.k-plus-disabled {
+			background-position: -16px -192px;
+		}
+		&.k-i-expand-w {
+			background-position: -16px -208px;
+		}
+		&.k-rtl {
+			.k-i-expand {
+				background-position: -16px -208px;
+			}
+			.k-plus {
+				background-position: -16px -208px;
+			}
+			.k-plus-disabled {
+				background-position: -16px -208px;
+			}
+			.k-i-collapse {
+				background-position: -16px -240px;
+			}
+			.k-minus {
+				background-position: -16px -240px;
+			}
+			.k-minus-disabled {
+				background-position: -16px -240px;
+			}
+		}
+		&.k-i-collapse {
+			background-position: -16px -224px;
+		}
+		&.k-minus {
+			background-position: -16px -224px;
+		}
+		&.k-minus-disabled {
+			background-position: -16px -224px;
+		}
+		&.k-i-collapse-w {
+			background-position: -16px -240px;
+		}
+		&.k-i-pencil {
+			background-position: -48px 0;
+		}
+		&.k-edit {
+			background-position: -48px 0;
+		}
+		&.k-i-close {
+			background-position: -48px -16px;
+		}
+		&.k-delete {
+			background-position: -48px -16px;
+		}
+		&.k-group-delete {
+			background-position: -48px -16px;
+		}
+		&.k-si-close {
+			background-position: -176px -80px;
+		}
+		&.k-i-tick {
+			background-position: -48px -32px;
+		}
+		&.k-insert {
+			background-position: -48px -32px;
+		}
+		&.k-update {
+			background-position: -48px -32px;
+		}
+		&.k-i-cancel {
+			background-position: -48px -48px;
+		}
+		&.k-cancel {
+			background-position: -48px -48px;
+		}
+		&.k-denied {
+			background-position: -48px -48px;
+		}
+		&.k-i-plus {
+			background-position: -48px -64px;
+		}
+		&.k-add {
+			background-position: -48px -64px;
+		}
+		&.k-i-funnel {
+			background-position: -48px -80px;
+		}
+		&.k-filter {
+			background-position: -48px -80px;
+		}
+		&.k-i-funnel-clear {
+			background-position: -48px -96px;
+		}
+		&.k-clear-filter {
+			background-position: -48px -96px;
+		}
+		&.k-i-lock {
+			background-position: -80px 0;
+		}
+		&.k-i-unlock {
+			background-position: -80px -16px;
+		}
+		&.k-i-refresh {
+			background-position: -48px -112px;
+		}
+		&.k-i-exception {
+			background-position: -176px -304px;
+		}
+		&.k-i-restore {
+			background-position: -48px -128px;
+		}
+		&.k-i-maximize {
+			background-position: -48px -144px;
+		}
+		&.k-i-minimize {
+			background-position: -80px -288px;
+		}
+		&.k-i-pin {
+			background-position: -176px -256px;
+		}
+		&.k-i-unpin {
+			background-position: -176px -272px;
+		}
+		&.k-resize-se {
+			background-position: -48px -160px;
+		}
+		&.k-i-calendar {
+			background-position: -48px -176px;
+		}
+		&.k-i-clock {
+			background-position: -48px -192px;
+		}
+		&.k-si-plus {
+			background-position: -48px -208px;
+		}
+		&.k-si-minus {
+			background-position: -48px -224px;
+		}
+		&.k-i-search {
+			background-position: -48px -240px;
+		}
+		&.k-i-custom {
+			background-position: -141px -113px;
+		}
+		&.k-i-insert-n {
+			background-position: -176px -32px;
+		}
+		&.k-insert-top {
+			background-position: -176px -32px;
+		}
+		&.k-i-insert-m {
+			background-position: -176px -48px;
+		}
+		&.k-insert-middle {
+			background-position: -176px -48px;
+		}
+		&.k-i-insert-s {
+			background-position: -176px -64px;
+		}
+		&.k-insert-bottom {
+			background-position: -176px -64px;
+		}
+		&.k-i-note {
+			background-position: -176px -240px;
+		}
+		&.k-warning {
+			background-position: -176px -240px;
+		}
+		&.k-i-sort-asc {
+			background-position: -128px -240px;
+		}
+		&.k-i-sort-desc {
+			background-position: -128px -256px;
+		}
+		&.k-i-group {
+			background-position: -128px -272px;
+		}
+		&.k-i-ungroup {
+			background-position: -128px -288px;
+		}
+		&.k-i-columns {
+			background-position: -128px -304px;
+		}
+		&.k-file {
+			background-position: -16px 0;
+		}
+		&.k-i-folder-add {
+			background-position: -48px -272px;
+		}
+		&.k-addfolder {
+			background-position: -48px -272px;
+		}
+		&.k-i-folder-up {
+			background-position: -48px -288px;
+		}
+		&.k-goup {
+			background-position: -48px -288px;
+		}
+		&.k-si-refresh {
+			background-position: -176px -128px;
+		}
+		&.k-si-tick {
+			background-position: -176px -96px;
+		}
+		&.k-success {
+			background-position: -176px -96px;
+		}
+		&.k-si-cancel {
+			background-position: -176px -112px;
+		}
+		&.k-check:checked {
+			background-position: -48px -32px;
+		}
+		&.k-mobile-list .k-edit-field {
+			[type=checkbox] {
+				background-position: -48px -32px;
+			}
+			[type=radio] {
+				background-position: -48px -32px;
+			}
+		}
+		&.k-file>.k-icon {
+			background-position: -128px -288px;
+		}
+	}
+}
+.k-textbox {
+	background-repeat: repeat;
+	background-position: 0 center;
+	@extend %extend_2;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	@extend %extend_32;
+	@extend %extend_34;
+	padding: 0;
+	display: inline-block;
+	vertical-align: middle;
+	outline: 0;
+	padding: 2px .3em;
+	line-height: 1.6em;
+	&:hover {
+		background-repeat: repeat;
+		background-position: 0 center;
+		.k-state-selected {
+			.k-i-arrow-n {
+				background-position: -32px 0;
+			}
+			.k-i-arrow-s {
+				background-position: -32px -32px;
+			}
+		}
+		.k-i-arrow-n {
+			background-position: -16px 0;
+		}
+		.k-i-arrow-e {
+			background-position: -16px -16px;
+		}
+		.k-i-arrow-s {
+			background-position: -16px -32px;
+		}
+		.k-i-arrow-w {
+			background-position: -16px -48px;
+		}
+		.k-i-seek-n {
+			background-position: -16px -64px;
+		}
+		.k-i-seek-e {
+			background-position: -16px -80px;
+		}
+		.k-i-seek-s {
+			background-position: -16px -96px;
+		}
+		.k-i-seek-w {
+			background-position: -16px -112px;
+		}
+		.k-si-arrow-n {
+			background-position: -16px -129px;
+		}
+		.k-si-arrow-e {
+			background-position: -16px -144px;
+		}
+		.k-si-arrow-s {
+			background-position: -16px -159px;
+		}
+		.k-si-arrow-w {
+			background-position: -16px -176px;
+		}
+		.k-i-arrowhead-n {
+			background-position: -16px -256px;
+		}
+		.k-i-arrowhead-e {
+			background-position: -16px -272px;
+		}
+		.k-i-arrowhead-s {
+			background-position: -16px -288px;
+		}
+		.k-i-arrowhead-w {
+			background-position: -16px -304px;
+		}
+		.k-i-expand {
+			background-position: -16px -192px;
+		}
+		.k-plus {
+			background-position: -16px -192px;
+		}
+		.k-plus-disabled {
+			background-position: -16px -192px;
+		}
+		.k-i-expand-w {
+			background-position: -16px -208px;
+		}
+		.k-rtl {
+			.k-i-expand {
+				background-position: -16px -208px;
+			}
+			.k-plus {
+				background-position: -16px -208px;
+			}
+			.k-plus-disabled {
+				background-position: -16px -208px;
+			}
+			.k-i-collapse {
+				background-position: -16px -240px;
+			}
+			.k-minus {
+				background-position: -16px -240px;
+			}
+			.k-minus-disabled {
+				background-position: -16px -240px;
+			}
+		}
+		.k-i-collapse {
+			background-position: -16px -224px;
+		}
+		.k-minus {
+			background-position: -16px -224px;
+		}
+		.k-minus-disabled {
+			background-position: -16px -224px;
+		}
+		.k-i-collapse-w {
+			background-position: -16px -240px;
+		}
+		.k-i-pencil {
+			background-position: -48px 0;
+		}
+		.k-edit {
+			background-position: -48px 0;
+		}
+		.k-i-close {
+			background-position: -48px -16px;
+		}
+		.k-delete {
+			background-position: -48px -16px;
+		}
+		.k-group-delete {
+			background-position: -48px -16px;
+		}
+		.k-si-close {
+			background-position: -176px -80px;
+		}
+		.k-i-tick {
+			background-position: -48px -32px;
+		}
+		.k-insert {
+			background-position: -48px -32px;
+		}
+		.k-update {
+			background-position: -48px -32px;
+		}
+		.k-i-cancel {
+			background-position: -48px -48px;
+		}
+		.k-cancel {
+			background-position: -48px -48px;
+		}
+		.k-denied {
+			background-position: -48px -48px;
+		}
+		.k-i-plus {
+			background-position: -48px -64px;
+		}
+		.k-add {
+			background-position: -48px -64px;
+		}
+		.k-i-funnel {
+			background-position: -48px -80px;
+		}
+		.k-filter {
+			background-position: -48px -80px;
+		}
+		.k-i-funnel-clear {
+			background-position: -48px -96px;
+		}
+		.k-clear-filter {
+			background-position: -48px -96px;
+		}
+		.k-i-lock {
+			background-position: -80px 0;
+		}
+		.k-i-unlock {
+			background-position: -80px -16px;
+		}
+		.k-i-refresh {
+			background-position: -48px -112px;
+		}
+		.k-i-exception {
+			background-position: -176px -304px;
+		}
+		.k-i-restore {
+			background-position: -48px -128px;
+		}
+		.k-i-maximize {
+			background-position: -48px -144px;
+		}
+		.k-i-minimize {
+			background-position: -80px -288px;
+		}
+		.k-i-pin {
+			background-position: -176px -256px;
+		}
+		.k-i-unpin {
+			background-position: -176px -272px;
+		}
+		.k-resize-se {
+			background-position: -48px -160px;
+		}
+		.k-i-calendar {
+			background-position: -48px -176px;
+		}
+		.k-i-clock {
+			background-position: -48px -192px;
+		}
+		.k-si-plus {
+			background-position: -48px -208px;
+		}
+		.k-si-minus {
+			background-position: -48px -224px;
+		}
+		.k-i-search {
+			background-position: -48px -240px;
+		}
+		.k-i-custom {
+			background-position: -141px -113px;
+		}
+		.k-i-insert-n {
+			background-position: -176px -32px;
+		}
+		.k-insert-top {
+			background-position: -176px -32px;
+		}
+		.k-i-insert-m {
+			background-position: -176px -48px;
+		}
+		.k-insert-middle {
+			background-position: -176px -48px;
+		}
+		.k-i-insert-s {
+			background-position: -176px -64px;
+		}
+		.k-insert-bottom {
+			background-position: -176px -64px;
+		}
+		.k-i-note {
+			background-position: -176px -240px;
+		}
+		.k-warning {
+			background-position: -176px -240px;
+		}
+		.k-i-sort-asc {
+			background-position: -128px -240px;
+		}
+		.k-i-sort-desc {
+			background-position: -128px -256px;
+		}
+		.k-i-group {
+			background-position: -128px -272px;
+		}
+		.k-i-ungroup {
+			background-position: -128px -288px;
+		}
+		.k-i-columns {
+			background-position: -128px -304px;
+		}
+		.k-file {
+			background-position: -16px 0;
+		}
+		.k-i-folder-add {
+			background-position: -48px -272px;
+		}
+		.k-addfolder {
+			background-position: -48px -272px;
+		}
+		.k-i-folder-up {
+			background-position: -48px -288px;
+		}
+		.k-goup {
+			background-position: -48px -288px;
+		}
+		.k-si-refresh {
+			background-position: -176px -128px;
+		}
+		.k-si-tick {
+			background-position: -176px -96px;
+		}
+		.k-success {
+			background-position: -176px -96px;
+		}
+		.k-si-cancel {
+			background-position: -176px -112px;
+		}
+		.k-check:checked {
+			background-position: -48px -32px;
+		}
+		.k-mobile-list .k-edit-field {
+			[type=checkbox] {
+				background-position: -48px -32px;
+			}
+			[type=radio] {
+				background-position: -48px -32px;
+			}
+		}
+		.k-file>.k-icon {
+			background-position: -128px -288px;
+		}
+	}
+	&.k-space-left {
+		padding-left: 1.9em;
+	}
+	&.k-space-right {
+		padding-right: 1.9em;
+	}
+	.k-icon {
+		top: 50%;
+		margin: -8px 0 0;
+		position: absolute;
+	}
+}
+.k-autocomplete {
+	background-repeat: repeat;
+	background-position: 0 center;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	@extend %extend_32;
+	white-space: nowrap;
+	position: relative;
+	cursor: default;
+	@extend %extend_34;
+	padding: 0;
+	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: "box-shadow .15s ease-out";
+	&.k-state-hover {
+		background-repeat: repeat;
+		background-position: 0 center;
+	}
+	&.k-state-border-down {
+		border-bottom-width: 0;
+		padding-bottom: 1px;
+	}
+	.k-input {
+		display: block;
+		@extend %extend_40;
+	}
+	.k-loading {
+		@extend %extend_44;
+	}
+}
+.k-dropdown-wrap {
+	background-repeat: repeat;
+	background-position: 0 center;
+	position: relative;
+	display: block;
+	@extend %extend_34;
+	&.k-state-hover {
+		background-repeat: repeat;
+		background-position: 0 center;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: "box-shadow .15s ease-out";
+	}
+	&.k-state-border-down {
+		border-bottom-width: 0;
+		padding-bottom: 1px;
+	}
+	&.k-state-focused {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: "box-shadow .15s ease-out";
+	}
+	.k-input {
+		@extend %extend_35;
+		@extend %extend_40;
+	}
+	.k-select {
+		@extend %extend_37;
+	}
+}
+.k-picker-wrap {
+	background-repeat: repeat;
+	background-position: 0 center;
+	position: relative;
+	cursor: default;
+	display: block;
+	@extend %extend_34;
+	&.k-state-hover {
+		background-repeat: repeat;
+		background-position: 0 center;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: "box-shadow .15s ease-out";
+	}
+	.k-input {
+		@extend %extend_2;
+		width: 100%;
+		vertical-align: top;
+		@extend %extend_35;
+		@extend %extend_40;
+		display: inline;
+		margin: 0;
+	}
+	&.k-state-border-down {
+		border-bottom-width: 0;
+		padding-bottom: 1px;
+	}
+	&.k-state-focused {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: "box-shadow .15s ease-out";
+	}
+	.k-select {
+		@extend %extend_37;
+		@extend %extend_38;
+	}
+	.k-icon {
+		cursor: pointer;
+	}
+}
+.k-numeric-wrap {
+	background-repeat: repeat;
+	background-position: 0 center;
+	position: relative;
+	cursor: default;
+	display: block;
+	@extend %extend_34;
+	&.k-state-hover {
+		background-repeat: repeat;
+		background-position: 0 center;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: "box-shadow .15s ease-out";
+	}
+	&.k-state-border-down {
+		border-bottom-width: 0;
+		padding-bottom: 1px;
+	}
+	&.k-expand-padding {
+		padding-right: 0;
+	}
+	&.k-state-focused {
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: "box-shadow .15s ease-out";
+	}
+	.k-input {
+		width: 100%;
+		vertical-align: top;
+		@extend %extend_35;
+		@extend %extend_40;
+		display: inline;
+		&::-webkit-inner-spin-button {
+		}
+	}
+	.k-select {
+		@extend %extend_37;
+		@extend %extend_38;
+		padding: 0;
+	}
+}
+.k-draghandle {
+	background-repeat: repeat;
+	background-position: 0 center;
+	border-style: solid;
+	border-width: 1px;
+	position: absolute;background-repeat:no-repeat;background-color:transparent;text-indent:-3333px;overflow:hidden;text-decoration:none;text-align:center;outline:0;
+}
+.k-textbox>input {
+	@extend %extend_2;
+	width: 100%;
+	vertical-align: top;
+	display: block;
+	@extend %extend_40;
+	outline: 0;
+}
+.k-input[type="text"] {
+	@extend %extend_2;
+}
+.k-input[type="number"] {
+	@extend %extend_2;
+}
+.k-widget {
+	border-style: solid;
+	border-width: 1px;
+	line-height: normal;
+	outline: 0;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: content-box;
+	//Instead of the line below you could use @include background-clip($clip)
+	background-clip: border-box;
+	outline: 0;
+	* {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: content-box;
+		//Instead of the line below you could use @include background-clip($clip)
+		background-clip: border-box;
+		&:before {
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: content-box;
+		}
+	}
+	&.k-calendar {
+		.k-nav-prev {
+			@extend %extend_28;
+			left: 1%;
+		}
+		.k-nav-next {
+			@extend %extend_28;
+			right: 1%;
+		}
+		.k-nav-fast {
+			display: inline-block;
+			width: 75%;
+			height: 1.8333em;
+			line-height: 1.8333em;
+			margin: .16666em -0.08333em .3333em 0;
+		}
+	}
+	.km-scroll-wrapper {
+		position: relative;padding-bottom:0;
+	}
+	&.k-menu-horizontal>.k-item {
+		@extend %extend_18;
+	}
+}
+.k-inline-block {
+	border-style: solid;
+	border-width: 1px;
+	padding: 0 2px;
+}
+.k-button[disabled] {
+	cursor: default;
+}
+.k-state-disabled {
+	cursor: default!important;
+	outline: 0;
+	.k-button {
+		cursor: default;
+		cursor: default!important;
+		outline: 0;
+		&:hover {
+			cursor: default;
+		}
+		&:active {
+			cursor: default;
+		}
+	}
+	.k-link {
+		cursor: default!important;
+		outline: 0;
+	}
+	.k-icon {
+		cursor: default!important;
+		outline: 0;
+	}
+	.k-draghandle {
+		cursor: default!important;
+		outline: 0;
+	}
+	.k-slider-wrap {
+		filter: alpha(opacity=60);opacity:.6;
+		.k-slider-items {
+			color: $color_26;
+		}
+	}
+	.k-upload-button input {
+		cursor: default!important;
+		outline: 0;
+	}
+}
+.k-ie7 {
+	.k-button {
+		line-height: normal;
+		overflow: visible;
+		margin-right: 4px;
+		display: inline;zoom:1;
+	}
+	a {
+		&.k-button {
+			line-height: 1.6;
+			padding-left: 7px;
+			padding-right: 7px;
+		}
+		&.k-button-icon {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+	.k-slider {
+		.k-icon {
+			margin-top: 2px;
+		}
+		a.k-button {
+			height: 22px;
+			line-height: 22px;
+			padding: 0;
+		}
+	}
+	.k-button-expand {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.k-icon {
+		text-indent: 0;
+	}
+	.k-sprite {
+		text-indent: 0;
+	}
+	.k-window {
+		padding-bottom: 1.16em;
+	}
+	.k-tabstrip-items {
+		.k-item {
+			display: inline;zoom:1;
+			.k-image {
+				margin-top: -1px;
+				vertical-align: top;
+			}
+			.k-sprite {
+				margin-top: -1px;
+				vertical-align: top;
+			}
+		}
+		.k-link {
+			display: inline;zoom:1;
+		}
+	}
+	.k-menu {
+		.k-image {
+			margin-top: 0;
+		}
+		.k-sprite {
+			margin-top: 0;
+		}
+		.k-item .k-item {
+			zoom: normal;
+		}
+		.k-item>.k-link>.k-i-arrow-s {
+			margin-top: 0;
+		}
+		.k-group .k-link {
+			width: 100%;
+		}
+	}
+	.k-pager-sizes {
+		float: left;
+	}
+	.k-dirty-cell {
+		position: relative;
+	}
+	.k-dirty {
+		top: 5px;
+	}
+	.k-grid-actions {
+		vertical-align: bottom;
+		display: inline;zoom:1;
+	}
+	.k-grid {
+		.k-pager-numbers {
+			display: inline;zoom:1;
+		}
+		.k-status-text {
+			display: inline;zoom:1;
+		}
+		tbody a.k-button {
+			min-width: 62px;
+		}
+	}
+	.k-edit-cell> {
+		&.text-box {
+			display: block;
+			width: 90%;
+		}
+		&.k-textbox {
+			display: block;
+			width: 90%;
+		}
+		&.k-widget {
+			display: block;
+			width: 90%;
+		}
+	}
+	.k-grid-edit-row>td> {
+		&.k-textbox {
+			display: block;
+			width: 90%;
+		}
+		&.k-widget {
+			display: block;
+			width: 90%;
+		}
+		&.text-box {
+			display: block;
+			width: 90%;
+		}
+	}
+	.k-picker-wrap {
+		.k-input {
+			margin: -1px 0;
+			text-indent: 0;
+		}
+		.k-icon {
+			@extend %extend_42;
+		}
+		.k-select {
+			display: inline;zoom:1;
+		}
+	}
+	.k-dropdown-wrap {
+		.k-input {
+			text-indent: 0;
+		}
+		.k-icon {
+			@extend %extend_42;
+		}
+		.k-select {
+			display: inline;zoom:1;
+		}
+	}
+	.k-textbox {
+		padding: 1px 0;
+		text-indent: 0;
+	}
+	.k-flatcolorpicker {
+		.k-hsv-gradient {
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#00ffffff',GradientType=1) progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#ff000000',GradientType=0);
+		}
+		.k-hue-slider .k-slider-track {
+			background: url("textures/hue.png") repeat 0 50%;
+		}
+		.k-transparency-slider .k-slider-track {
+			background: url("textures/transparency.png") repeat 0 50%;
+		}
+	}
+	.k-scheduler-toolbar {
+		.k-nav-prev .k-link {
+			height: 2.3em;margin-top:-1px;vertical-align:middle;
+			.k-icon {
+				margin-top: .5em;
+			}
+		}
+		.k-nav-next .k-link {
+			height: 2.3em;margin-top:-1px;vertical-align:middle;
+			.k-icon {
+				margin-top: .5em;
+			}
+		}
+	}
+	.k-upload-button {
+		vertical-align: baseline;
+		margin: .8em;
+	}
+	.k-upload-selected {
+		min-width: 100px;
+	}
+	.k-imagebrowser {
+		.k-upload-button {
+			vertical-align: baseline;position:relative;top:1px;
+		}
+		.k-upload .k-icon {
+			vertical-align: baseline;position:relative;top:1px;
+			top: 2px;
+		}
+		.k-toolbar .k-button-icon {
+			vertical-align: middle;
+		}
+	}
+	.k-grid-filter {
+		display: inline;zoom:1;
+	}
+	.k-header-column-menu {
+		display: inline;zoom:1;
+	}
+	.k-pager-numbers {
+		.k-link {
+			display: inline;zoom:1;
+		}
+		span {
+			display: inline;zoom:1;
+		}
+		input {
+			display: inline;zoom:1;
+		}
+	}
+	.k-grouping-header {
+		a {
+			display: inline;zoom:1;
+		}
+		.k-group-indicator {
+			display: inline;zoom:1;
+		}
+		.k-link {
+			display: inline;zoom:1;
+		}
+		.k-button {
+			display: inline;zoom:1;
+		}
+	}
+	.k-edit-label {
+		display: inline;zoom:1;
+	}
+	.k-edit-field {
+		display: inline;zoom:1;
+	}
+	.k-edit-form-container {
+		.editor-label {
+			display: inline;zoom:1;
+		}
+		.editor-field {
+			display: inline;zoom:1;
+		}
+	}
+	.k-dropdown {
+		display: inline;zoom:1;
+	}
+	.k-numerictextbox {
+		display: inline;zoom:1;
+	}
+	.k-timepicker {
+		display: inline;zoom:1;
+	}
+	.k-datepicker {
+		display: inline;zoom:1;
+	}
+	.k-datetimepicker {
+		display: inline;zoom:1;
+	}
+	.k-colorpicker {
+		display: inline;zoom:1;
+		display: inline;zoom:1;
+		.k-tool-icon {
+			display: inline;zoom:1;
+		}
+	}
+	.k-calendar {
+		display: inline;zoom:1;
+		.k-nav-fast {
+			display: inline;zoom:1;
+		}
+	}
+	.k-treeview {
+		.k-icon {
+			display: inline;zoom:1;
+		}
+		.k-image {
+			display: inline;zoom:1;
+		}
+		.k-sprite {
+			display: inline;zoom:1;
+		}
+		.k-in {
+			display: inline;zoom:1;
+		}
+		.k-item {
+			zoom: 1;
+		}
+		.k-group {
+			zoom: 1;
+		}
+	}
+	.k-slider-horizontal {
+		display: inline;zoom:1;
+	}
+	.t-filename {
+		display: inline;zoom:1;
+	}
+	.k-scheduler-toolbar>ul>li {
+		display: inline;zoom:1;
+		display: inline;zoom:1;
+	}
+	.k-scheduler-footer>ul>li {
+		display: inline;zoom:1;
+		display: inline;zoom:1;
+	}
+	.k-progressbar {
+		display: inline;zoom:1;
+	}
+	.k-progress-status {
+		display: inline;zoom:1;
+	}
+	.k-grid-header-locked {
+		display: inline;zoom:1;
+	}
+	.k-grid-content-locked {
+		display: inline;zoom:1;
+	}
+	.k-grid-footer-locked {
+		display: inline;zoom:1;
+	}
+	.k-grid-content table {
+		width: auto;
+	}
+	.k-pager-wrap .k-textbox {
+		height: 1.3333em;
+		margin-top: .16666em;
+		display: inline;
+	}
+	.k-numeric-wrap .k-input {
+		margin: -1px 0;
+		text-indent: 0;
+	}
+	.k-combobox .k-input {
+		margin: -1px 0;
+	}
+	.k-autocomplete .k-input {
+		text-indent: 0;
+	}
+	.k-selectbox .k-input {
+		text-indent: 0;
+	}
+	input.k-textbox {
+		line-height: 1.72em;
+		height: 1.72em;
+		text-indent: .33em;
+	}
+	.k-progressbar-vertical .k-progress-status {
+		writing-mode: tb-rl;padding:.5em 0;
+	}
+	.k-slider-vertical .k-tick {
+		float: left;clear:left;width:100%;
+	}
+	.k-scheduler-content .k-scheduler-table {
+		width: auto;
+	}
+	.k-dropzone em {
+		vertical-align: baseline;
+	}
+	.k-upload-files .k-button {
+		line-height: 1;
+	}
+	.k-grouping-row p {
+		display: inline;zoom:1;
+	}
+	.k-palette.k-reset {
+		display: inline;zoom:1;
+	}
+	.k-editor-dialog .k-button {
+		display: inline;zoom:1;
+	}
+	.k-form-text-row label {
+		display: inline;zoom:1;
+	}
+	.k-splitbar-draggable-vertical .k-resize-handle {
+		display: inline;zoom:1;
+	}
+	.k-splitbar-draggable-horizontal .k-resize-handle {
+		display: inline;zoom:1;
+	}
+	div.k-window {
+		display: inline;zoom:1;
+	}
+	.k-window-titlebar .k-window-action {
+		display: inline;zoom:1;
+	}
+	.k-event:hover .k-event-delete {
+		display: inline;zoom:1;
+	}
+	tr:hover>td>.k-task .k-event-delete {
+		display: inline;zoom:1;
+	}
+	.k-progressbar-horizontal .k-item {
+		display: inline;zoom:1;
+	}
+	.k-grid-header-locked+.k-grid-header-wrap {
+		display: inline;zoom:1;
+	}
+	.k-grid-content-locked+.k-grid-content {
+		display: inline;zoom:1;
+	}
+}
+a {
+	&.k-button {
+		//Instead of the line below you could use @include user-select($select)
+		user-select: none;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&.k-button-expand {
+		display: block;
+	}
+}
+.k-ff {
+	input {
+		&.k-button {
+			padding-bottom: .37em;
+			padding-top: .37em;
+		}
+		&.k-textbox {
+			height: 2.17em;
+		}
+	}
+	.k-editor-toolbar {
+		padding: 0;
+		li {
+			display: inline-block;padding:.1em 0;
+		}
+	}
+	.km-view {
+		overflow: hidden;
+	}
+	.km-pane {
+		overflow: hidden;
+	}
+}
+button {
+	&.k-button-expand {
+		width: 100%;
+	}
+	&.k-button::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+}
+input {
+	&.k-textbox {
+		height: 2.13em;
+		text-indent: .33em;
+	}
+	&.k-button::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+}
+body {
+	.k-button-icon {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.k-datetimepicker .k-select {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+	}
+}
+.k-button-icontext {
+	padding-right: 8px;
+	overflow: visible;
+	.k-icon {
+		margin-right: .2rem;
+		margin-left: -0.2rem;
+	}
+	.k-image {
+		margin-right: .2rem;
+		margin-left: -0.2rem;
+	}
+}
+.k-ie8 {
+	.k-button-icontext {
+		.k-icon {
+			margin-right: 3px;
+			margin-left: -3px;
+		}
+		.k-image {
+			margin-right: 3px;
+			margin-left: -3px;
+		}
+	}
+	.k-icon {
+		vertical-align: middle;
+	}
+	.k-sprite {
+		vertical-align: middle;
+	}
+	.k-grid-filter {
+		font-size: 100%;
+	}
+	.k-header-column-menu {
+		font-size: 100%;
+	}
+	.k-flatcolorpicker {
+		.k-hsv-gradient {
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#00ffffff',GradientType=1) progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#ff000000',GradientType=0);
+		}
+		.k-hue-slider .k-slider-track {
+			background: url("textures/hue.png") repeat 0 50%;
+		}
+		.k-transparency-slider .k-slider-track {
+			background: url("textures/transparency.png") repeat 0 50%;
+		}
+	}
+	.k-upload-button {
+		margin: .8em;
+	}
+	.k-upload-status-total {
+		line-height: 29px;
+	}
+	.k-button-group .k-tool-icon {
+		vertical-align: middle;
+	}
+	.k-grid tbody button.k-button {
+		min-width: 64px;
+	}
+	.k-progressbar-vertical .k-progress-status {
+		writing-mode: bt-lr;padding:.5em 0;
+	}
+}
+html {
+	body {
+		.k-button-bare {
+			background: none!important;
+			color: inherit;
+			border-width: 0;
+			&.k-upload-button:hover {
+				color: inherit;
+			}
+		}
+		.k-grid tbody .k-button-icon {
+			width: auto;
+			min-width: 0;
+		}
+	}
+	.k-success-colored {
+		color: $color_1;
+		border-color: $color_2;
+		background-color: $color_3;
+	}
+	.k-info-colored {
+		color: $color_4;
+		border-color: $color_5;
+		background-color: $color_6;
+	}
+	.k-error-colored {
+		color: $color_7;
+		border-color: $color_8;
+		background-color: $color_9;
+	}
+	.k-upload {
+		position: relative;
+	}
+	.k-upload-empty {
+		border-width: 0;background:0;
+	}
+	.k-edit-cell .k-tooltip {
+		width: auto;
+		max-width: 300px;
+	}
+	.k-grid-edit-row .k-tooltip {
+		width: auto;
+		max-width: 300px;
+	}
+}
+@media print {
+	.k-grid {
+		height: auto!important;
+	}
+	.k-grid-header {
+		padding: 0!important;
+	}
+	.k-grid-content {
+		overflow: visible;
+		height: auto!important;
+	}
+}
+.k-state-error {
+	border-style: ridge;
+}
+.k-state-empty {
+	font-style: italic;
+}
+.k-icon {
+	@extend %extend_3;
+	background-color: transparent;
+}
+.k-sprite {
+	@extend %extend_3;
+	background-color: transparent;
+}
+.k-button-group {
+	white-space: nowrap;
+	.k-tool-icon {
+		@extend %extend_3;
+	}
+	.k-tool {
+		display: inline-block;vertical-align:middle;margin:1px 0;width:24px;height:24px;line-height:24px;
+		border-style: solid;border-width:1px;margin-right:-1px;
+		&.k-state-hover {
+			position: relative;z-index:1;
+		}
+		&:focus {
+			position: relative;z-index:1;
+		}
+		&.k-group-end {
+			border-right-width: 1px;
+		}
+	}
+	.k-state-disabled {
+		display: none;
+		filter: alpha(opacity=30);opacity:.3;
+	}
+	.k-state-hover {
+		vertical-align: middle;
+	}
+	.k-state-active {
+		vertical-align: middle;
+	}
+}
+.k-numerictextbox {
+	@extend %extend_32;
+	white-space: nowrap;
+	.k-link {
+		display: block;
+		height: 1em;
+		line-height: 1em;
+		vertical-align: middle;
+		border-width: 0;
+		padding: 0;
+		&.k-state-selected span {
+			&.k-i-arrow-n {
+				background-position: -16px -3px;
+			}
+			&.k-i-arrow-s {
+				background-position: -16px -35px;
+			}
+		}
+	}
+	.k-input {
+		margin: 0;
+	}
+	.k-icon {
+		height: 11px;
+	}
+	.k-select .k-link span {
+		&.k-i-arrow-n {
+			background-position: 0 -3px;
+		}
+		&.k-i-arrow-s {
+			background-position: 0 -35px;
+		}
+	}
+	.k-state-hover .k-link span {
+		&.k-i-arrow-n {
+			background-position: -16px -3px;
+		}
+		&.k-i-arrow-s {
+			background-position: -16px -35px;
+		}
+	}
+}
+.k-state-selected {
+	.k-i-arrow-n {
+		background-position: -16px 0;
+	}
+	.k-i-arrow-s {
+		background-position: -16px -32px;
+	}
+	.k-bold {
+		background-position: -264px 0;
+	}
+	.k-italic {
+		background-position: -264px -24px;
+	}
+	.k-underline {
+		background-position: -264px -48px;
+	}
+	.k-strikethrough {
+		background-position: -264px -72px;
+	}
+	.k-foreColor {
+		background-position: -264px -96px;
+	}
+	.k-backColor {
+		background-position: -264px -120px;
+	}
+	.k-justifyLeft {
+		background-position: -264px -144px;
+	}
+	.k-justifyCenter {
+		background-position: -264px -168px;
+	}
+	.k-justifyRight {
+		background-position: -264px -192px;
+	}
+	.k-justifyFull {
+		background-position: -264px -216px;
+	}
+	.k-insertUnorderedList {
+		background-position: -264px -264px;
+	}
+	.k-insertOrderedList {
+		background-position: -264px -288px;
+	}
+	.k-indent {
+		background-position: -312px 0;
+	}
+	.k-rtl {
+		.k-outdent {
+			background-position: -312px 0;
+		}
+		.k-indent {
+			background-position: -312px -24px;
+		}
+	}
+	.k-outdent {
+		background-position: -312px -24px;
+	}
+	.k-createLink {
+		background-position: -312px -48px;
+	}
+	.k-unlink {
+		background-position: -312px -72px;
+	}
+	.k-insertImage {
+		background-position: -312px -96px;
+	}
+	.k-subscript {
+		background-position: -312px -144px;
+	}
+	.k-superscript {
+		background-position: -312px -168px;
+	}
+	.k-createTable {
+		background-position: -216px 0;
+	}
+	.k-addColumnLeft {
+		background-position: -216px -24px;
+	}
+	.k-addColumnRight {
+		background-position: -216px -48px;
+	}
+	.k-addRowAbove {
+		background-position: -216px -72px;
+	}
+	.k-addRowBelow {
+		background-position: -216px -96px;
+	}
+	.k-deleteRow {
+		background-position: -216px -120px;
+	}
+	.k-deleteColumn {
+		background-position: -216px -144px;
+	}
+	.k-mergeCells {
+		background-position: -216px -168px;
+	}
+}
+.k-state-hover> {
+	&.k-state-selected {
+		.k-i-arrow-n {
+			background-position: -32px 0;
+		}
+		.k-i-arrow-s {
+			background-position: -32px -32px;
+		}
+	}
+	&.k-i-arrow-n {
+		background-position: -16px 0;
+	}
+	&.k-i-arrow-e {
+		background-position: -16px -16px;
+	}
+	&.k-i-arrow-s {
+		background-position: -16px -32px;
+	}
+	&.k-i-arrow-w {
+		background-position: -16px -48px;
+	}
+	&.k-i-seek-n {
+		background-position: -16px -64px;
+	}
+	&.k-i-seek-e {
+		background-position: -16px -80px;
+	}
+	&.k-i-seek-s {
+		background-position: -16px -96px;
+	}
+	&.k-i-seek-w {
+		background-position: -16px -112px;
+	}
+	&.k-si-arrow-n {
+		background-position: -16px -129px;
+	}
+	&.k-si-arrow-e {
+		background-position: -16px -144px;
+	}
+	&.k-si-arrow-s {
+		background-position: -16px -159px;
+	}
+	&.k-si-arrow-w {
+		background-position: -16px -176px;
+	}
+	&.k-i-arrowhead-n {
+		background-position: -16px -256px;
+	}
+	&.k-i-arrowhead-e {
+		background-position: -16px -272px;
+	}
+	&.k-i-arrowhead-s {
+		background-position: -16px -288px;
+	}
+	&.k-i-arrowhead-w {
+		background-position: -16px -304px;
+	}
+	&.k-i-expand {
+		background-position: -16px -192px;
+	}
+	&.k-plus {
+		background-position: -16px -192px;
+	}
+	&.k-plus-disabled {
+		background-position: -16px -192px;
+	}
+	&.k-i-expand-w {
+		background-position: -16px -208px;
+	}
+	&.k-rtl {
+		.k-i-expand {
+			background-position: -16px -208px;
+		}
+		.k-plus {
+			background-position: -16px -208px;
+		}
+		.k-plus-disabled {
+			background-position: -16px -208px;
+		}
+		.k-i-collapse {
+			background-position: -16px -240px;
+		}
+		.k-minus {
+			background-position: -16px -240px;
+		}
+		.k-minus-disabled {
+			background-position: -16px -240px;
+		}
+	}
+	&.k-i-collapse {
+		background-position: -16px -224px;
+	}
+	&.k-minus {
+		background-position: -16px -224px;
+	}
+	&.k-minus-disabled {
+		background-position: -16px -224px;
+	}
+	&.k-i-collapse-w {
+		background-position: -16px -240px;
+	}
+	&.k-i-pencil {
+		background-position: -48px 0;
+	}
+	&.k-edit {
+		background-position: -48px 0;
+	}
+	&.k-i-close {
+		background-position: -48px -16px;
+	}
+	&.k-delete {
+		background-position: -48px -16px;
+	}
+	&.k-group-delete {
+		background-position: -48px -16px;
+	}
+	&.k-si-close {
+		background-position: -176px -80px;
+	}
+	&.k-i-tick {
+		background-position: -48px -32px;
+	}
+	&.k-insert {
+		background-position: -48px -32px;
+	}
+	&.k-update {
+		background-position: -48px -32px;
+	}
+	&.k-i-cancel {
+		background-position: -48px -48px;
+	}
+	&.k-cancel {
+		background-position: -48px -48px;
+	}
+	&.k-denied {
+		background-position: -48px -48px;
+	}
+	&.k-i-plus {
+		background-position: -48px -64px;
+	}
+	&.k-add {
+		background-position: -48px -64px;
+	}
+	&.k-i-funnel {
+		background-position: -48px -80px;
+	}
+	&.k-filter {
+		background-position: -48px -80px;
+	}
+	&.k-i-funnel-clear {
+		background-position: -48px -96px;
+	}
+	&.k-clear-filter {
+		background-position: -48px -96px;
+	}
+	&.k-i-lock {
+		background-position: -80px 0;
+	}
+	&.k-i-unlock {
+		background-position: -80px -16px;
+	}
+	&.k-i-refresh {
+		background-position: -48px -112px;
+	}
+	&.k-i-exception {
+		background-position: -176px -304px;
+	}
+	&.k-i-restore {
+		background-position: -48px -128px;
+	}
+	&.k-i-maximize {
+		background-position: -48px -144px;
+	}
+	&.k-i-minimize {
+		background-position: -80px -288px;
+	}
+	&.k-i-pin {
+		background-position: -176px -256px;
+	}
+	&.k-i-unpin {
+		background-position: -176px -272px;
+	}
+	&.k-resize-se {
+		background-position: -48px -160px;
+	}
+	&.k-i-calendar {
+		background-position: -48px -176px;
+	}
+	&.k-i-clock {
+		background-position: -48px -192px;
+	}
+	&.k-si-plus {
+		background-position: -48px -208px;
+	}
+	&.k-si-minus {
+		background-position: -48px -224px;
+	}
+	&.k-i-search {
+		background-position: -48px -240px;
+	}
+	&.k-i-custom {
+		background-position: -141px -113px;
+	}
+	&.k-i-insert-n {
+		background-position: -176px -32px;
+	}
+	&.k-insert-top {
+		background-position: -176px -32px;
+	}
+	&.k-i-insert-m {
+		background-position: -176px -48px;
+	}
+	&.k-insert-middle {
+		background-position: -176px -48px;
+	}
+	&.k-i-insert-s {
+		background-position: -176px -64px;
+	}
+	&.k-insert-bottom {
+		background-position: -176px -64px;
+	}
+	&.k-i-note {
+		background-position: -176px -240px;
+	}
+	&.k-warning {
+		background-position: -176px -240px;
+	}
+	&.k-i-sort-asc {
+		background-position: -128px -240px;
+	}
+	&.k-i-sort-desc {
+		background-position: -128px -256px;
+	}
+	&.k-i-group {
+		background-position: -128px -272px;
+	}
+	&.k-i-ungroup {
+		background-position: -128px -288px;
+	}
+	&.k-i-columns {
+		background-position: -128px -304px;
+	}
+	&.k-file {
+		background-position: -16px 0;
+	}
+	&.k-i-folder-add {
+		background-position: -48px -272px;
+	}
+	&.k-addfolder {
+		background-position: -48px -272px;
+	}
+	&.k-i-folder-up {
+		background-position: -48px -288px;
+	}
+	&.k-goup {
+		background-position: -48px -288px;
+	}
+	&.k-si-refresh {
+		background-position: -176px -128px;
+	}
+	&.k-si-tick {
+		background-position: -176px -96px;
+	}
+	&.k-success {
+		background-position: -176px -96px;
+	}
+	&.k-si-cancel {
+		background-position: -176px -112px;
+	}
+	&.k-check:checked {
+		background-position: -48px -32px;
+	}
+	&.k-mobile-list .k-edit-field {
+		[type=checkbox] {
+			background-position: -48px -32px;
+		}
+		[type=radio] {
+			background-position: -48px -32px;
+		}
+	}
+	&.k-file>.k-icon {
+		background-position: -128px -288px;
+	}
+}
+.k-state-hover>*> {
+	&.k-state-selected {
+		.k-i-arrow-n {
+			background-position: -32px 0;
+		}
+		.k-i-arrow-s {
+			background-position: -32px -32px;
+		}
+	}
+	&.k-i-arrow-n {
+		background-position: -16px 0;
+	}
+	&.k-i-arrow-e {
+		background-position: -16px -16px;
+	}
+	&.k-i-arrow-s {
+		background-position: -16px -32px;
+	}
+	&.k-i-arrow-w {
+		background-position: -16px -48px;
+	}
+	&.k-i-seek-n {
+		background-position: -16px -64px;
+	}
+	&.k-i-seek-e {
+		background-position: -16px -80px;
+	}
+	&.k-i-seek-s {
+		background-position: -16px -96px;
+	}
+	&.k-i-seek-w {
+		background-position: -16px -112px;
+	}
+	&.k-si-arrow-n {
+		background-position: -16px -129px;
+	}
+	&.k-si-arrow-e {
+		background-position: -16px -144px;
+	}
+	&.k-si-arrow-s {
+		background-position: -16px -159px;
+	}
+	&.k-si-arrow-w {
+		background-position: -16px -176px;
+	}
+	&.k-i-arrowhead-n {
+		background-position: -16px -256px;
+	}
+	&.k-i-arrowhead-e {
+		background-position: -16px -272px;
+	}
+	&.k-i-arrowhead-s {
+		background-position: -16px -288px;
+	}
+	&.k-i-arrowhead-w {
+		background-position: -16px -304px;
+	}
+	&.k-i-expand {
+		background-position: -16px -192px;
+	}
+	&.k-plus {
+		background-position: -16px -192px;
+	}
+	&.k-plus-disabled {
+		background-position: -16px -192px;
+	}
+	&.k-i-expand-w {
+		background-position: -16px -208px;
+	}
+	&.k-rtl {
+		.k-i-expand {
+			background-position: -16px -208px;
+		}
+		.k-plus {
+			background-position: -16px -208px;
+		}
+		.k-plus-disabled {
+			background-position: -16px -208px;
+		}
+		.k-i-collapse {
+			background-position: -16px -240px;
+		}
+		.k-minus {
+			background-position: -16px -240px;
+		}
+		.k-minus-disabled {
+			background-position: -16px -240px;
+		}
+	}
+	&.k-i-collapse {
+		background-position: -16px -224px;
+	}
+	&.k-minus {
+		background-position: -16px -224px;
+	}
+	&.k-minus-disabled {
+		background-position: -16px -224px;
+	}
+	&.k-i-collapse-w {
+		background-position: -16px -240px;
+	}
+	&.k-i-pencil {
+		background-position: -48px 0;
+	}
+	&.k-edit {
+		background-position: -48px 0;
+	}
+	&.k-i-close {
+		background-position: -48px -16px;
+	}
+	&.k-delete {
+		background-position: -48px -16px;
+	}
+	&.k-group-delete {
+		background-position: -48px -16px;
+	}
+	&.k-si-close {
+		background-position: -176px -80px;
+	}
+	&.k-i-tick {
+		background-position: -48px -32px;
+	}
+	&.k-insert {
+		background-position: -48px -32px;
+	}
+	&.k-update {
+		background-position: -48px -32px;
+	}
+	&.k-i-cancel {
+		background-position: -48px -48px;
+	}
+	&.k-cancel {
+		background-position: -48px -48px;
+	}
+	&.k-denied {
+		background-position: -48px -48px;
+	}
+	&.k-i-plus {
+		background-position: -48px -64px;
+	}
+	&.k-add {
+		background-position: -48px -64px;
+	}
+	&.k-i-funnel {
+		background-position: -48px -80px;
+	}
+	&.k-filter {
+		background-position: -48px -80px;
+	}
+	&.k-i-funnel-clear {
+		background-position: -48px -96px;
+	}
+	&.k-clear-filter {
+		background-position: -48px -96px;
+	}
+	&.k-i-lock {
+		background-position: -80px 0;
+	}
+	&.k-i-unlock {
+		background-position: -80px -16px;
+	}
+	&.k-i-refresh {
+		background-position: -48px -112px;
+	}
+	&.k-i-exception {
+		background-position: -176px -304px;
+	}
+	&.k-i-restore {
+		background-position: -48px -128px;
+	}
+	&.k-i-maximize {
+		background-position: -48px -144px;
+	}
+	&.k-i-minimize {
+		background-position: -80px -288px;
+	}
+	&.k-i-pin {
+		background-position: -176px -256px;
+	}
+	&.k-i-unpin {
+		background-position: -176px -272px;
+	}
+	&.k-resize-se {
+		background-position: -48px -160px;
+	}
+	&.k-i-calendar {
+		background-position: -48px -176px;
+	}
+	&.k-i-clock {
+		background-position: -48px -192px;
+	}
+	&.k-si-plus {
+		background-position: -48px -208px;
+	}
+	&.k-si-minus {
+		background-position: -48px -224px;
+	}
+	&.k-i-search {
+		background-position: -48px -240px;
+	}
+	&.k-i-custom {
+		background-position: -141px -113px;
+	}
+	&.k-i-insert-n {
+		background-position: -176px -32px;
+	}
+	&.k-insert-top {
+		background-position: -176px -32px;
+	}
+	&.k-i-insert-m {
+		background-position: -176px -48px;
+	}
+	&.k-insert-middle {
+		background-position: -176px -48px;
+	}
+	&.k-i-insert-s {
+		background-position: -176px -64px;
+	}
+	&.k-insert-bottom {
+		background-position: -176px -64px;
+	}
+	&.k-i-note {
+		background-position: -176px -240px;
+	}
+	&.k-warning {
+		background-position: -176px -240px;
+	}
+	&.k-i-sort-asc {
+		background-position: -128px -240px;
+	}
+	&.k-i-sort-desc {
+		background-position: -128px -256px;
+	}
+	&.k-i-group {
+		background-position: -128px -272px;
+	}
+	&.k-i-ungroup {
+		background-position: -128px -288px;
+	}
+	&.k-i-columns {
+		background-position: -128px -304px;
+	}
+	&.k-file {
+		background-position: -16px 0;
+	}
+	&.k-i-folder-add {
+		background-position: -48px -272px;
+	}
+	&.k-addfolder {
+		background-position: -48px -272px;
+	}
+	&.k-i-folder-up {
+		background-position: -48px -288px;
+	}
+	&.k-goup {
+		background-position: -48px -288px;
+	}
+	&.k-si-refresh {
+		background-position: -176px -128px;
+	}
+	&.k-si-tick {
+		background-position: -176px -96px;
+	}
+	&.k-success {
+		background-position: -176px -96px;
+	}
+	&.k-si-cancel {
+		background-position: -176px -112px;
+	}
+	&.k-check:checked {
+		background-position: -48px -32px;
+	}
+	&.k-mobile-list .k-edit-field {
+		[type=checkbox] {
+			background-position: -48px -32px;
+		}
+		[type=radio] {
+			background-position: -48px -32px;
+		}
+	}
+	&.k-file>.k-icon {
+		background-position: -128px -288px;
+	}
+}
+.k-group-indicator {
+	.k-link:hover span {
+		&.k-si-arrow-n {
+			background-position: 0 -129px;
+		}
+		&.k-si-arrow-s {
+			background-position: 0 -159px;
+		}
+	}
+	.k-button:hover span.k-group-delete {
+		background-position: -32px -16px;
+	}
+}
+.k-scheduler {
+	div {
+		&.k-scheduler-footer ul li {
+			margin-right: .6em;border-width:1px;
+		}
+		&.k-scheduler-toolbar>ul>li.k-nav-current {
+			background: 0;
+		}
+	}
+	.k-scheduler-table {
+		td {
+		}
+		th {
+		}
+	}
+	.k-scheduler-toolbar .k-nav-current {
+		border-width: 0;
+		.k-link .k-i-calendar {
+			background-position: -32px -176px;
+		}
+	}
+	.k-nav-current>.k-state-active {
+		background: 0;
+	}
+	.k-scrollbar-v .k-scheduler-header-wrap {
+		border-right-width: 1px;
+	}
+	.k-middle-row td {
+		border-bottom-style: dotted;
+	}
+}
+.k-i-arrow-n {
+	background-position: 0 0;
+}
+.k-i-arrow-e {
+	background-position: 0 -16px;
+}
+.k-rtl {
+	.k-i-arrow-w {
+		background-position: 0 -16px;
+	}
+	.k-state-hover> {
+		&.k-i-arrow-w {
+			background-position: -16px -16px;
+		}
+		&.k-i-arrow-e {
+			background-position: -16px -48px;
+		}
+		&.k-i-seek-w {
+			background-position: -16px -80px;
+		}
+		&.k-i-seek-e {
+			background-position: -16px -112px;
+		}
+	}
+	.k-state-hover>*> {
+		&.k-i-arrow-w {
+			background-position: -16px -16px;
+		}
+		&.k-i-arrow-e {
+			background-position: -16px -48px;
+		}
+		&.k-i-seek-w {
+			background-position: -16px -80px;
+		}
+		&.k-i-seek-e {
+			background-position: -16px -112px;
+		}
+	}
+	.k-button {
+		&:hover {
+			.k-i-arrow-w {
+				background-position: -16px -16px;
+			}
+			.k-i-arrow-e {
+				background-position: -16px -48px;
+			}
+			.k-i-seek-w {
+				background-position: -16px -80px;
+			}
+			.k-i-seek-e {
+				background-position: -16px -112px;
+			}
+		}
+		&:active {
+			.k-i-arrow-w {
+				background-position: -16px -16px;
+			}
+			.k-i-arrow-e {
+				background-position: -16px -48px;
+			}
+			.k-i-seek-w {
+				background-position: -16px -80px;
+			}
+			.k-i-seek-e {
+				background-position: -16px -112px;
+			}
+		}
+	}
+	.k-i-arrow-e {
+		background-position: 0 -48px;
+	}
+	.k-i-seek-w {
+		background-position: 0 -80px;
+	}
+	.k-i-seek-e {
+		background-position: 0 -112px;
+	}
+	.k-i-expand {
+		background-position: 0 -208px;
+	}
+	.k-plus {
+		background-position: 0 -208px;
+	}
+	.k-plus-disabled {
+		background-position: 0 -208px;
+	}
+	.k-i-collapse {
+		background-position: 0 -240px;
+	}
+	.k-minus {
+		background-position: 0 -240px;
+	}
+	.k-minus-disabled {
+		background-position: 0 -240px;
+	}
+	.k-outdent {
+		background-position: -288px 0;
+	}
+	.k-indent {
+		background-position: -288px -24px;
+	}
+	.k-progressbar-horizontal {
+		&.k-progressbar-reverse {
+			.k-item {
+				border-width: 1px 1px 1px 0;
+			}
+			.k-last {
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 4px 0 0 4px;border-left-width:1px;
+			}
+			.k-progress-status-wrap {
+				left: -1px;right:auto;text-align:right;
+			}
+		}
+		.k-item {
+			border-width: 1px 0 1px 1px;
+		}
+		.k-last {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 4px 0 0 4px;border-left-width:1px;
+		}
+		.k-first {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0 4px 4px 0;
+			border-right-width: 1px;
+		}
+		.k-progress-status-wrap {
+			left: auto;right:-1px;text-align:left;
+		}
+		&.k-progressbar-reverse>.k-state-selected {
+			left: -1px;right:auto;top:-1px;height:100%;border-radius:4px 0 0 4px;
+		}
+	}
+	.k-link:not(.k-state-disabled):hover> {
+		&.k-i-arrow-w {
+			background-position: -16px -16px;
+		}
+		&.k-i-arrow-e {
+			background-position: -16px -48px;
+		}
+		&.k-i-seek-w {
+			background-position: -16px -80px;
+		}
+		&.k-i-seek-e {
+			background-position: -16px -112px;
+		}
+	}
+	.k-textbox:hover {
+		.k-i-arrow-w {
+			background-position: -16px -16px;
+		}
+		.k-i-arrow-e {
+			background-position: -16px -48px;
+		}
+		.k-i-seek-w {
+			background-position: -16px -80px;
+		}
+		.k-i-seek-e {
+			background-position: -16px -112px;
+		}
+	}
+	.k-button-group .k-tool {
+		border-style: solid;border-width:1px;
+		&.k-group-end {
+			border-left-width: 1px;
+		}
+	}
+	.k-progressbar-horizontal>.k-state-selected {
+		left: auto;right:-1px;border-radius:0 4px 4px 0;
+	}
+	.k-progressbar>.k-state-selected.k-complete {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+	}
+}
+.k-i-arrow-s {
+	background-position: 0 -32px;
+}
+.k-i-arrow-w {
+	background-position: 0 -48px;
+}
+.k-i-seek-n {
+	background-position: 0 -64px;
+}
+.k-i-seek-e {
+	background-position: 0 -80px;
+}
+.k-i-seek-s {
+	background-position: 0 -96px;
+}
+.k-i-seek-w {
+	background-position: 0 -112px;
+}
+.k-si-arrow-n {
+	background-position: 0 -129px;
+}
+.k-si-arrow-e {
+	background-position: 0 -144px;
+}
+.k-si-arrow-s {
+	background-position: 0 -159px;
+}
+.k-si-arrow-w {
+	background-position: 0 -176px;
+}
+.k-i-arrowhead-n {
+	background-position: 0 -256px;
+}
+.k-i-arrowhead-e {
+	background-position: 0 -272px;
+}
+.k-i-arrowhead-s {
+	background-position: 0 -288px;
+}
+.k-i-arrowhead-w {
+	background-position: 0 -304px;
+}
+.k-i-expand {
+	background-position: 0 -192px;
+}
+.k-plus {
+	background-position: 0 -192px;
+}
+.k-plus-disabled {
+	background-position: 0 -192px;
+}
+.k-i-expand-w {
+	background-position: 0 -208px;
+}
+.k-i-collapse {
+	background-position: 0 -224px;
+}
+.k-minus {
+	background-position: 0 -224px;
+}
+.k-minus-disabled {
+	background-position: 0 -224px;
+}
+.k-i-collapse-w {
+	background-position: 0 -240px;
+}
+.k-i-pencil {
+	background-position: -32px 0;
+}
+.k-edit {
+	background-position: -32px 0;
+}
+.k-i-close {
+	background-position: -32px -16px;
+}
+.k-delete {
+	background-position: -32px -16px;
+}
+.k-group-delete {
+	background-position: -32px -16px;
+}
+.k-si-close {
+	background-position: -160px -80px;
+}
+.k-multiselect {
+	.k-delete {
+		background-position: -160px -80px;
+	}
+	.k-loading {
+		@extend %extend_44;
+	}
+	.k-loading-hidden {
+		visibility: hidden;
+	}
+	.k-state-hover .k-delete {
+		background-position: -176px -80px;
+	}
+}
+.k-i-tick {
+	background-position: -32px -32px;
+}
+.k-insert {
+	background-position: -32px -32px;
+}
+.k-update {
+	background-position: -32px -32px;
+}
+.k-i-cancel {
+	background-position: -32px -48px;
+}
+.k-cancel {
+	background-position: -32px -48px;
+}
+.k-denied {
+	background-position: -32px -48px;
+}
+.k-i-plus {
+	background-position: -32px -64px;
+}
+.k-add {
+	background-position: -32px -64px;
+}
+.k-i-funnel {
+	background-position: -32px -80px;
+}
+.k-filter {
+	background-position: -32px -80px;
+}
+.k-i-funnel-clear {
+	background-position: -32px -96px;
+}
+.k-clear-filter {
+	background-position: -32px -96px;
+}
+.k-i-lock {
+	background-position: -64px 0;
+}
+.k-i-unlock {
+	background-position: -64px -16px;
+}
+.k-i-refresh {
+	background-position: -32px -112px;
+}
+.k-i-exception {
+	background-position: -160px -304px;
+}
+.k-i-restore {
+	background-position: -32px -128px;
+}
+.k-i-maximize {
+	background-position: -32px -144px;
+}
+.k-i-minimize {
+	background-position: -64px -288px;
+}
+.k-i-pin {
+	background-position: -160px -256px;
+}
+.k-i-unpin {
+	background-position: -160px -272px;
+}
+.k-resize-se {
+	background-position: -32px -160px;
+	bottom: -3px;
+	right: -3px;
+	width: 16px;
+	height: 16px;
+	cursor: se-resize;
+}
+.k-i-calendar {
+	background-position: -32px -176px;
+}
+.k-i-clock {
+	background-position: -32px -192px;
+}
+.k-si-plus {
+	background-position: -32px -208px;
+}
+.k-si-minus {
+	background-position: -32px -224px;
+}
+.k-i-search {
+	background-position: -32px -240px;
+}
+.k-i-custom {
+	background-position: -115px -113px;
+}
+.k-editor {
+	.k-i-custom {
+		background-position: -111px -109px;
+	}
+	.k-editor-toolbar-wrap {
+		border: 0;padding:0;
+	}
+	.k-editable-area {
+		width: 100%;height:100%;border-style:solid;border-width:1px;outline:0;
+	}
+	.k-content {
+		display: block;width:100%;height:100%;border:0;margin:0;padding:0;background:$color_12;
+	}
+	.k-tool {
+		outline: 0;
+	}
+	.k-raw-content {
+		border: 0;margin:0;padding:0;
+		font-size: inherit;font-family:consolas,"courier new",monospace;
+	}
+	.k-editor-toolbar .k-row-break {
+		display: block;height:0;font-size:0;line-height:0;
+	}
+	iframe.k-content {
+		display: inline;vertical-align:top;
+	}
+}
+.k-viewHtml {
+	background-position: -288px -120px;
+}
+.k-i-insert-n {
+	background-position: -160px -32px;
+}
+.k-insert-top {
+	background-position: -160px -32px;
+}
+.k-i-insert-m {
+	background-position: -160px -48px;
+}
+.k-insert-middle {
+	background-position: -160px -48px;
+}
+.k-i-insert-s {
+	background-position: -160px -64px;
+}
+.k-insert-bottom {
+	background-position: -160px -64px;
+}
+.k-drop-hint {
+	background-position: 0 -326px;
+}
+.k-i-note {
+	background-position: -160px -240px;
+}
+.k-warning {
+	background-position: -160px -240px;
+}
+.k-i-sort-asc {
+	background-position: -112px -240px;
+}
+.k-i-sort-desc {
+	background-position: -112px -256px;
+}
+.k-i-group {
+	background-position: -112px -272px;
+}
+.k-i-ungroup {
+	background-position: -112px -288px;
+}
+.k-i-columns {
+	background-position: -112px -304px;
+}
+.k-file {
+	background-position: 0 0;
+	border-style: solid;border-width:0 0 1px;padding:.167em .167em .167em .8em;
+	position: relative;
+	.k-icon {
+		position: relative;
+	}
+}
+.k-i-folder-add {
+	background-position: -32px -272px;
+}
+.k-addfolder {
+	background-position: -32px -272px;
+}
+.k-i-folder-up {
+	background-position: -32px -288px;
+}
+.k-goup {
+	background-position: -32px -288px;
+}
+.k-image {
+	border: 0;
+}
+.k-loading {
+	@extend %extend_4;
+}
+.k-loading-image {
+	@extend %extend_4;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.k-loading-mask {
+	position: absolute;
+}
+.k-loading-text {
+	position: absolute;
+	text-indent: -4000px;
+	text-align: center;
+}
+.k-loading-color {
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity=30);
+	opacity: .3;
+}
+.k-content-frame {
+	border: 0;
+	width: 100%;
+	height: 100%;
+}
+.k-pane> {
+	&.k-splitter-overlay {
+		filter: alpha(opacity=0);
+		opacity: 0;
+		position: absolute;
+	}
+	&.k-splitter {
+		border-width: 0;overflow:hidden;
+	}
+}
+.k-drag-clue {
+	position: absolute;
+	z-index: 10003;
+	border-style: solid;
+	border-width: 1px;
+	font-size: .9em;
+	padding: .2em .4em;
+	white-space: nowrap;
+	cursor: default;
+}
+.k-drag-status {
+	margin-top: -3px;
+	margin-right: 4px;
+	vertical-align: middle;
+}
+.k-reorder-cue {
+	position: absolute;
+	width: 1px;
+	overflow: visible;
+	.k-icon {
+		position: absolute;
+		left: -4px;
+		width: 8px;
+		height: 4px;
+	}
+	.k-i-arrow-s {
+		top: -4px;
+		background-position: -4px -166px;
+	}
+	.k-i-arrow-n {
+		bottom: -4px;
+		background-position: -4px -134px;
+	}
+}
+.k-scrollbar {
+	position: absolute;
+	overflow: scroll;
+}
+.k-scrollbar-vertical {
+	top: 0;
+	right: 0;
+	width: 17px;
+	height: 100%;
+	overflow-x: hidden;
+}
+.k-touch-scrollbar {
+	display: none;
+	position: absolute;
+	z-index: 200000;
+	height: 8px;
+	width: 8px;
+	border: 1px solid $color_10;
+	background-color: $color_11;
+}
+@media only screen and(-webkit-min-device-pixel-ratio:2) {
+	body .k-touch-scrollbar {
+		height: 12px;
+		width: 12px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 7px;
+	}
+}
+.k-virtual-scrollable-wrap {
+	overflow-x: auto;
+	height: 100%;
+	overflow-y: hidden;
+	position: relative;
+}
+.k-animation-container {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: content-box;
+	* {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: content-box;
+		&:after {
+			//Instead of the line below you could use @include box-sizing($bs)
+			box-sizing: content-box;
+		}
+	}
+}
+.k-list-container {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: content-box;
+	&.k-state-border-down {
+		border-bottom-width: 0;
+		padding-bottom: 1px;
+	}
+	.km-scroll-container {
+		padding-bottom: 6px;
+	}
+}
+div {
+	&.k-window-content {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		position: relative;
+		height: 100%;
+		padding: .58em;
+		overflow: auto;
+		outline: 0;
+	}
+	&.k-window {
+		display: inline-block;
+		position: absolute;
+		z-index: 10001;
+		border-style: solid;
+		border-width: 1px;
+		padding-top: 2em;
+	}
+	&.k-window-titleless {
+		padding-top: 0;
+	}
+	&.k-window-iframecontent {
+		padding: 0;
+		overflow: visible;
+	}
+	&.k-grid-header {
+		@extend %extend_21;
+		.k-header {
+			border-bottom-width: 0;
+		}
+	}
+	&.k-grid-footer {
+		@extend %extend_21;
+	}
+	&.k-treeview {
+		border-width: 0;
+		background: 0;
+		overflow: auto;
+		white-space: nowrap;
+	}
+	&.k-flatcolorpicker {
+		background-color: transparent;
+		background-image: none;
+	}
+	&.k-slider {
+	}
+	&.k-more-events {
+		text-align: center;font-size:18px;line-height:1.2;padding:0;
+	}
+	&.k-scheduler-marquee {
+		&:before {
+			top: 0;left:0;border-right-color:transparent;border-bottom-color:transparent;
+		}
+		&:after {
+			bottom: 0;right:0;border-top-color:transparent;border-left-color:transparent;
+		}
+	}
+}
+.k-tabstrip {
+	>.k-content {
+		@extend %extend_10;
+		display: none;
+		&.km-scroll-wrapper {
+			padding: 0;
+		}
+	}
+	>.k-content>.km-scroll-container {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		padding: .3em .92em;
+	}
+}
+.k-edit-cell {
+	.k-widget {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+	input[type="checkbox"] {
+		margin-left: .6em;
+	}
+}
+.k-grid-edit-row {
+	.k-widget {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+	.text-box {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	td {
+		text-overflow: clip;
+	}
+	.k-textbox {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.k-edit-form td {
+		border-bottom-width: 0;
+	}
+}
+.km-actionsheet>li {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	list-style-type: none;padding:inherit 1em;line-height:2em;
+}
+.km-shim {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	font-family: $font_6;
+	left: 0;bottom:0;position:fixed;width:100%;height:100%;background:$color_27;z-index:10001;
+	.k-animation-container {
+		width: auto;
+	}
+}
+.k-edit-form {
+	margin: 0;
+	padding: 0;
+}
+.k-edit-form-container {
+	position: relative;
+	width: 400px;
+	.editor-label {
+		@extend %extend_5;
+	}
+	.editor-field {
+		@extend %extend_6;
+	}
+	.k-button {
+		margin: 0 .16em;
+	}
+	.k-edit-buttons {
+		clear: both;
+		text-align: right;
+		border-width: 1px 0 0;
+		border-style: solid;
+		position: relative;
+		bottom: -1em;
+		padding: .6em;
+	}
+}
+.k-edit-label {
+	@extend %extend_5;
+}
+.k-edit-field {
+	@extend %extend_6;
+	&.k-scheduler-toolbar {
+		border-width: 0;padding-top:0;padding-left:0;padding-right:0;
+	}
+	span.k-recur-interval {
+		width: 5em;
+	}
+}
+.k-edit-field>input[type="checkbox"] {
+	margin-top: .4em;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+.k-edit-field>input[type="radio"] {
+	margin-top: .4em;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+.k-window-titlebar {
+	@extend %extend_7;
+	.k-window-actions {
+		position: absolute;
+		top: 0;
+		right: .3em;
+		padding-top: .3em;
+		white-space: nowrap;
+	}
+	.k-window-action {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		padding: 2px;
+		text-decoration: none;
+		vertical-align: middle;
+		opacity: .7;
+	}
+	.k-state-hover {
+		border-style: solid;
+		border-width: 1px;
+		padding: 1px;
+		opacity: 1;
+	}
+}
+.k-window-title {
+	position: absolute;
+	left: .44em;
+	right: .44em;
+	overflow: hidden;
+	cursor: default;
+	text-overflow: ellipsis;
+	.k-image {
+		margin: 0 5px 0 0;
+		vertical-align: middle;
+	}
+}
+.k-window {
+	.k-resize-handle {
+		position: absolute;
+		z-index: 1;
+		background-color: $color_12;
+		font-size: 0;
+		line-height: 6px;
+		filter: alpha(opacity=0);
+		opacity: 0;
+		zoom: 1;
+	}
+	.k-overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: $color_12;
+		filter: alpha(opacity=0);
+		opacity: 0;
+	}
+}
+.k-resize-n {
+	top: -3px;
+	left: 0;
+	width: 100%;
+	height: 6px;
+	cursor: n-resize;
+}
+.k-resize-e {
+	top: 0;
+	right: -3px;
+	width: 6px;
+	height: 100%;
+	cursor: e-resize;
+}
+.k-resize-s {
+	bottom: -3px;
+	left: 0;
+	width: 100%;
+	height: 6px;
+	cursor: s-resize;
+}
+.k-resize-w {
+	top: 0;
+	left: -3px;
+	width: 6px;
+	height: 100%;
+	cursor: w-resize;
+}
+.k-resize-sw {
+	bottom: -3px;
+	left: -3px;
+	width: 6px;
+	height: 6px;
+	cursor: sw-resize;
+}
+.k-resize-ne {
+	top: -3px;
+	right: -3px;
+	width: 6px;
+	height: 6px;
+	cursor: ne-resize;
+}
+.k-resize-nw {
+	top: -3px;
+	left: -3px;
+	width: 6px;
+	height: 6px;
+	cursor: nw-resize;
+}
+.k-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10001;
+	width: 100%;
+	height: 100%;
+	background-color: $color_13;
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+.k-tabstrip {
+	margin: 0;
+	padding: 0;
+	zoom: 1;
+	.k-tabstrip-items {
+		padding: .3em .3em 0;
+	}
+}
+.k-panelbar {
+	zoom: 1;
+	outline: 0;
+	.k-tabstrip-items {
+		.k-item {
+			@extend %extend_8;
+			.k-image {
+				margin: -3px 3px 0 -6px;
+				vertical-align: middle;
+			}
+			.k-sprite {
+				margin: -3px 3px 0 -6px;
+				vertical-align: middle;
+			}
+		}
+		.k-state-active {
+			margin-bottom: -1px;
+			padding-bottom: 1px;
+		}
+		.k-link {
+			@extend %extend_9;
+		}
+		.k-icon {
+			margin: -1px 4px 0 -3px;
+			vertical-align: top;
+		}
+	}
+	.k-image {
+		@extend %extend_12;
+	}
+	.k-sprite {
+		@extend %extend_12;
+	}
+	.k-panel {
+		@extend %extend_15;
+	}
+	.k-content {
+		@extend %extend_15;
+	}
+	.k-tabstrip>.k-content {
+		@extend %extend_10;
+	}
+	.k-i-seek-e .k-link {
+		border-bottom: 0;
+	}
+}
+@-webkit-keyframes k-tab-loader {
+	0% {
+		left: 0;
+	}
+	50% {
+		left: 80%;
+	}
+	100% {
+		left: 0;
+	}
+}
+@-moz-keyframes k-tab-loader {
+	0% {
+		left: 0;
+	}
+	50% {
+		left: 80%;
+	}
+	100% {
+		left: 0;
+	}
+}
+@keyframes k-tab-loader {
+	0% {
+		left: 0;
+	}
+	50% {
+		left: 80%;
+	}
+	100% {
+		left: 0;
+	}
+}
+.k-panelbar {
+	>.k-item {
+		@extend %extend_11;
+	}
+	>.k-item>.k-link {
+		@extend %extend_13;
+	}
+}
+.k-panel {
+	>.k-item {
+		@extend %extend_11;
+	}
+	>.k-item>.k-link {
+		@extend %extend_13;
+		border-bottom: 0;
+		font-size: .95em;
+		line-height: 2.2;
+	}
+}
+.k-panelbar-expand {
+	@extend %extend_14;
+}
+.k-panelbar-collapse {
+	@extend %extend_14;
+}
+.k-panel {
+	.k-i-arrow-n {
+		top: 4px;
+	}
+	.k-i-arrow-s {
+		top: 4px;
+	}
+	.k-panel {
+		border-bottom: 0;
+	}
+	.k-panel>.k-item>.k-link {
+		padding-left: 2em;
+	}
+}
+.k-menu {
+	cursor: default;
+	@extend %extend_16;
+	.k-group {
+		@extend %extend_16;
+		display: none;
+		border-style: solid;
+		border-width: 1px;
+		overflow: visible;
+		white-space: nowrap;
+		position: absolute;
+		left: 0;
+		.k-item {
+			display: block;
+			border-width: 0;
+		}
+		.k-group {
+			top: 0;
+			left: 0;
+		}
+		.k-separator {
+			@extend %extend_19;
+		}
+		.k-item>.k-link {
+			padding: .28em 1.8em .38em .9em;
+		}
+	}
+	&:after {
+		content: '';
+		display: block;
+		width: 99%;
+		height: 0;
+		float: inherit;
+		overflow: hidden;
+	}
+	.k-item {
+		>.k-link {
+			>.k-icon {
+				margin: -2px 4px 0 -4px;
+				vertical-align: middle;
+				margin: -2px 0 0;
+			}
+			>.k-i-arrow-s {
+				margin-right: -8px;
+			}
+			>.k-i-arrow-e {
+				position: absolute;
+				top: 50%;
+				margin-top: -8px;
+				right: .2rem;
+			}
+		}
+		>.k-link {
+			display: block;
+			padding: .5em 1.1em .4em;
+			line-height: 1.34em;
+			//Instead of the line below you could use @include user-select($select)
+			user-select: none;
+		}
+	}
+	.k-image {
+		margin: -2px 4px 0 -4px;
+		vertical-align: middle;
+	}
+	.k-sprite {
+		margin: -2px 4px 0 -4px;
+		vertical-align: middle;
+	}
+	.k-animation-container {
+		border: 0;
+		position: absolute;
+		left: 0;
+		margin-top: -1px;
+		padding-left: 1px;
+		.k-animation-container {
+			top: 0;
+			left: 0;
+		}
+		.k-group {
+			top: auto;
+			left: auto;
+			margin-left: -1px;
+		}
+	}
+	.k-item .k-item {
+		@extend %extend_17;
+	}
+}
+ul {
+	&.k-menu-vertical>.k-item {
+		@extend %extend_17;
+	}
+	&.k-menu .k-separator {
+		padding: .25em 0;
+		height: 100%;
+		width: 1px;
+		font-size: 0;
+		line-height: 0;
+		border-width: 0 1px 0 0;
+	}
+	&.k-menu-vertical .k-separator {
+		@extend %extend_19;
+	}
+}
+.k-menu-vertical {
+	.k-animation-container {
+		top: 0;
+		left: 0;
+	}
+	.k-group {
+		top: 0;
+		left: 0;
+	}
+}
+.k-popup {
+	border-style: solid;
+	border-width: 1px;
+	.k-animation-container {
+		margin-top: -1px;
+		padding-left: 1px;
+		.k-popup {
+			margin-left: -1px;
+		}
+	}
+	&.k-list-container {
+		@extend %extend_33;
+	}
+	&.k-calendar-container {
+		@extend %extend_33;
+	}
+	.k-item {
+		cursor: default;
+	}
+	.k-calendar {
+		border: 0;
+	}
+	.k-list {
+		.k-item {
+			padding: 1px 5px;
+			line-height: 1.8em;
+			min-height: 1.8em;
+		}
+		.k-state-hover {
+			@extend %extend_43;
+		}
+		.k-state-focused {
+			@extend %extend_43;
+		}
+		.k-state-selected {
+			@extend %extend_43;
+		}
+	}
+}
+.k-ie {
+	.km-pane-wrapper {
+		.k-scheduler> {
+			&.k-scheduler-toolbar {
+				line-height: 2em;
+			}
+			&.k-scheduler-footer {
+				line-height: 2em;
+			}
+		}
+		.k-icon {
+			font-size: inherit;text-indent:-9999px;width:1.01em;height:1em;
+		}
+		.k-mobile-list {
+			.k-widget {
+				height: initial;
+			}
+			.k-link .k-check {
+				font-size: inherit;text-indent:-9999px;width:1.01em;height:1em;
+			}
+			.k-label .k-check {
+				font-size: inherit;text-indent:-9999px;width:1.01em;height:1em;
+			}
+		}
+	}
+	.k-menu .k-animation-container {
+		margin-top: -2px;
+	}
+	.k-popup .k-animation-container {
+		margin-top: -2px;
+	}
+	input.k-textbox {
+		text-indent: .165em;
+	}
+	.k-mobile-list .k-edit-field {
+		[type=checkbox] {
+			font-size: inherit;text-indent:-9999px;width:1.01em;height:1em;
+		}
+		[type=radio] {
+			font-size: inherit;text-indent:-9999px;width:1.01em;height:1em;
+		}
+	}
+}
+.k-grid {
+	position: relative;
+	zoom: 1;
+	outline: 0;
+	table {
+		width: 100%;
+		margin: 0;
+		border-collapse: separate;
+		border-spacing: 0;
+		empty-cells: show;
+		border-width: 0;
+		outline: 0;
+	}
+	.k-state-hover {
+		cursor: pointer;
+	}
+	td {
+		border-style: solid;
+		border-width: 0 0 0 1px;
+		padding: .4em .6em;
+		overflow: hidden;
+		line-height: 1.6em;
+		vertical-align: middle;
+		text-overflow: ellipsis;
+	}
+	.k-hierarchy-cell {
+		overflow: visible;
+	}
+	tbody {
+		.k-button {
+			min-width: 64px;
+		}
+		td:first-child {
+			border-left-width: 0;
+		}
+		button.k-button {
+			min-width: 78px;
+		}
+		td>.k-grid-delete {
+			margin-top: -0.2em;
+			margin-bottom: -0.2em;
+		}
+	}
+	.k-pager-numbers {
+		@extend %extend_23;
+		float: left;
+		cursor: default;
+	}
+	.k-animation-container {
+		position: absolute;
+	}
+	.k-hierarchy-cell+td {
+		border-left-width: 0;
+	}
+	.k-group-col {
+		width: 27px;
+	}
+	.k-hierarchy-col {
+		width: 27px;
+	}
+	.k-edit-container {
+		padding: 0;
+	}
+	.field-validation-error {
+		display: block;
+	}
+	.input-validation-error {
+		border-style: ridge;
+		border-color: $color_0;
+		background-color: $color_14;
+	}
+	.k-button {
+		margin: 0 .16em;
+	}
+	.k-detail-cell {
+		overflow: visible;
+	}
+	.k-edit-cell {
+		padding: 0 .3em;
+		white-space: nowrap;
+	}
+	.k-resize-handle {
+		position: absolute;
+		height: 25px;
+		cursor: col-resize;
+		z-index: 2;
+	}
+	.k-grouping-row td {
+		overflow: visible;
+	}
+	tfoot td:first-child {
+		border-left-width: 0;
+	}
+	.k-slider .k-button {
+		position: absolute;top:0;width:24px;min-width:0;height:24px;margin:0;padding:0;outline:0;
+	}
+	.k-slider-vertical .k-button-decrease {
+		top: auto;bottom:0;
+	}
+}
+.k-listview {
+	position: relative;
+	zoom: 1;
+}
+.k-ie10 {
+	.k-grid-header a:active {
+		background-color: transparent;
+	}
+	.k-editor-toolbar li {
+		display: inline-block;padding:.1em 0;
+	}
+}
+.k-grid-header-wrap {
+	@extend %extend_20;
+}
+.k-grid-footer-wrap {
+	@extend %extend_20;
+}
+.k-grid-content {
+	position: relative;
+	width: 100%;
+	overflow: auto;
+	overflow-x: auto;
+	overflow-y: scroll;
+	zoom: 1;
+	white-space: normal;
+	table {
+		table-layout: fixed;
+	}
+}
+.k-mobile {
+	.k-grid tbody {
+	}
+	.k-grid-backface tbody {
+	}
+}
+.k-grid-content-expander {
+	position: absolute;
+	visibility: hidden;
+	height: 1px;
+}
+.k-grid-footer {
+	border-style: solid;
+	border-width: 1px 0 0;
+	table {
+		table-layout: fixed;
+	}
+	td {
+		border-top-width: 0;
+	}
+}
+.k-grid-content-locked>table {
+	table-layout: fixed;
+}
+.k-grid-lockedcolumns {
+	white-space: nowrap;
+}
+.k-grid-content-locked {
+	white-space: normal;
+	@extend %extend_22;
+}
+.k-grid-header-locked {
+	@extend %extend_22;
+}
+.k-grid-footer-locked {
+	@extend %extend_22;
+}
+.k-group-footer {
+	td {
+		border-style: solid;
+		border-width: 1px 0;
+	}
+	.k-group-cell+td {
+		border-left-width: 1px;
+	}
+}
+.k-grid-pager {
+	border-width: 1px 0 0;
+}
+.k-pager-numbers {
+	margin: 0 2px;
+	.k-link {
+		@extend %extend_23;
+		text-decoration: none;
+		text-align: center;
+		line-height: 2em;
+		border-style: solid;
+		border-width: 1px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 1.0833em;
+		min-width: 2em;
+	}
+	.k-state-selected {
+		@extend %extend_23;
+		vertical-align: top;
+		border-style: solid;
+		border-width: 1px;
+		text-align: center;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 1.0833em;
+		min-width: 2em;
+	}
+	li {
+		float: left;
+	}
+}
+.k-pager-input {
+	float: left;
+	padding: 0 1.4166em;
+}
+.k-pager-info {
+	float: right;
+	padding: 0 1.333em;
+}
+.k-pager-refresh {
+	float: right;
+}
+.k-pager-sizes {
+	padding: 0 1.4166em;
+	display: inline-block;
+	padding-top: 1px;
+	.k-widget.k-dropdown {
+		margin-top: -2px;
+	}
+}
+.k-header> {
+	&.k-grid-filter {
+		@extend %extend_24;
+	}
+	&.k-header-column-menu {
+		@extend %extend_24;
+	}
+}
+.k-filter-menu {
+	padding: .5em;
+	.k-widget {
+		margin: .19em 0 0;
+	}
+	.k-textbox {
+		margin: .19em 0 0;
+		width: 13.2em;
+	}
+	.k-button {
+		width: 48%;
+		margin: .5em 4% 0 0;
+	}
+	.k-combobox {
+		width: 13.2em;
+	}
+	.k-datepicker {
+		width: 13.2em;
+	}
+	.k-timepicker {
+		width: 13.2em;
+	}
+	.k-datetimepicker {
+		width: 13.2em;
+	}
+	.k-numerictextbox {
+		width: 13.2em;
+	}
+	.k-dropdown {
+		width: 13.2em;
+	}
+	span.k-filter-and {
+		width: 6em;
+		margin: .5em 0 .5em;
+	}
+	.k-button+.k-button {
+		margin-right: 0;
+	}
+}
+.k-filter-help-text {
+	margin: .19em 0 0;
+}
+.k-grouping-row {
+	.k-icon {
+		margin: -3px 4px 0 2px;
+	}
+	p {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: -0.6em;
+		padding: 0 .6em;
+	}
+	.k-group-cell {
+		border-top-width: 0;
+		text-overflow: none;
+	}
+}
+.k-grouping-row+tr {
+	td {
+		border-top-width: 1px;
+	}
+	.k-group-cell {
+		border-top-width: 0;
+		text-overflow: none;
+	}
+}
+.k-grouping-dropclue {
+	position: absolute;
+	width: 6px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-position: -165px -148px;
+}
+.k-dirty {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 3px;
+	border-color: $color_0 transparent transparent $color_0;
+	margin: -0.45em 0 0 -0.6em;
+	padding: 0;
+	overflow: hidden;
+	vertical-align: top;
+}
+.k-grid-actions {
+	display: inline-block;
+}
+.k-detail-row {
+	position: relative;
+}
+.k-edit-cell> {
+	&.k-textbox {
+		width: 100%;
+	}
+	&.k-widget {
+		width: 100%;
+	}
+}
+.k-grid-edit-row>td> {
+	&.k-textbox {
+		width: 100%;
+	}
+	&.k-widget {
+		width: 100%;
+	}
+	&.text-box {
+		width: 100%;
+	}
+}
+.k-grid-resize-indicator {
+	position: absolute;
+	width: 2px;
+	background-color: $color_15;
+}
+.k-marquee {
+	position: absolute;
+	z-index: 100000;
+}
+.k-marquee-color {
+	@extend %extend_26;
+	filter: alpha(opacity=60);
+	opacity: .6;
+}
+.k-marquee-text {
+	@extend %extend_26;
+}
+.k-ie9 {
+	.k-column-menu {
+		width: 160px;
+	}
+	.k-flatcolorpicker {
+		.k-hsv-gradient {
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		}
+		.k-hue-slider .k-slider-track {
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE2JSIgc3RvcC1jb2xvcj0iI2ZmZmYwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMzJSIgc3RvcC1jb2xvcj0iIzAwZmYwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY3JSIgc3RvcC1jb2xvcj0iIzAwMDBmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg0JSIgc3RvcC1jb2xvcj0iI2ZmMDBmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjAwMDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		}
+	}
+	.k-editor-toolbar {
+		padding: 0;
+		li {
+			display: inline-block;padding:.1em 0;
+		}
+	}
+	.k-upload-button {
+		margin: .8em;
+	}
+}
+.k-column-menu {
+	min-width: 160px;
+	.k-sprite {
+		margin-right: 10px;
+	}
+}
+.k-calendar {
+	position: relative;
+	display: inline-block;
+	width: 16.917em;
+	overflow: hidden;
+	td {
+		text-decoration: none;
+		padding: .08333em;
+		cursor: pointer;
+	}
+	.k-link {
+		text-decoration: none;
+	}
+	.k-action-link {
+		text-decoration: underline;
+	}
+	.k-header {
+		@extend %extend_27;
+		.k-icon {
+			vertical-align: middle;
+		}
+		.k-link {
+			&.k-nav-prev {
+				height: 1.8333em;
+				width: 1.8333em;
+			}
+			&.k-nav-next {
+				height: 1.8333em;
+				width: 1.8333em;
+			}
+		}
+	}
+	.k-footer {
+		@extend %extend_27;
+		clear: both;
+		.k-nav-today {
+			@extend %extend_29;
+		}
+	}
+	.k-content {
+		float: left;
+		border-spacing: 0;
+		width: 100%;
+		height: 14.167em;
+		border-width: 0;
+		margin: 0;
+		table-layout: fixed;
+		text-align: right;
+		outline: 0;
+		.k-link {
+			display: block;
+			overflow: hidden;
+			min-height: 1.8333em;
+			line-height: 1.8333em;
+			padding: 0 .45em 0 .1em;
+		}
+	}
+	th {
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		padding: .4em .45em .4em .1em;
+		font-weight: normal;
+		cursor: default;
+	}
+	.k-state-focus {
+		border-style: dotted;
+		border-width: .08333em;
+		padding: 0;
+	}
+	.k-animation-container .k-content {
+		height: 100%;
+	}
+	.k-meta-view .k-link {
+		padding: .25em 0 .3em;
+		text-align: center;
+	}
+	.k-footer>.k-state-disabled {
+		@extend %extend_29;
+	}
+	.k-nav-today:hover {
+		text-decoration: underline;
+	}
+}
+.k-treeview {
+	outline: 0;
+	.k-item {
+		display: block;
+		border-width: 0;
+		margin: 0;
+		padding: 0 0 0 16px;
+	}
+	.k-content {
+		@extend %extend_30;
+	}
+	.k-icon {
+		display: inline-block;
+		vertical-align: top;
+		vertical-align: middle;
+	}
+	.k-image {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 3px;
+	}
+	.k-sprite {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 3px;
+	}
+	.k-checkbox {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: .2em;
+	}
+	.k-in {
+		display: inline-block;
+		vertical-align: top;
+		vertical-align: middle;
+		margin: 1px 0 1px .16666em;
+		padding: 1px .3333em 1px .25em;
+		line-height: 1.3333em;
+		text-decoration: none;
+		border-style: solid;
+		border-width: 1px;
+	}
+	.k-request-retry {
+		vertical-align: baseline;
+	}
+	.k-plus {
+		@extend %extend_31;
+	}
+	.k-minus {
+		@extend %extend_31;
+	}
+	.k-plus-disabled {
+		@extend %extend_31;
+		cursor: default;
+	}
+	.k-minus-disabled {
+		@extend %extend_31;
+		cursor: default;
+	}
+	.k-drop-hint {
+		position: absolute;
+		z-index: 10000;
+		visibility: hidden;
+		width: 80px;
+		height: 5px;
+		margin-top: -3px;
+		background-color: transparent;
+		background-repeat: no-repeat;
+	}
+	.k-item>.k-group {
+		@extend %extend_30;
+	}
+	span.k-in {
+		cursor: default;
+	}
+}
+span {
+	&.k-datepicker {
+		background-image: none;
+	}
+	&.k-timepicker {
+		background-image: none;
+	}
+	&.k-datetimepicker {
+		background-image: none;
+		.k-select {
+			right: 0;
+		}
+		.k-select+.k-select {
+			right: 0;
+		}
+	}
+	&.k-colorpicker {
+		background-image: none;
+	}
+	&.k-numerictextbox {
+		background-image: none;
+		background-color: transparent;
+	}
+	&.k-combobox {
+		background-image: none;
+	}
+	&.k-dropdown {
+		background-image: none;
+	}
+	&.k-tooltip {
+		position: static;display:inline-block;border-width:1px;padding:2px 5px 1px 6px;
+	}
+}
+.k-combobox {
+	@extend %extend_32;
+	white-space: nowrap;
+	.k-input {
+		width: 100%;
+		vertical-align: top;
+		display: inline;
+	}
+	.k-select {
+		@extend %extend_38;
+	}
+	.k-icon {
+		cursor: pointer;
+	}
+}
+.k-datepicker {
+	@extend %extend_32;
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: middle;
+}
+.k-timepicker {
+	@extend %extend_32;
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: middle;
+}
+.k-datetimepicker {
+	@extend %extend_32;
+	white-space: nowrap;
+	width: 15em;
+	display: inline-block;
+	vertical-align: middle;
+	.k-picker-wrap {
+		padding-right: 3.8em;
+		.k-icon {
+			margin: 0 2px;
+		}
+	}
+	.k-select {
+		width: 3.8em;
+	}
+}
+.k-colorpicker {
+	@extend %extend_32;
+	white-space: nowrap;
+	width: auto;
+	.k-picker-wrap {
+		line-height: 2em;
+	}
+	.k-selected-color {
+		vertical-align: top;
+		line-height: 0;
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+	}
+	.k-tool-icon {
+		position: relative;
+		top: -2px;
+		display: inline-block;
+		padding: 3px 3px 2px;
+		font-size: 0;
+		line-height: 0;
+		margin-right: 3px;
+		margin-left: 2px;
+		margin-bottom: 3px;
+		background-repeat: no-repeat;
+		vertical-align: middle;
+		width: 16px;
+		height: 16px;
+		.k-selected-color {
+			display: block;
+			height: 3px;
+			width: 16px;
+			position: absolute;
+			left: 3px;
+			bottom: -3px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0!important;
+		}
+	}
+	.k-icon {
+		cursor: pointer;
+	}
+	.k-foreColor {
+		background-position: -240px -96px;
+	}
+	.k-backColor {
+		background-position: -240px -120px;
+	}
+}
+.k-dropdown {
+	@extend %extend_32;
+	white-space: nowrap;
+	cursor: pointer;
+	.k-input {
+		@extend %extend_36;
+	}
+	.k-select {
+		@extend %extend_39;
+	}
+}
+.k-selectbox {
+	@extend %extend_32;
+	white-space: nowrap;
+	.k-input {
+		@extend %extend_35;
+		@extend %extend_36;
+		@extend %extend_40;
+	}
+	.k-select {
+		@extend %extend_39;
+	}
+	.k-icon {
+		cursor: pointer;
+	}
+}
+.k-slider {
+	outline: 0;
+	.k-button {
+		position: absolute;top:0;width:24px;min-width:0;height:24px;margin:0;padding:0;outline:0;
+		.k-icon {
+			margin-top: 3px;vertical-align:top;
+		}
+	}
+	.k-button-decrease {
+		left: 0;
+	}
+	.k-button-increase {
+		right: 0;
+	}
+	.k-icon {
+		cursor: pointer;
+	}
+	.k-tick {
+		cursor: pointer;
+		position: relative;margin:0;padding:0;background-color:transparent;background-repeat:no-repeat;background-position:center center;
+	}
+	.k-label {
+		position: absolute;$color_12-space:nowrap;font-size:.92em;
+	}
+}
+.k-splitter {
+	outline: 0;
+	position: relative;height:300px;
+	.k-pane {
+		overflow: hidden;
+	}
+	.k-scrollable {
+		overflow: auto;
+	}
+	.k-pane-loading {
+		position: absolute;top:50%;left:50%;margin:-8px 0 0 -8px;
+	}
+	.k-ghost-splitbar-horizontal {
+		top: 0;width:5px;border-width:0 1px;background-repeat:repeat-y;
+	}
+	.k-splitbar-horizontal {
+		top: 0;width:5px;border-width:0 1px;background-repeat:repeat-y;
+	}
+}
+.k-content {
+	outline: 0;
+}
+.k-header-column-menu {
+	outline: 0;
+}
+.k-webkit {
+	.k-editor-toolbar {
+		padding: 0;
+		li {
+			display: inline-block;padding:.1em 0;
+		}
+	}
+	.k-combobox .k-dropdown-wrap:before {
+		@extend %extend_41;
+	}
+	.k-picker-wrap:before {
+		@extend %extend_41;
+	}
+	.k-numeric-wrap:before {
+		@extend %extend_41;
+	}
+	.k-event-actions:first-child {
+		margin-top: 3px;
+	}
+	.k-scheduler-timecolumn>div>.k-icon {
+		vertical-align: top;
+	}
+}
+.k-list {
+	height: 100%;
+}
+.k-multiselect-wrap {
+	position: relative;
+	border-width: 0;
+	border-style: solid;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	border-color: $color_16;
+	background-color: #FFF;
+	min-height: 2.04em;
+	.k-input {
+		background-color: transparent;
+		height: 1.31em;
+		line-height: 1.31em;
+		padding: .18em 0;
+		text-indent: .33em;
+		border: 0;
+		margin: 1px 0 0;
+		float: left;
+	}
+	li {
+		margin: 1px 0 1px 1px;
+		padding: .1em .15em .1em .4em;
+		line-height: 1.5em;
+		float: left;
+	}
+}
+.k-input {
+	padding: .25em 0;
+	outline: 0;
+}
+.k-disabled-overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $color_12;
+	opacity: .5;
+	filter: alpha(opacity=50);
+}
+.k-colorpalette {
+	position: relative;
+	line-height: 0;
+	border-width: 0;
+	display: inline-block;
+	.k-palette {
+		border-collapse: collapse;
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	.k-item {
+		width: 14px;
+		height: 14px;
+		overflow: hidden;
+		&.k-state-selected {
+			z-index: 100;
+			background: transparent;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 1px 4px $color_13,inset 0 0 3px $color_12;
+			position: relative;
+		}
+	}
+}
+.k-flatcolorpicker {
+	position: relative;
+	display: inline-block;
+	width: 250px;
+	padding-bottom: 5px;
+	.k-selected-color {
+		background-image: url("textures/transtexture.png");
+		background-position: 50% 50%;
+		text-align: right;
+		input.k-color-value {
+			font-family: $font_1, $font_2, $font_3, $font_4, $font_5;
+			padding: .75em .3em .65em 1em;
+			border: 0;
+			margin: 0;
+			width: 70%;
+		}
+	}
+	.k-hsv-rectangle {
+		position: relative;
+		//Instead of the line below you could use @include user-select($select)
+		user-select: none;
+		.k-draghandle {
+			cursor: pointer;
+			position: absolute;
+			z-index: 10;
+			left: 50%;
+			top: 50%;
+			width: 8px;
+			height: 8px;
+			border: 1px solid $color_17;
+			margin-left: -5px;
+			margin-top: -5px;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 6px;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 1px 2px $color_18;
+			background: transparent;
+			&:hover {
+				@extend %extend_45;
+			}
+			&:focus {
+				@extend %extend_45;
+			}
+		}
+		&.k-dragging {
+			cursor: none;
+			* {
+				cursor: none;
+			}
+		}
+	}
+	.k-slider-horizontal {
+		height: 20px;
+		width: 90%;
+		margin: 0 5%;
+		.k-slider-track {
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: 0 1px 0 $color_12,0 -1px 0 $color_19;
+		}
+	}
+	.k-hue-slider {
+		display: block;
+		.k-slider-selection {
+			background: transparent;
+		}
+		.k-draghandle {
+			@extend %extend_46;
+			&:hover {
+				@extend %extend_47;
+			}
+			&:focus {
+				@extend %extend_47;
+			}
+		}
+		.k-slider-track {
+			background: -left-linear-gradient(left,$color_0 0,$color_20 16%,$color_21 33%,$color_22 50%,$color_23 67%,$color_24 84%,$color_20004 100%);
+		}
+	}
+	.k-transparency-slider {
+		display: block;
+		.k-slider-selection {
+			background: transparent;
+		}
+		.k-draghandle {
+			@extend %extend_46;
+			&:hover {
+				@extend %extend_47;
+			}
+			&:focus {
+				@extend %extend_47;
+			}
+		}
+		.k-slider-track {
+			background-image: url("textures/transparency.png");
+			background-size: 100% auto;
+			background-position: 100% 50%;
+			background-repeat: no-repeat;
+		}
+	}
+	.k-controls {
+		margin-top: 10px;
+		margin-bottom: 5px;
+		text-align: center;
+		font-size: 90%;
+		.k-button {
+			width: 6em;
+		}
+	}
+	.k-hsv-gradient {
+		background: -top-linear-gradient(top,rgba(0,0,0,0) 0,$color_13 100%),-left-linear-gradient(left,$color_12 0,rgba(255,255,255,0) 100%);
+		height: 180px;
+		margin-bottom: 5px;
+	}
+}
+.k-editor-inline {
+	border-width: 2px;padding:.3em .5em;word-wrap:break-word;
+}
+.k-editortoolbar-dragHandle {
+	cursor: move;padding-left:0;padding-right:3px;box-shadow:none!important;
+	float: left;margin:1px 0 0;
+}
+.k-editor-toolbar {
+	margin: 0;padding:.1em 0;list-style-type:none;line-height:1.3em;cursor:default;
+	li {
+		display: inline;vertical-align:middle;
+	}
+	.k-editor-widget {
+		margin-right: 6px;
+	}
+	.k-editor-dropdown {
+		position: relative;
+	}
+	.k-separator {
+		position: relative;top:1px;border-style:solid;border-width:0 1px 0 0;margin:0 .3em 0 .1em;padding:0 0 0 1px;font-size:1.3em;
+	}
+	.k-break {
+		display: block;height:1px;font-size:0;line-height:0;
+	}
+	.k-dropdown {
+		vertical-align: middle;
+	}
+	.k-combobox {
+		vertical-align: middle;
+	}
+	.k-selectbox {
+		vertical-align: middle;
+	}
+	.k-colorpicker {
+		vertical-align: middle;
+	}
+	.k-button-group {
+		padding: 1px;
+	}
+}
+.k-editor-toolbar>li {
+	margin-right: 6px;
+}
+.k-select-overlay {
+}
+.k-i-move {
+	background-position: -160px -288px;
+}
+.k-bold {
+	background-position: -240px 0;
+}
+.k-state-hover {
+	.k-bold {
+		background-position: -264px 0;
+	}
+	.k-italic {
+		background-position: -264px -24px;
+	}
+	.k-underline {
+		background-position: -264px -48px;
+	}
+	.k-strikethrough {
+		background-position: -264px -72px;
+	}
+	.k-foreColor {
+		background-position: -264px -96px;
+	}
+	.k-backColor {
+		background-position: -264px -120px;
+	}
+	.k-justifyLeft {
+		background-position: -264px -144px;
+	}
+	.k-justifyCenter {
+		background-position: -264px -168px;
+	}
+	.k-justifyRight {
+		background-position: -264px -192px;
+	}
+	.k-justifyFull {
+		background-position: -264px -216px;
+	}
+	.k-insertUnorderedList {
+		background-position: -264px -264px;
+	}
+	.k-insertOrderedList {
+		background-position: -264px -288px;
+	}
+	.k-indent {
+		background-position: -312px 0;
+	}
+	.k-rtl {
+		.k-outdent {
+			background-position: -312px 0;
+		}
+		.k-indent {
+			background-position: -312px -24px;
+		}
+	}
+	.k-outdent {
+		background-position: -312px -24px;
+	}
+	.k-createLink {
+		background-position: -312px -48px;
+	}
+	.k-unlink {
+		background-position: -312px -72px;
+	}
+	.k-insertImage {
+		background-position: -312px -96px;
+	}
+	.k-subscript {
+		background-position: -312px -144px;
+	}
+	.k-superscript {
+		background-position: -312px -168px;
+	}
+	.k-createTable {
+		background-position: -216px 0;
+	}
+	.k-addColumnLeft {
+		background-position: -216px -24px;
+	}
+	.k-addColumnRight {
+		background-position: -216px -48px;
+	}
+	.k-addRowAbove {
+		background-position: -216px -72px;
+	}
+	.k-addRowBelow {
+		background-position: -216px -96px;
+	}
+	.k-deleteRow {
+		background-position: -216px -120px;
+	}
+	.k-deleteColumn {
+		background-position: -216px -144px;
+	}
+	.k-mergeCells {
+		background-position: -216px -168px;
+	}
+}
+.k-italic {
+	background-position: -240px -24px;
+}
+.k-underline {
+	background-position: -240px -48px;
+}
+.k-strikethrough {
+	background-position: -240px -72px;
+}
+.k-foreColor {
+	background-position: -240px -96px;
+}
+.k-backColor {
+	background-position: -240px -120px;
+}
+.k-justifyLeft {
+	background-position: -240px -144px;
+}
+.k-justifyCenter {
+	background-position: -240px -168px;
+}
+.k-justifyRight {
+	background-position: -240px -192px;
+}
+.k-justifyFull {
+	background-position: -240px -216px;
+}
+.k-insertUnorderedList {
+	background-position: -240px -264px;
+}
+.k-insertOrderedList {
+	background-position: -240px -288px;
+}
+.k-indent {
+	background-position: -288px 0;
+}
+.k-outdent {
+	background-position: -288px -24px;
+}
+.k-createLink {
+	background-position: -288px -48px;
+}
+.k-unlink {
+	background-position: -288px -72px;
+}
+.k-insertImage {
+	background-position: -288px -96px;
+}
+.k-subscript {
+	background-position: -288px -144px;
+}
+.k-superscript {
+	background-position: -288px -168px;
+}
+.k-createTable {
+	background-position: -192px 0;
+}
+.k-addColumnLeft {
+	background-position: -192px -24px;
+}
+.k-addColumnRight {
+	background-position: -192px -48px;
+}
+.k-addRowAbove {
+	background-position: -192px -72px;
+}
+.k-addRowBelow {
+	background-position: -192px -96px;
+}
+.k-deleteRow {
+	background-position: -192px -120px;
+}
+.k-deleteColumn {
+	background-position: -192px -144px;
+}
+.k-mergeCells {
+	background-position: -192px -168px;
+}
+.k-fontName {
+	width: 110px;
+}
+.k-fontSize {
+	width: 124px;
+}
+.k-formatBlock {
+	width: 147px;
+}
+.k-editor-dialog {
+	padding: 1em;width:400px;
+	.k-editor-textarea {
+		font-size: inherit;font-family:consolas,"courier new",monospace;
+		width: 600px;height:350px;padding:.2em .2em .2em .4em;border-width:1px;border-style:solid;overflow:auto;
+	}
+	.k-edit-label {
+		width: 25%;
+	}
+	.k-edit-field {
+		width: 66%;
+		.k-textbox {
+			width: 96%;
+		}
+		.k-checkbox {
+			margin: 0 .4em 0 0;
+		}
+	}
+	.k-button {
+		display: inline-block;
+	}
+}
+.k-viewhtml-dialog {
+	width: auto;
+}
+.k-imagebrowser-dialog {
+	width: 740px;
+	.k-imagebrowser {
+		margin: 0 1em 0;
+	}
+	.k-edit-label {
+		width: 13%;
+	}
+	.k-edit-field {
+		width: 81%;
+		.k-textbox {
+			width: 50%;
+		}
+	}
+}
+#k-editor-image-width {
+	width: 5em;
+}
+#k-editor-image-height {
+	width: 5em;
+}
+.k-ct-popup {
+	width: 180.39999999999998px;padding:.65em .5em .5em;
+	.k-status {
+		margin: .3em 0;
+	}
+}
+.k-ct-cell {
+}
+.k-notification-wrap {
+	padding: .6em .5em;cursor:default;position:relative;$color_12-space:nowrap;
+}
+.k-notification-button {
+	.k-notification-wrap {
+		padding-right: 20px;
+	}
+	.k-notification-wrap>.k-i-close {
+		display: block;
+	}
+}
+.k-notification-wrap> {
+	&.k-i-note {
+		vertical-align: text-bottom;margin-right:4px;
+	}
+	&.k-i-close {
+		position: absolute;top:7px;right:4px;display:none;
+	}
+}
+.k-progressbar {
+	display: inline-block;position:relative;vertical-align:middle;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+}
+.k-progressbar-horizontal {
+	width: 27em;height:1.9em;
+	.k-item {
+		display: inline-block;height:100%;border-style:solid;margin-left:-1px;
+		border-width: 1px 1px 1px 0;
+		&.k-first {
+			margin-left: 0;
+		}
+		&.k-last {
+			border-right-width: 0;
+		}
+	}
+	&.k-progressbar-reverse {
+		.k-item {
+			border-width: 1px 0 1px 1px;
+		}
+		.k-last {
+			border-right-width: 1px;
+		}
+		.k-progress-status-wrap {
+			left: auto;right:-1px;text-align:left;
+		}
+	}
+	.k-first {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px 0 0 4px;border-left-width:1px;
+	}
+	.k-last {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0 4px 4px 0;
+	}
+	&.k-progressbar-reverse>.k-state-selected {
+		left: auto;right:-1px;border-radius:0 4px 4px 0;
+	}
+}
+.k-progressbar-vertical {
+	width: 1.9em;height:27em;
+	.k-item {
+		width: 100%;border-style:solid;border-width:1px 1px 0 1px;margin-top:-1px;
+		&.k-first {
+			margin-top: 0;
+		}
+	}
+	.k-first {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px 4px 0 0;
+	}
+	.k-last {
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0 0 4px 4px;border-bottom-width:1px;
+	}
+	&.k-progressbar-reverse {
+		.k-item {
+			border-width: 0 1px 1px 1px;
+		}
+		.k-first {
+			border-top-width: 1px;
+		}
+		.k-progress-status-wrap {
+			bottom: auto;top:-1px;
+		}
+		.k-progress-status {
+		}
+	}
+	.k-progress-status-wrap {
+		top: auto;bottom:-1px;
+	}
+	.k-progress-status {
+	}
+	&.k-progressbar-reverse>.k-state-selected {
+		bottom: auto;top:-1px;border-radius:4px 4px 0 0;
+	}
+	li.k-item.k-last {
+		border-bottom-width: 0;
+	}
+}
+.k-progressbar {
+	>.k-state-selected {
+		position: absolute;border-style:solid;border-width:1px;overflow:hidden;
+		&.k-complete {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 4px;
+		}
+	}
+	>.k-reset {
+		list-style: none;margin:0;padding:0;position:absolute;left:-1px;top:-1px;width:100%;height:100%;border-radius:4px;$color_12-space:nowrap;
+	}
+}
+.k-progress-status-wrap {
+	position: absolute;top:-1px;border:1px solid transparent;line-height:2em;width:100%;height:100%;
+	left: -1px;right:auto;text-align:right;
+}
+.k-progress-status {
+	display: inline-block;padding:0 .5em;min-width:10px;$color_12-space:nowrap;
+}
+.k-slider-vertical {
+	width: 26px;height:200px;
+	.k-button-decrease {
+		top: auto;bottom:0;
+	}
+	.k-slider-track {
+		left: 50%;bottom:0;width:8px;margin-left:-4px;background-repeat:repeat-y;
+	}
+	.k-slider-selection {
+		left: 50%;bottom:0;width:8px;margin-left:-4px;background-repeat:repeat-y;
+	}
+	.k-slider-buttons {
+		.k-slider-track {
+			bottom: 34px;
+		}
+		.k-slider-items {
+			padding-top: 0;
+			margin: 0;padding-top:35px;
+		}
+	}
+	.k-draghandle {
+		left: -4px;width:14px;height:13px;
+	}
+	.k-slider-items {
+		padding-top: 1px;
+	}
+	.k-tick {
+		background-position: -92px center;
+		text-align: right;
+	}
+	.k-slider-topleft {
+		.k-tick {
+			background-position: -122px center;
+			text-align: left;
+		}
+		.k-tick-large {
+			background-position: -32px center;
+			&.k-first {
+				background-position: -32px 100%;
+			}
+			&.k-last {
+				background-position: -32px 0;
+			}
+		}
+		.k-first {
+			background-position: -122px 100%;
+		}
+		.k-last {
+			background-position: -122px 0;
+		}
+		.k-label {
+			left: auto;right:120%;
+		}
+	}
+	.k-slider-bottomright {
+		.k-tick {
+			background-position: -152px center;
+		}
+		.k-tick-large {
+			background-position: -62px center;
+			&.k-first {
+				background-position: -62px 100%;
+			}
+			&.k-last {
+				background-position: -62px 0;
+			}
+		}
+		.k-first {
+			background-position: -152px 100%;
+		}
+		.k-last {
+			background-position: -152px 0;
+		}
+	}
+	.k-tick-large {
+		background-position: -2px center;
+		&.k-first {
+			background-position: -2px 100%;
+		}
+		&.k-last {
+			background-position: -2px 0;
+		}
+	}
+	.k-first {
+		background-position: -92px 100%;
+		.k-label {
+			bottom: -0.5em;
+		}
+	}
+	.k-last {
+		background-position: -92px 0;
+		.k-label {
+			top: -0.5em;
+		}
+	}
+	.k-label {
+		left: 120%;display:block;text-align:left;
+	}
+}
+.k-slider-horizontal {
+	display: inline-block;width:200px;height:26px;
+	.k-slider-track {
+		top: 50%;left:0;height:8px;margin-top:-4px;background-repeat:repeat-x;
+	}
+	.k-slider-selection {
+		top: 50%;left:0;height:8px;margin-top:-4px;background-repeat:repeat-x;
+	}
+	.k-draghandle {
+		top: -4px;width:13px;height:14px;
+	}
+	.k-slider-items {
+		height: 100%;
+	}
+	.k-tick {
+		float: left;height:100%;text-align:center;
+		background-position: center -92px;
+	}
+	.k-slider-topleft {
+		.k-tick {
+			background-position: center -122px;
+		}
+		.k-tick-large {
+			background-position: center -32px;
+			&.k-first {
+				background-position: 0 -32px;
+			}
+			&.k-last {
+				background-position: 100% -32px;
+			}
+		}
+		.k-first {
+			background-position: 0 -122px;
+		}
+		.k-last {
+			background-position: 100% -122px;
+		}
+		.k-label {
+			top: -1.2em;
+		}
+	}
+	.k-slider-bottomright {
+		.k-tick {
+			background-position: center -152px;
+		}
+		.k-tick-large {
+			background-position: center -62px;
+			&.k-first {
+				background-position: 0 -62px;
+			}
+			&.k-last {
+				background-position: 100% -62px;
+			}
+		}
+		.k-first {
+			background-position: 0 -152px;
+		}
+		.k-last {
+			background-position: 100% -152px;
+		}
+	}
+	.k-tick-large {
+		background-position: center -2px;
+		&.k-first {
+			background-position: 0 -2px;
+		}
+		&.k-last {
+			background-position: 100% -2px;
+		}
+	}
+	.k-first {
+		background-position: 0 -92px;
+		.k-label {
+			left: -50%;
+		}
+	}
+	.k-last {
+		background-position: 100% -92px;
+		.k-label {
+			left: auto;right:-50%;
+		}
+	}
+	.k-label {
+		left: 0;width:100%;line-height:1;
+		bottom: -1.2em;
+	}
+	.k-slider-buttons .k-slider-track {
+		left: 34px;
+	}
+}
+.k-slider-wrap {
+	width: 100%;height:100%;
+}
+.k-slider-track {
+	cursor: pointer;
+	position: absolute;margin:0;padding:0;
+}
+.k-slider-selection {
+	position: absolute;margin:0;padding:0;
+}
+.k-slider-tooltip {
+	top: -4444px;
+	.k-callout-n {
+		margin-left: -6px;
+	}
+	.k-callout-s {
+		margin-left: -6px;
+	}
+	.k-callout-w {
+		margin-top: -6px;
+	}
+	.k-callout-e {
+		margin-top: -6px;
+	}
+}
+.k-scheduler-toolbar {
+	border-style: solid;
+	line-height: 28px;padding:6px;
+	border-width: 0 0 1px;
+	.k-link {
+		display: inline-block;padding:0 1.1em;
+	}
+	.k-i-calendar {
+		margin: -2px 6px 0 0;
+	}
+	.k-nav-prev .k-link {
+		padding-left: .6em;padding-right:.6em;
+	}
+	.k-nav-next .k-link {
+		padding-left: .6em;padding-right:.6em;
+	}
+	.k-nav-current .k-link {
+		padding: 0;
+	}
+}
+.k-scheduler-footer {
+	border-style: solid;
+	line-height: 28px;padding:6px;
+	border-width: 1px 0 0;
+	.k-link {
+		display: inline-block;padding:0 1.1em;
+	}
+	.k-icon {
+		margin: -2px 6px 0 0;
+	}
+}
+.k-scheduler-header {
+	text-align: center;
+	overflow: hidden;
+	th {
+		overflow: hidden;text-overflow:ellipsis;
+		border-style: solid;border-width:0 0 1px 1px;
+		&:first-child {
+			border-left-width: 0;
+		}
+	}
+	.k-event {
+		white-space: nowrap;
+	}
+}
+.k-scheduler-toolbar>ul {
+	float: right;
+	&:first-child {
+		float: left;
+	}
+}
+.k-scheduler-toolbar>ul>li {
+	display: inline-block;border-style:solid;border-width:1px 1px 1px 0;
+	&:first-child {
+		border-left-width: 1px;
+	}
+}
+.k-scheduler-footer>ul>li {
+	display: inline-block;border-style:solid;border-width:1px 1px 1px 0;
+}
+.k-scheduler-phone {
+	.k-toolbar {
+		.k-nav-next {
+			float: right;
+		}
+		.k-nav-prev {
+			float: left;
+		}
+	}
+	.k-scheduler-monthview {
+		.k-events-container {
+			position: absolute;text-align:center;height:6px;line-height:6px;
+		}
+		.k-event {
+			position: static;display:inline-block;width:4px;height:4px;min-height:0;margin:1px;
+		}
+		.k-scheduler-table td {
+			height: 40px;
+			text-align: center;vertical-align:middle;
+			span {
+				font-size: 1.5em;
+			}
+		}
+	}
+	.k-scheduler-toolbar+.k-scheduler-toolbar {
+		.k-scheduler-navigation {
+			width: 100%;text-align:center;
+		}
+		.k-scheduler-navigation>li {
+			background: 0;border:0;
+		}
+	}
+}
+.k-scheduler-header-wrap {
+	overflow: hidden;
+	position: relative;border-style:solid;border-width:0;
+}
+.k-scheduler-times {
+	position: relative;
+	overflow: hidden;$color_12-space:nowrap;border-style:solid;border-width:0;
+	.k-scheduler-table {
+		table-layout: auto;
+	}
+	th {
+		text-align: right;padding-right:.6em;border-style:solid;border-width:0 1px 1px 0;border-color:transparent;
+	}
+	.k-slot-cell {
+		width: 6em;
+	}
+}
+.k-scheduler-content {
+	position: relative;
+	overflow: auto;
+}
+.k-scheduler-layout {
+	border-spacing: 0;width:100%;margin:0;border-collapse:separate;
+	tr+tr {
+		.k-scheduler-times {
+			th {
+				border-bottom-color: transparent;
+				&:last-child {
+					vertical-align: top;
+				}
+				&.k-slot-cell {
+					border-bottom-color: inherit;
+				}
+				&.k-scheduler-times-all-day {
+					border-bottom-color: inherit;
+				}
+			}
+			tr:last-child>th {
+				border-bottom-width: 0;
+			}
+		}
+		.k-scheduler-table>tbody>tr:last-child>td {
+			border-bottom-width: 0;
+		}
+	}
+}
+.k-scheduler-table {
+	border-spacing: 0;width:100%;margin:0;border-collapse:separate;
+	table-layout: fixed;
+	td {
+		height: 1.5em;padding:.334em .5em;font-size:100%;
+		vertical-align: top;
+		border-style: solid;border-width:0 0 1px 1px;
+		&:first-child {
+			border-left-width: 0;
+		}
+	}
+	th {
+		height: 1.5em;padding:.334em .5em;font-size:100%;
+	}
+}
+.k-scheduler-layout>tbody>tr>td {
+	padding: 0;vertical-align:top;
+}
+.k-scheduler-monthview {
+	.k-hidden {
+		width: 0!important;overflow:hidden!important;
+		height: 60px;padding-left:0!important;padding-right:0!important;border-right-width:0!important;
+	}
+	.k-hidden>div {
+		width: 0!important;overflow:hidden!important;
+	}
+	.k-scheduler-content .k-scheduler-table {
+		height: 100%;
+	}
+	.k-scheduler-table td {
+		height: 80px;text-align:right;
+	}
+}
+.k-slot-cell {
+	vertical-align: top;
+}
+.k-scheduler-agendaview {
+	.k-scheduler-table {
+		td {
+			text-align: left;
+			&:first-child {
+				border-left-width: 1px;
+			}
+			&.k-first {
+				border-left-width: 0;
+			}
+		}
+		th {
+			text-align: left;
+		}
+	}
+	&.k-scrollbar-h .k-scheduler-table>tbody>tr>td.k-last {
+		border-bottom-width: 1px;
+	}
+	.k-task>.k-link {
+		top: 0;right:0;
+	}
+}
+.k-scrollbar-h {
+	tr+tr .k-scheduler-times {
+		border-bottom-width: 1px;
+	}
+	.k-scheduler-content .k-scheduler-table>tbody>tr:last-child>td {
+		border-bottom-width: 1px;
+	}
+}
+.k-scheduler-now-arrow {
+	position: absolute;
+	width: 0;height:0;border:solid 5px transparent;left:0;
+}
+.k-scheduler-now-line {
+	position: absolute;
+	left: 5px;right:0;height:1px;
+}
+.k-task {
+	position: relative;
+}
+.k-more-events>span {
+	display: block;margin-top:-0.6em;
+}
+.k-event {
+	position: absolute;border-style:solid;border-width:1px;text-align:left;overflow:hidden;
+	cursor: default;min-height:1.3em;
+	&:hover {
+		.k-event-delete {
+			display: inline-block;
+		}
+		.k-resize-handle {
+			visibility: visible;
+		}
+	}
+	.k-event-top-actions {
+		position: absolute;top:0;left:0;width:100%;text-align:center;
+	}
+	.k-event-bottom-actions {
+		position: absolute;top:0;left:0;width:100%;text-align:center;
+		top: auto;bottom:0;
+	}
+	.k-resize-handle {
+		position: absolute;visibility:hidden;z-index:2;
+		&:after {
+			content: "";position:absolute;filter:alpha(opacity=50);opacity:.5;
+		}
+	}
+}
+.k-more-events {
+	position: absolute;border-style:solid;border-width:1px;text-align:left;overflow:hidden;
+}
+.k-event-template {
+	padding: .3em 1.4em .3em .6em;
+}
+.k-event-time {
+	display: none;padding-bottom:0;font-size:.9em;
+}
+.k-event-actions {
+	position: absolute;top:3px;right:4px;$color_12-space:nowrap;
+	z-index: 1;
+	&:first-child {
+		position: static;float:left;margin:4px 2px 0 4px;
+	}
+	&:first-child>.k-link {
+		display: inline-block;
+	}
+}
+.k-event {
+	>.k-link {
+		position: absolute;top:3px;right:4px;$color_12-space:nowrap;
+	}
+	>.k-resize-n {
+		top: 0;left:0;right:0;height:.4em;
+		&:after {
+			top: 1px;left:50%;margin-left:-1em;width:2em;height:1px;
+		}
+	}
+	>.k-resize-s {
+		bottom: 0;left:0;right:0;height:.4em;
+		&:after {
+			top: 1px;left:50%;margin-left:-1em;width:2em;height:1px;
+			top: auto;bottom:1px;
+		}
+	}
+	>.k-resize-e {
+		right: 0;top:0;bottom:0;width:.4em;
+		&:after {
+			left: 1px;top:50%;margin-top:-0.7em;height:1.4em;width:1px;
+			left: auto;right:1px;
+		}
+	}
+	>.k-resize-w {
+		left: 0;top:0;bottom:0;width:.4em;
+		&:after {
+			left: 1px;top:50%;margin-top:-0.7em;height:1.4em;width:1px;
+		}
+	}
+}
+.k-event-delete {
+	display: none;
+}
+.k-scheduler-mobile {
+	.k-event {
+		&:hover .k-resize-handle {
+			position: absolute;visibility:hidden;z-index:2;
+		}
+		.k-resize-handle:after {
+			filter: none;opacity:1;
+		}
+	}
+	.k-event> {
+		&.k-resize-n {
+			height: .6em;
+			&:after {
+				top: 0;margin-left:-3em;width:4em;height:.6em;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 0 0 4px 4px;
+			}
+		}
+		&.k-resize-s {
+			height: .6em;
+			&:after {
+				top: 0;margin-left:-3em;width:4em;height:.6em;
+				bottom: 0;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 4px 4px 0 0;
+			}
+		}
+		&.k-resize-e {
+			width: .6em;
+			&:after {
+				left: 0;margin-top:-0.7em;height:1.4em;width:.6em;
+				right: 0;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 4px 0 0 4px;
+			}
+		}
+		&.k-resize-w {
+			width: .6em;
+			&:after {
+				left: 0;margin-top:-0.7em;height:1.4em;width:.6em;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 0 4px 4px 0;
+			}
+		}
+	}
+	.k-event-active:hover .k-resize-handle {
+		visibility: visible;
+	}
+}
+.k-scheduler-marquee {
+	border-style: solid;border-width:0;
+	.k-label-top {
+		position: absolute;top:.3em;left:.8em;font-size:.8em;
+	}
+	.k-label-bottom {
+		position: absolute;bottom:.3em;right:.81em;font-size:.8em;
+	}
+	&.k-first:before {
+		content: "";position:absolute;width:0;height:0;border-style:solid;border-width:3px;
+	}
+	&.k-last:after {
+		content: "";position:absolute;width:0;height:0;border-style:solid;border-width:3px;
+	}
+}
+.k-tooltip-bottom {
+	text-align: left;
+	.k-button {
+		float: left;margin-right:.3em;
+	}
+	.k-quickedit-details {
+		float: right;margin-right:0;
+	}
+}
+.k-scheduler-groupcolumn {
+	width: 6em;
+}
+.k-scheduler-datecolumn {
+	width: 12em;
+}
+.k-scheduler-timecolumn {
+	width: 11em;
+	white-space: nowrap;
+	.k-i-arrow-w {
+		margin-left: -4px;
+	}
+}
+.k-scheduler-timecolumn>div {
+	position: relative;vertical-align:top;
+}
+.k-scheduler-mark {
+	display: inline-block;width:1em;height:1em;vertical-align:middle;margin-right:.5em;
+}
+.k-scheduler-agendaday {
+	float: left;margin:0 .2em 0 0;font-size:3em;font-weight:normal;
+}
+.k-scheduler-agendaweek {
+	display: block;margin:.4em 0 0;font-size:1.1em;font-style:normal;
+}
+.k-scheduler-agendadate {
+	font-size: .8em;
+}
+.k-scheduler-edit-form {
+	.k-edit-form-container {
+		width: 520px;
+	}
+	.k-edit-label {
+		width: 17%;
+	}
+	.k-edit-field {
+		width: 77%;
+	}
+	.k-textbox[name="title"] {
+		width: 100%;
+	}
+	label+input {
+		margin-left: 1em;
+	}
+	textarea.k-textbox {
+		width: 100%;
+		min-height: 4em;resize:vertical;
+	}
+}
+.k-scheduler-timezones {
+	.k-edit-form-container {
+		width: 520px;
+	}
+	.k-dropdown:first-child {
+		width: 100%;
+	}
+	.k-dropdown+.k-dropdown {
+		margin: .5em 0 .7em;
+	}
+}
+.km-pane-wrapper {
+	position: absolute;width:100%;height:100%;
+	.k-scheduler-edit-form {
+		.k-edit-buttons {
+			clear: right;margin-right:2%;margin-left:2%;padding:0 0 .6em;
+		}
+		.k-multiselect {
+			width: 15em;
+		}
+		.k-dropdown-wrap {
+			display: block;
+		}
+		.k-scheduler-update {
+			float: right;
+		}
+		.k-scheduler-cancel {
+			float: left;
+		}
+		.k-scheduler-delete {
+			display: block;text-align:center;
+		}
+		.km-scroll-container {
+			padding-top: 1em;width:100%;
+		}
+	}
+	.k-grid-edit-form {
+		.k-multiselect {
+			width: 15em;
+		}
+		.k-dropdown-wrap {
+			display: block;
+		}
+		.k-grid-update {
+			float: right;
+		}
+		.k-grid-cancel {
+			float: left;
+		}
+		.k-popup-edit-form {
+			width: auto;
+		}
+		.k-edit-form-container {
+			width: auto;
+		}
+		.km-content>.km-scroll-container {
+		}
+	}
+	.k-grid-column-menu {
+		.k-done {
+			float: right;
+		}
+		.km-content>.km-scroll-container {
+		}
+	}
+	.k-grid-filter-menu {
+		.k-submit {
+			float: right;
+		}
+		.k-cancel {
+			float: left;
+		}
+		.km-content>.km-scroll-container {
+		}
+	}
+	.k-mobile-list {
+		.k-edit-field {
+			width: 74%;
+			padding: .5em 0;
+			font-size: 1em;line-height:1.6em;overflow:hidden;
+			width: 100%;float:none;clear:none;min-height:2.7em;
+			&.k-scheduler-toolbar {
+			}
+		}
+		ul {
+			padding: 0;margin:0;list-style-type:none;border-radius:0;background:0;
+		}
+		.k-state-disabled {
+			opacity: 1;
+		}
+		.k-state-disabled>* {
+			opacity: .7;
+		}
+		.k-item {
+			font-size: 1em;line-height:1.6em;overflow:hidden;
+			&:first-child {
+				border-top: 0;
+			}
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+		.k-item {
+			>.k-link {
+				line-height: inherit;text-decoration:none;margin:-0.5em 0 -0.5em -1em;
+			}
+			>.k-label {
+				line-height: inherit;text-decoration:none;margin:-0.5em 0 -0.5em -1em;
+			}
+		}
+		.k-edit-label {
+			position: absolute;margin:0;float:none;clear:none;width:100%;
+			font-size: 1em;line-height:1.6em;overflow:hidden;
+			width: 100%;float:none;clear:none;min-height:2.7em;
+			label {
+			}
+		}
+		.k-scheduler-toolbar {
+			padding: .3em 0;
+			ul li {
+				line-height: 2em;
+			}
+		}
+		.k-item>* {
+			line-height: normal;
+		}
+		.k-edit-buttons {
+		}
+		.k-button-container {
+		}
+		.k-recur-view {
+			>.k-edit-label:nth-child(3) {
+				position: relative;
+			}
+			>.k-edit-field .k-check {
+				width: 100%;
+				&:first-child {
+					margin-top: -0.5em;
+				}
+				&:last-child {
+					margin-bottom: -0.5em;
+				}
+			}
+		}
+		.k-widget {
+			border: 0;border-radius:0;
+			width: 80%;padding:.6em 0;margin:-0.5em 0;
+			.k-input {
+				border: 0;background:transparent;
+			}
+			.k-state-default {
+				border: 0;background:transparent;
+			}
+		}
+		textarea {
+			width: 80%;padding:.6em 0;margin:-0.5em 0;
+		}
+		.k-edit-field>* {
+		}
+		.k-scheduler-navigation {
+			display: table;table-layout:fixed;
+			li {
+				display: table-cell;text-align:center;
+				a {
+					padding-left: 0;padding-right:0;width:100%;
+				}
+			}
+		}
+		.k-picker-wrap {
+		}
+		.k-numeric-wrap {
+		}
+		.k-dropdown-wrap {
+		}
+		.k-numerictextbox {
+			.k-select {
+				position: absolute;top:0;right:0;line-height:auto;
+			}
+			.k-link {
+				height: 50%;
+			}
+		}
+		.k-filter-help-text>li>.k-link {
+		}
+		.k-link .k-check {
+			border: 0;font-size:inherit;width:13px;height:13px;margin:.26em 1em .26em 0;
+		}
+		.k-label .k-check {
+			border: 0;font-size:inherit;width:13px;height:13px;margin:.26em 1em .26em 0;
+		}
+		select:not([multiple]) {
+			width: 80%;padding:.6em 0;margin:-0.5em 0;
+		}
+		.k-scheduler-timezones .k-edit-field label.k-check {
+			text-indent: 1em;
+			width: 100%;
+		}
+		.k-edit-field>.k-button {
+			margin-left: 20%;float:left;
+		}
+		.k-datepicker .k-select {
+			position: absolute;top:0;right:0;line-height:auto;
+			&:before {
+				content: "\a0";display:inline-block;width:0;height:100%;vertical-align:middle;
+			}
+		}
+		.k-datetimepicker .k-select {
+			position: absolute;top:0;right:0;line-height:auto;
+			&:before {
+				content: "\a0";display:inline-block;width:0;height:100%;vertical-align:middle;
+			}
+		}
+		.k-edit-field>*>select:not([multiple]) {
+			width: 100%;
+		}
+	}
+	.km-pane {
+		* {
+		}
+		.k-mobile-list {
+			padding: 0;margin:0;list-style-type:none;border-radius:0;background:0;
+			textarea {
+			}
+			input:not([type="checkbox"]):not([type="radio"]) {
+			}
+			select:not([multiple]) {
+			}
+		}
+	}
+	.km-switch {
+		top: 50%;right:.8rem;position:absolute;margin-top:-1.1rem;
+	}
+	.k-edit-form-container {
+		padding-top: 1em;width:100%;
+		.k-button {
+			margin: 0;
+		}
+		.k-button+.k-button {
+			margin: 0 0 0 .18em;
+		}
+	}
+	#recurrence {
+		.k-scheduler-navigation {
+			width: 100%;
+		}
+		.km-scroll-container>.k-edit-label:first-child {
+			position: relative;
+		}
+	}
+	.k-scheduler-views {
+		width: 18em;
+		display: table;table-layout:fixed;
+		li {
+			display: table-cell;text-align:center;
+			a {
+				padding-left: 0;padding-right:0;width:100%;
+			}
+		}
+	}
+	.k-grid {
+		.k-button {
+			margin: 0;
+		}
+		.k-button+.k-button {
+			margin: 0 0 0 .18em;
+		}
+	}
+	.k-pager-numbers {
+		.k-link {
+			width: auto;line-height:2.2em;padding:0 .86em;min-width:.7em;
+		}
+		.k-state-selected {
+			width: auto;line-height:2.2em;padding:0 .86em;min-width:.7em;
+		}
+	}
+	.k-pager-wrap {
+		line-height: 2.4em;
+	}
+	.k-grid-edit-form>.km-header {
+		border-style: solid;border-width:1px;padding:.3em .6em;text-align:center;width:auto;line-height:2em;
+	}
+	.k-grid-column-menu>.km-header {
+		border-style: solid;border-width:1px;padding:.3em .6em;text-align:center;width:auto;line-height:2em;
+	}
+	.k-grid-filter-menu>.km-header {
+		border-style: solid;border-width:1px;padding:.3em .6em;text-align:center;width:auto;line-height:2em;
+	}
+	.k-scheduler-edit-form>.km-header {
+		border-style: solid;border-width:1px;padding:.3em .6em;text-align:center;width:auto;line-height:2em;
+	}
+	.k-popup-edit-form .km-content>.km-scroll-container {
+	}
+	.k-filter-menu .k-button {
+		width: 100%;margin:0;
+	}
+	.km-header .k-icon {
+		display: none;
+	}
+	.k-grid-toolbar .k-icon {
+		display: none;
+	}
+	.k-grid-edit .k-icon {
+		display: none;
+	}
+	.k-grid-delete .k-icon {
+		display: none;
+	}
+	.k-mobile-list>ul>li>.k-link {
+	}
+	.k-edit-field>*:not([type="checkbox"]):not([type="radio"]):not(.k-button) {
+		width: 80%;padding:.6em 0;margin:-0.5em 0;
+	}
+	*:not(.k-state-default)>input:not([type="checkbox"]):not([type="radio"]) {
+		width: 80%;padding:.6em 0;margin:-0.5em 0;
+	}
+	.k-pager-wrap>.k-link {
+	}
+}
+.k-edit-box {
+	float: left;
+}
+.k-edit-field>ul {
+	&.k-reset>li {
+		margin: .2em 0 .4em;line-height:2.4;
+	}
+	&.k-reset {
+		&.k-toolbar>li {
+			margin: 0;
+		}
+		.k-widget {
+			margin-left: .8em;
+		}
+		.k-numerictextbox {
+			width: 5em;
+		}
+		.k-dropdown {
+			width: 9em;
+		}
+		.k-datepicker {
+			width: 9em;
+		}
+	}
+}
+.k-popup-message {
+	margin: 0;padding:1em 0 2em;text-align:center;
+}
+.k-tooltip-button {
+	text-align: right;height:0;
+}
+.k-tooltip-content {
+	height: 100%;
+}
+.k-invalid-msg {
+	display: none;
+}
+.k-callout {
+	position: absolute;width:0;height:0;border-style:solid;border-width:6px;border-color:transparent;
+}
+.k-callout-n {
+	top: -13px;left:50%;
+}
+.k-callout-w {
+	top: 50%;left:-13px;
+}
+.k-callout-s {
+	left: 50%;bottom:-13px;
+}
+.k-callout-e {
+	top: 50%;right:-13px;
+}
+.k-ghost-splitbar {
+}
+.k-ghost-splitbar-vertical {
+	left: 0;height:5px;border-width:1px 0;background-repeat:repeat-x;
+}
+.k-splitbar-vertical {
+	left: 0;height:5px;border-width:1px 0;background-repeat:repeat-x;
+	.k-icon {
+		position: absolute;left:50%;width:20px;height:5px;margin-left:-10px;
+	}
+	.k-collapse-prev {
+		margin-left: -31px;
+		background-position: 2px -134px;
+	}
+	.k-collapse-next {
+		margin-left: 11px;
+		background-position: 2px -165px;
+	}
+	.k-resize-handle {
+		background-position: -38px -309px;
+	}
+	.k-expand-next {
+		background-position: 2px -134px;
+	}
+	.k-expand-prev {
+		background-position: 2px -165px;
+	}
+}
+.k-splitbar-draggable-horizontal {
+	cursor: w-resize;
+	.k-resize-handle {
+		display: inline-block;
+	}
+}
+.k-splitbar-draggable-vertical {
+	cursor: n-resize;
+	.k-resize-handle {
+		display: inline-block;
+	}
+}
+.k-restricted-size-horizontal {
+	background-color: $color_0;
+}
+.k-restricted-size-vertical {
+	background-color: $color_0;
+}
+.k-splitbar-horizontal {
+	.k-icon {
+		position: absolute;top:50%;width:5px;height:20px;margin-top:-10px;
+	}
+	.k-collapse-prev {
+		margin-top: -31px;
+		background-position: -6px -174px;
+	}
+	.k-collapse-next {
+		margin-top: 11px;
+		background-position: -5px -142px;
+	}
+	.k-resize-handle {
+		background-position: -165px -6px;
+	}
+	.k-expand-next {
+		background-position: -6px -174px;
+	}
+	.k-expand-prev {
+		background-position: -5px -142px;
+	}
+}
+.k-collapse-prev {
+	cursor: pointer;
+}
+.k-collapse-next {
+	cursor: pointer;
+}
+.k-expand-prev {
+	cursor: pointer;
+}
+.k-expand-next {
+	cursor: pointer;
+}
+.k-splitbar-static-horizontal {
+	width: 1px;
+}
+.k-splitbar-static-vertical {
+	height: 1px;
+}
+.k-splitbar-horizontal-hover {
+	>.k-resize-handle {
+		background-position: -181px -6px;
+	}
+	>.k-collapse-prev {
+		background-position: -22px -174px;
+	}
+	>.k-expand-next {
+		background-position: -22px -174px;
+	}
+	>.k-collapse-next {
+		background-position: -21px -142px;
+	}
+	>.k-expand-prev {
+		background-position: -21px -142px;
+	}
+}
+.k-splitbar-vertical-hover {
+	>.k-resize-handle {
+		background-position: -70px -309px;
+	}
+	>.k-collapse-prev {
+		background-position: -14px -134px;
+	}
+	>.k-expand-next {
+		background-position: -14px -134px;
+	}
+	>.k-collapse-next {
+		background-position: -14px -165px;
+	}
+	>.k-expand-prev {
+		background-position: -14px -165px;
+	}
+}
+.k-dropzone {
+	position: relative;
+	border-style: solid;border-width:0;padding:.8em;background-color:transparent;
+	em {
+		vertical-align: middle;
+		visibility: hidden;margin-left:.6em;
+	}
+	.k-upload-status {
+		line-height: 2.4;
+	}
+}
+.k-upload-button {
+	vertical-align: middle;
+	position: relative;min-width:7.167em;overflow:hidden!important;direction:ltr;
+	input {
+		position: absolute;top:0;right:0;z-index:1;font:200px monospace!important;filter:alpha(opacity=0);opacity:0;margin:0;padding:0;cursor:pointer;
+	}
+}
+.k-upload-files {
+	margin: 0 0 .6em;line-height:2.66;border-style:solid;border-width:1px 0 0;
+	.k-button {
+		padding: 0;
+		margin-left: 8px;
+	}
+}
+.k-si-refresh {
+	background-position: -160px -128px;
+}
+.k-si-tick {
+	background-position: -160px -96px;
+}
+.k-success {
+	background-position: -160px -96px;
+}
+.k-si-cancel {
+	background-position: -160px -112px;
+}
+.k-filename {
+}
+.k-upload-status {
+	position: absolute;right:12px;top:.6em;line-height:.7em;
+	.k-button {
+		vertical-align: text-bottom;
+	}
+	.k-warning {
+		vertical-align: text-bottom;
+	}
+}
+.k-progress {
+	position: absolute;top:0;bottom:0;left:0;
+}
+.k-upload-selected {
+	margin-left: .8em;margin-right:.2em;
+	margin-bottom: .8em;
+}
+.k-upload-cancel {
+	margin-bottom: .8em;
+}
+.k-toolbar-wrap {
+	.k-upload-files {
+		display: none;
+	}
+	.k-dropzone-active {
+		text-align: center;
+		em {
+			display: inline;margin:0;font-size:5em;font-style:normal;
+		}
+		.k-upload-button {
+			display: none;
+		}
+	}
+	.k-dropzone em {
+		display: none;
+	}
+}
+.k-imagebrowser-dropzone {
+	z-index: 10010;filter:alpha(opacity=40);opacity:.4;position:fixed;
+}
+.k-search-wrap {
+	position: relative;float:right;width:20%;padding:0;
+	label {
+		position: absolute;top:0;left:4px;line-height:20px;font-style:italic;
+	}
+	.k-search {
+		position: absolute;top:4px;right:2px;margin:0;
+	}
+	input.k-input {
+		padding-left: 0;padding-right:0;
+	}
+}
+.k-breadcrumbs {
+	position: relative;float:left;width:79%;
+	.k-link {
+		margin-top: 0;text-decoration:none;vertical-align:middle;position:static;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.k-breadcrumbs-wrap {
+	position: absolute;top:3px;left:0;z-index:1;padding-left:5px;line-height:18px;
+	.k-icon {
+		margin-top: 0;text-decoration:none;vertical-align:middle;position:static;
+	}
+}
+.k-imagebrowser {
+	.k-toolbar {
+		border-style: solid;border-width:1px;margin:8px 0 0;padding:.25em;line-height:23px;$color_12-space:nowrap;
+		.k-button.k-state-disabled {
+			display: none;
+		}
+	}
+	.k-toolbar-wrap {
+		float: left;
+	}
+	.k-tiles-arrange {
+		float: right;
+		.k-dropdown {
+			width: 75px;
+		}
+	}
+	.k-upload {
+		float: left;z-index:10010;border-width:0;background-color:transparent;
+		.k-upload-status {
+			display: none;
+		}
+		.k-upload-button {
+			width: auto;margin-left:0;vertical-align:top;
+		}
+		.k-icon {
+			vertical-align: bottom;
+		}
+	}
+	.k-thumb {
+	}
+	.k-file {
+		width: 80px;height:80px;
+	}
+	.k-image {
+		margin: 2px 0 0 2px;
+	}
+	.k-folder {
+		width: 80px;height:80px;background-position:0 -200px;background-repeat:no-repeat;
+	}
+	.k-loading {
+		margin: 35px 0 0 33px;
+	}
+	.k-form-text-row {
+		text-align: right;
+		label {
+			width: 14%;
+		}
+		input {
+			width: 80%;
+		}
+	}
+	.k-breadcrumbs .k-i-seek-w {
+		text-decoration: none;cursor:default;
+	}
+}
+.k-tiles {
+	clear: both;height:390px;border-style:solid;border-width:1px;border-top-width:0;margin:0 0 1.4em;padding:9px;overflow:auto;line-height:1.2;
+	li {
+		&.k-state-hover {
+			background-position: 0 center;
+		}
+		&.k-state-selected {
+			background-position: 0 center;
+		}
+	}
+}
+.k-tile {
+	float: left;width:223px;height:88px;overflow:hidden;border-style:solid;border-width:1px;margin:1px;padding:0 0 4px;background-position:0 100px;background-repeat:repeat-x;cursor:pointer;
+	strong {
+		margin: 10px 0 4px;font-weight:normal;
+		float: left;width:120px;overflow:hidden;text-overflow:ellipsis;
+		display: block;
+	}
+	input {
+		margin: 10px 0 4px;font-weight:normal;
+		width: 100px;
+		display: block;
+	}
+	.k-filesize {
+		display: block;
+	}
+}
+.k-tile-empty {
+	margin: 160px 0 0;
+	text-align: center;
+	.k-dialog-upload {
+		font-weight: bold;font-size:120%;
+	}
+	strong {
+		display: block;margin:0 0 .2em;font-size:3em;font-weight:normal;
+	}
+	.k-button-wrapper {
+		text-align: center;
+	}
+}
+.km-root {
+}
+.km-pane {
+	font-family: $font_6;
+	overflow-x: hidden;
+}
+.km-view {
+}
+.k-ff18 {
+	.km-view {
+		position: relative;
+	}
+	.km-pane {
+		position: relative;
+	}
+}
+.k-ff19 {
+	.km-view {
+		position: relative;
+	}
+	.km-pane {
+		position: relative;
+	}
+}
+.k-ff20 {
+	.km-view {
+		position: relative;
+	}
+	.km-pane {
+		position: relative;
+	}
+}
+.k-ff21 {
+	.km-view {
+		position: relative;
+	}
+	.km-pane {
+		position: relative;
+	}
+}
+.km-content {
+}
+.km-actionsheet {
+	padding: 0;margin:0;
+}
+.km-actionsheet-wrapper {
+}
+.k-grid-mobile {
+	border-width: 0;
+	.k-resize-handle-inner {
+		position: absolute;top:50%;margin-top:-10px;left:-7px;width:17px;height:17px;border-style:solid;border-width:2px;border-radius:10px;
+		&:before {
+			content: "";position:absolute;top:50%;margin-top:-3px;left:1px;width:6px;height:6px;background-position:-5px -53px;
+		}
+		&:after {
+			content: "";position:absolute;top:50%;margin-top:-3px;right:1px;width:6px;height:6px;background-position:-5px -21px;
+		}
+	}
+}
+.k-check[type=checkbox] {
+}
+.k-check[type=radio] {
+}
+@media screen and(-ms-high-contrast:active) and(-ms-high-contrast:none) {
+	.km-pane-wrapper {
+		.k-numerictextbox {
+			.k-select .k-link span {
+				&.k-i-arrow-n {
+					background-position: 0 0;
+				}
+				&.k-i-arrow-s {
+					background-position: 0 -2em;
+				}
+			}
+			.k-link.k-state-selected span {
+				&.k-i-arrow-n {
+					background-position: -1em 0;
+				}
+				&.k-i-arrow-s {
+					background-position: -1em -2em;
+				}
+			}
+			.k-state-hover .k-link span {
+				&.k-i-arrow-n {
+					background-position: -1em 0;
+				}
+				&.k-i-arrow-s {
+					background-position: -1em -2em;
+				}
+			}
+		}
+		.k-state-selected {
+			.k-i-arrow-n {
+				background-position: -1em 0;
+			}
+			.k-i-arrow-s {
+				background-position: -1em -2em;
+			}
+		}
+		.k-i-arrow-n {
+			background-position: 0 0;
+		}
+		.k-i-arrow-e {
+			background-position: 0 -1em;
+		}
+		.k-i-arrow-s {
+			background-position: 0 -2em;
+		}
+		.k-i-arrow-w {
+			background-position: 0 -3em;
+		}
+		.k-i-seek-n {
+			background-position: 0 -4em;
+		}
+		.k-i-seek-e {
+			background-position: 0 -5em;
+		}
+		.k-i-seek-s {
+			background-position: 0 -6em;
+		}
+		.k-i-seek-w {
+			background-position: 0 -7em;
+		}
+		.k-i-arrowhead-n {
+			background-position: 0 -16em;
+		}
+		.k-i-arrowhead-e {
+			background-position: 0 -17em;
+		}
+		.k-i-arrowhead-s {
+			background-position: 0 -18em;
+		}
+		.k-i-arrowhead-w {
+			background-position: 0 -19em;
+		}
+		.k-i-expand {
+			background-position: 0 -12em;
+		}
+		.k-plus {
+			background-position: 0 -12em;
+		}
+		.k-plus-disabled {
+			background-position: 0 -12em;
+		}
+		.k-i-expand-w {
+			background-position: 0 -13em;
+		}
+		.k-i-collapse {
+			background-position: 0 -14em;
+		}
+		.k-minus {
+			background-position: 0 -14em;
+		}
+		.k-minus-disabled {
+			background-position: 0 -14em;
+		}
+		.k-i-collapse-w {
+			background-position: 0 -15em;
+		}
+		.k-i-pencil {
+			background-position: -2em 0;
+		}
+		.k-edit {
+			background-position: -2em 0;
+		}
+		.k-i-close {
+			background-position: -2em -1em;
+		}
+		.k-delete {
+			background-position: -2em -1em;
+		}
+		.k-group-delete {
+			background-position: -2em -1em;
+		}
+		.k-si-close {
+			background-position: -10em -5em;
+		}
+		.k-multiselect {
+			.k-delete {
+				background-position: -10em -5em;
+			}
+			.k-state-hover .k-delete {
+				background-position: -11em -5em;
+			}
+		}
+		.k-i-tick {
+			background-position: -2em -2em;
+		}
+		.k-insert {
+			background-position: -2em -2em;
+		}
+		.k-update {
+			background-position: -2em -2em;
+		}
+		.k-i-cancel {
+			background-position: -2em -3em;
+		}
+		.k-cancel {
+			background-position: -2em -3em;
+		}
+		.k-denied {
+			background-position: -2em -3em;
+		}
+		.k-i-plus {
+			background-position: -2em -4em;
+		}
+		.k-add {
+			background-position: -2em -4em;
+		}
+		.k-i-funnel {
+			background-position: -2em -5em;
+		}
+		.k-filter {
+			background-position: -2em -5em;
+		}
+		.k-i-funnel-clear {
+			background-position: -2em -6em;
+		}
+		.k-clear-filter {
+			background-position: -2em -6em;
+		}
+		.k-i-refresh {
+			background-position: -2em -7em;
+		}
+		.k-i-exception {
+			background-position: -10em -19em;
+		}
+		.k-i-restore {
+			background-position: -2em -8em;
+		}
+		.k-i-maximize {
+			background-position: -2em -9em;
+		}
+		.k-i-minimize {
+			background-position: -4em -18em;
+		}
+		.k-i-pin {
+			background-position: -10em -16em;
+		}
+		.k-i-unpin {
+			background-position: -10em -17em;
+		}
+		.k-resize-se {
+			background-position: -2em -10em;
+		}
+		.k-i-calendar {
+			background-position: -2em -11em;
+		}
+		.k-i-clock {
+			background-position: -2em -12em;
+		}
+		.k-si-plus {
+			background-position: -2em -13em;
+		}
+		.k-si-minus {
+			background-position: -2em -14em;
+		}
+		.k-check:checked {
+			background-position: -2em -2em;
+		}
+		.k-mobile-list .k-edit-field {
+			[type=checkbox] {
+				background-position: -2em -2em;
+			}
+			[type=radio] {
+				background-position: -2em -2em;
+			}
+		}
+	}
+	.k-state-hover {
+		>.km-pane-wrapper {
+			.k-numerictextbox {
+				.k-select .k-link span {
+					&.k-i-arrow-n {
+						background-position: -1em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -1em -2em;
+					}
+				}
+				.k-link.k-state-selected span {
+					&.k-i-arrow-n {
+						background-position: -2em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -2em -2em;
+					}
+				}
+				.k-state-hover .k-link span {
+					&.k-i-arrow-n {
+						background-position: -2em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -2em -2em;
+					}
+				}
+			}
+			.k-state-selected {
+				.k-i-arrow-n {
+					background-position: -2em 0;
+				}
+				.k-i-arrow-s {
+					background-position: -2em -2em;
+				}
+			}
+			.k-i-arrow-n {
+				background-position: -1em 0;
+			}
+			.k-i-arrow-e {
+				background-position: -1em -1em;
+			}
+			.k-i-arrow-s {
+				background-position: -1em -2em;
+			}
+			.k-i-arrow-w {
+				background-position: -1em -3em;
+			}
+			.k-i-seek-n {
+				background-position: -1em -4em;
+			}
+			.k-i-seek-e {
+				background-position: -1em -5em;
+			}
+			.k-i-seek-s {
+				background-position: -1em -6em;
+			}
+			.k-i-seek-w {
+				background-position: -1em -7em;
+			}
+			.k-i-arrowhead-n {
+				background-position: -1em -16em;
+			}
+			.k-i-arrowhead-e {
+				background-position: -1em -17em;
+			}
+			.k-i-arrowhead-s {
+				background-position: -1em -18em;
+			}
+			.k-i-arrowhead-w {
+				background-position: -1em -19em;
+			}
+			.k-i-expand {
+				background-position: -1em -12em;
+			}
+			.k-plus {
+				background-position: -1em -12em;
+			}
+			.k-plus-disabled {
+				background-position: -1em -12em;
+			}
+			.k-i-expand-w {
+				background-position: -1em -13em;
+			}
+			.k-i-collapse {
+				background-position: -1em -14em;
+			}
+			.k-minus {
+				background-position: -1em -14em;
+			}
+			.k-minus-disabled {
+				background-position: -1em -14em;
+			}
+			.k-i-collapse-w {
+				background-position: -1em -15em;
+			}
+			.k-i-pencil {
+				background-position: -3em 0;
+			}
+			.k-edit {
+				background-position: -3em 0;
+			}
+			.k-i-close {
+				background-position: -3em -1em;
+			}
+			.k-delete {
+				background-position: -3em -1em;
+			}
+			.k-group-delete {
+				background-position: -3em -1em;
+			}
+			.k-si-close {
+				background-position: -11em -5em;
+			}
+			.k-i-tick {
+				background-position: -3em -2em;
+			}
+			.k-insert {
+				background-position: -3em -2em;
+			}
+			.k-update {
+				background-position: -3em -2em;
+			}
+			.k-i-cancel {
+				background-position: -3em -3em;
+			}
+			.k-cancel {
+				background-position: -3em -3em;
+			}
+			.k-denied {
+				background-position: -3em -3em;
+			}
+			.k-i-plus {
+				background-position: -3em -4em;
+			}
+			.k-add {
+				background-position: -3em -4em;
+			}
+			.k-i-funnel {
+				background-position: -3em -5em;
+			}
+			.k-filter {
+				background-position: -3em -5em;
+			}
+			.k-i-funnel-clear {
+				background-position: -3em -6em;
+			}
+			.k-clear-filter {
+				background-position: -3em -6em;
+			}
+			.k-i-refresh {
+				background-position: -3em -7em;
+			}
+			.k-i-exception {
+				background-position: -11em -19em;
+			}
+			.k-i-restore {
+				background-position: -3em -8em;
+			}
+			.k-i-maximize {
+				background-position: -3em -9em;
+			}
+			.k-i-minimize {
+				background-position: -5em -18em;
+			}
+			.k-i-pin {
+				background-position: -11em -16em;
+			}
+			.k-i-unpin {
+				background-position: -11em -17em;
+			}
+			.k-resize-se {
+				background-position: -3em -10em;
+			}
+			.k-i-calendar {
+				background-position: -3em -11em;
+			}
+			.k-i-clock {
+				background-position: -3em -12em;
+			}
+			.k-si-plus {
+				background-position: -3em -13em;
+			}
+			.k-si-minus {
+				background-position: -3em -14em;
+			}
+			.k-check:checked {
+				background-position: -3em -2em;
+			}
+			.k-mobile-list .k-edit-field {
+				[type=checkbox] {
+					background-position: -3em -2em;
+				}
+				[type=radio] {
+					background-position: -3em -2em;
+				}
+			}
+		}
+		&.k-rtl .km-pane-wrapper {
+			.k-i-expand {
+				background-position: -1em -13em;
+			}
+			.k-plus {
+				background-position: -1em -13em;
+			}
+			.k-plus-disabled {
+				background-position: -1em -13em;
+			}
+			.k-i-collapse {
+				background-position: -1em -15em;
+			}
+			.k-minus {
+				background-position: -1em -15em;
+			}
+			.k-minus-disabled {
+				background-position: -1em -15em;
+			}
+		}
+	}
+	.k-state-hover>* {
+		>.km-pane-wrapper {
+			.k-numerictextbox {
+				.k-select .k-link span {
+					&.k-i-arrow-n {
+						background-position: -1em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -1em -2em;
+					}
+				}
+				.k-link.k-state-selected span {
+					&.k-i-arrow-n {
+						background-position: -2em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -2em -2em;
+					}
+				}
+				.k-state-hover .k-link span {
+					&.k-i-arrow-n {
+						background-position: -2em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -2em -2em;
+					}
+				}
+			}
+			.k-state-selected {
+				.k-i-arrow-n {
+					background-position: -2em 0;
+				}
+				.k-i-arrow-s {
+					background-position: -2em -2em;
+				}
+			}
+			.k-i-arrow-n {
+				background-position: -1em 0;
+			}
+			.k-i-arrow-e {
+				background-position: -1em -1em;
+			}
+			.k-i-arrow-s {
+				background-position: -1em -2em;
+			}
+			.k-i-arrow-w {
+				background-position: -1em -3em;
+			}
+			.k-i-seek-n {
+				background-position: -1em -4em;
+			}
+			.k-i-seek-e {
+				background-position: -1em -5em;
+			}
+			.k-i-seek-s {
+				background-position: -1em -6em;
+			}
+			.k-i-seek-w {
+				background-position: -1em -7em;
+			}
+			.k-i-arrowhead-n {
+				background-position: -1em -16em;
+			}
+			.k-i-arrowhead-e {
+				background-position: -1em -17em;
+			}
+			.k-i-arrowhead-s {
+				background-position: -1em -18em;
+			}
+			.k-i-arrowhead-w {
+				background-position: -1em -19em;
+			}
+			.k-i-expand {
+				background-position: -1em -12em;
+			}
+			.k-plus {
+				background-position: -1em -12em;
+			}
+			.k-plus-disabled {
+				background-position: -1em -12em;
+			}
+			.k-i-expand-w {
+				background-position: -1em -13em;
+			}
+			.k-i-collapse {
+				background-position: -1em -14em;
+			}
+			.k-minus {
+				background-position: -1em -14em;
+			}
+			.k-minus-disabled {
+				background-position: -1em -14em;
+			}
+			.k-i-collapse-w {
+				background-position: -1em -15em;
+			}
+			.k-i-pencil {
+				background-position: -3em 0;
+			}
+			.k-edit {
+				background-position: -3em 0;
+			}
+			.k-i-close {
+				background-position: -3em -1em;
+			}
+			.k-delete {
+				background-position: -3em -1em;
+			}
+			.k-group-delete {
+				background-position: -3em -1em;
+			}
+			.k-si-close {
+				background-position: -11em -5em;
+			}
+			.k-i-tick {
+				background-position: -3em -2em;
+			}
+			.k-insert {
+				background-position: -3em -2em;
+			}
+			.k-update {
+				background-position: -3em -2em;
+			}
+			.k-i-cancel {
+				background-position: -3em -3em;
+			}
+			.k-cancel {
+				background-position: -3em -3em;
+			}
+			.k-denied {
+				background-position: -3em -3em;
+			}
+			.k-i-plus {
+				background-position: -3em -4em;
+			}
+			.k-add {
+				background-position: -3em -4em;
+			}
+			.k-i-funnel {
+				background-position: -3em -5em;
+			}
+			.k-filter {
+				background-position: -3em -5em;
+			}
+			.k-i-funnel-clear {
+				background-position: -3em -6em;
+			}
+			.k-clear-filter {
+				background-position: -3em -6em;
+			}
+			.k-i-refresh {
+				background-position: -3em -7em;
+			}
+			.k-i-exception {
+				background-position: -11em -19em;
+			}
+			.k-i-restore {
+				background-position: -3em -8em;
+			}
+			.k-i-maximize {
+				background-position: -3em -9em;
+			}
+			.k-i-minimize {
+				background-position: -5em -18em;
+			}
+			.k-i-pin {
+				background-position: -11em -16em;
+			}
+			.k-i-unpin {
+				background-position: -11em -17em;
+			}
+			.k-resize-se {
+				background-position: -3em -10em;
+			}
+			.k-i-calendar {
+				background-position: -3em -11em;
+			}
+			.k-i-clock {
+				background-position: -3em -12em;
+			}
+			.k-si-plus {
+				background-position: -3em -13em;
+			}
+			.k-si-minus {
+				background-position: -3em -14em;
+			}
+			.k-check:checked {
+				background-position: -3em -2em;
+			}
+			.k-mobile-list .k-edit-field {
+				[type=checkbox] {
+					background-position: -3em -2em;
+				}
+				[type=radio] {
+					background-position: -3em -2em;
+				}
+			}
+		}
+		&.k-rtl .km-pane-wrapper {
+			.k-i-expand {
+				background-position: -1em -13em;
+			}
+			.k-plus {
+				background-position: -1em -13em;
+			}
+			.k-plus-disabled {
+				background-position: -1em -13em;
+			}
+			.k-i-collapse {
+				background-position: -1em -15em;
+			}
+			.k-minus {
+				background-position: -1em -15em;
+			}
+			.k-minus-disabled {
+				background-position: -1em -15em;
+			}
+		}
+	}
+	.k-button {
+		&:hover {
+			.km-pane-wrapper {
+				.k-numerictextbox {
+					.k-select .k-link span {
+						&.k-i-arrow-n {
+							background-position: -1em 0;
+						}
+						&.k-i-arrow-s {
+							background-position: -1em -2em;
+						}
+					}
+					.k-link.k-state-selected span {
+						&.k-i-arrow-n {
+							background-position: -2em 0;
+						}
+						&.k-i-arrow-s {
+							background-position: -2em -2em;
+						}
+					}
+					.k-state-hover .k-link span {
+						&.k-i-arrow-n {
+							background-position: -2em 0;
+						}
+						&.k-i-arrow-s {
+							background-position: -2em -2em;
+						}
+					}
+				}
+				.k-state-selected {
+					.k-i-arrow-n {
+						background-position: -2em 0;
+					}
+					.k-i-arrow-s {
+						background-position: -2em -2em;
+					}
+				}
+				.k-i-arrow-n {
+					background-position: -1em 0;
+				}
+				.k-i-arrow-e {
+					background-position: -1em -1em;
+				}
+				.k-i-arrow-s {
+					background-position: -1em -2em;
+				}
+				.k-i-arrow-w {
+					background-position: -1em -3em;
+				}
+				.k-i-seek-n {
+					background-position: -1em -4em;
+				}
+				.k-i-seek-e {
+					background-position: -1em -5em;
+				}
+				.k-i-seek-s {
+					background-position: -1em -6em;
+				}
+				.k-i-seek-w {
+					background-position: -1em -7em;
+				}
+				.k-i-arrowhead-n {
+					background-position: -1em -16em;
+				}
+				.k-i-arrowhead-e {
+					background-position: -1em -17em;
+				}
+				.k-i-arrowhead-s {
+					background-position: -1em -18em;
+				}
+				.k-i-arrowhead-w {
+					background-position: -1em -19em;
+				}
+				.k-i-expand {
+					background-position: -1em -12em;
+				}
+				.k-plus {
+					background-position: -1em -12em;
+				}
+				.k-plus-disabled {
+					background-position: -1em -12em;
+				}
+				.k-i-expand-w {
+					background-position: -1em -13em;
+				}
+				.k-i-collapse {
+					background-position: -1em -14em;
+				}
+				.k-minus {
+					background-position: -1em -14em;
+				}
+				.k-minus-disabled {
+					background-position: -1em -14em;
+				}
+				.k-i-collapse-w {
+					background-position: -1em -15em;
+				}
+				.k-i-pencil {
+					background-position: -3em 0;
+				}
+				.k-edit {
+					background-position: -3em 0;
+				}
+				.k-i-close {
+					background-position: -3em -1em;
+				}
+				.k-delete {
+					background-position: -3em -1em;
+				}
+				.k-group-delete {
+					background-position: -3em -1em;
+				}
+				.k-si-close {
+					background-position: -11em -5em;
+				}
+				.k-i-tick {
+					background-position: -3em -2em;
+				}
+				.k-insert {
+					background-position: -3em -2em;
+				}
+				.k-update {
+					background-position: -3em -2em;
+				}
+				.k-i-cancel {
+					background-position: -3em -3em;
+				}
+				.k-cancel {
+					background-position: -3em -3em;
+				}
+				.k-denied {
+					background-position: -3em -3em;
+				}
+				.k-i-plus {
+					background-position: -3em -4em;
+				}
+				.k-add {
+					background-position: -3em -4em;
+				}
+				.k-i-funnel {
+					background-position: -3em -5em;
+				}
+				.k-filter {
+					background-position: -3em -5em;
+				}
+				.k-i-funnel-clear {
+					background-position: -3em -6em;
+				}
+				.k-clear-filter {
+					background-position: -3em -6em;
+				}
+				.k-i-refresh {
+					background-position: -3em -7em;
+				}
+				.k-i-exception {
+					background-position: -11em -19em;
+				}
+				.k-i-restore {
+					background-position: -3em -8em;
+				}
+				.k-i-maximize {
+					background-position: -3em -9em;
+				}
+				.k-i-minimize {
+					background-position: -5em -18em;
+				}
+				.k-i-pin {
+					background-position: -11em -16em;
+				}
+				.k-i-unpin {
+					background-position: -11em -17em;
+				}
+				.k-resize-se {
+					background-position: -3em -10em;
+				}
+				.k-i-calendar {
+					background-position: -3em -11em;
+				}
+				.k-i-clock {
+					background-position: -3em -12em;
+				}
+				.k-si-plus {
+					background-position: -3em -13em;
+				}
+				.k-si-minus {
+					background-position: -3em -14em;
+				}
+				.k-check:checked {
+					background-position: -3em -2em;
+				}
+				.k-mobile-list .k-edit-field {
+					[type=checkbox] {
+						background-position: -3em -2em;
+					}
+					[type=radio] {
+						background-position: -3em -2em;
+					}
+				}
+			}
+			.k-rtl .km-pane-wrapper {
+				.k-i-expand {
+					background-position: -1em -13em;
+				}
+				.k-plus {
+					background-position: -1em -13em;
+				}
+				.k-plus-disabled {
+					background-position: -1em -13em;
+				}
+				.k-i-collapse {
+					background-position: -1em -15em;
+				}
+				.k-minus {
+					background-position: -1em -15em;
+				}
+				.k-minus-disabled {
+					background-position: -1em -15em;
+				}
+			}
+		}
+		&:active {
+			.km-pane-wrapper {
+				.k-numerictextbox {
+					.k-select .k-link span {
+						&.k-i-arrow-n {
+							background-position: -1em 0;
+						}
+						&.k-i-arrow-s {
+							background-position: -1em -2em;
+						}
+					}
+					.k-link.k-state-selected span {
+						&.k-i-arrow-n {
+							background-position: -2em 0;
+						}
+						&.k-i-arrow-s {
+							background-position: -2em -2em;
+						}
+					}
+					.k-state-hover .k-link span {
+						&.k-i-arrow-n {
+							background-position: -2em 0;
+						}
+						&.k-i-arrow-s {
+							background-position: -2em -2em;
+						}
+					}
+				}
+				.k-state-selected {
+					.k-i-arrow-n {
+						background-position: -2em 0;
+					}
+					.k-i-arrow-s {
+						background-position: -2em -2em;
+					}
+				}
+				.k-i-arrow-n {
+					background-position: -1em 0;
+				}
+				.k-i-arrow-e {
+					background-position: -1em -1em;
+				}
+				.k-i-arrow-s {
+					background-position: -1em -2em;
+				}
+				.k-i-arrow-w {
+					background-position: -1em -3em;
+				}
+				.k-i-seek-n {
+					background-position: -1em -4em;
+				}
+				.k-i-seek-e {
+					background-position: -1em -5em;
+				}
+				.k-i-seek-s {
+					background-position: -1em -6em;
+				}
+				.k-i-seek-w {
+					background-position: -1em -7em;
+				}
+				.k-i-arrowhead-n {
+					background-position: -1em -16em;
+				}
+				.k-i-arrowhead-e {
+					background-position: -1em -17em;
+				}
+				.k-i-arrowhead-s {
+					background-position: -1em -18em;
+				}
+				.k-i-arrowhead-w {
+					background-position: -1em -19em;
+				}
+				.k-i-expand {
+					background-position: -1em -12em;
+				}
+				.k-plus {
+					background-position: -1em -12em;
+				}
+				.k-plus-disabled {
+					background-position: -1em -12em;
+				}
+				.k-i-expand-w {
+					background-position: -1em -13em;
+				}
+				.k-i-collapse {
+					background-position: -1em -14em;
+				}
+				.k-minus {
+					background-position: -1em -14em;
+				}
+				.k-minus-disabled {
+					background-position: -1em -14em;
+				}
+				.k-i-collapse-w {
+					background-position: -1em -15em;
+				}
+				.k-i-pencil {
+					background-position: -3em 0;
+				}
+				.k-edit {
+					background-position: -3em 0;
+				}
+				.k-i-close {
+					background-position: -3em -1em;
+				}
+				.k-delete {
+					background-position: -3em -1em;
+				}
+				.k-group-delete {
+					background-position: -3em -1em;
+				}
+				.k-si-close {
+					background-position: -11em -5em;
+				}
+				.k-i-tick {
+					background-position: -3em -2em;
+				}
+				.k-insert {
+					background-position: -3em -2em;
+				}
+				.k-update {
+					background-position: -3em -2em;
+				}
+				.k-i-cancel {
+					background-position: -3em -3em;
+				}
+				.k-cancel {
+					background-position: -3em -3em;
+				}
+				.k-denied {
+					background-position: -3em -3em;
+				}
+				.k-i-plus {
+					background-position: -3em -4em;
+				}
+				.k-add {
+					background-position: -3em -4em;
+				}
+				.k-i-funnel {
+					background-position: -3em -5em;
+				}
+				.k-filter {
+					background-position: -3em -5em;
+				}
+				.k-i-funnel-clear {
+					background-position: -3em -6em;
+				}
+				.k-clear-filter {
+					background-position: -3em -6em;
+				}
+				.k-i-refresh {
+					background-position: -3em -7em;
+				}
+				.k-i-exception {
+					background-position: -11em -19em;
+				}
+				.k-i-restore {
+					background-position: -3em -8em;
+				}
+				.k-i-maximize {
+					background-position: -3em -9em;
+				}
+				.k-i-minimize {
+					background-position: -5em -18em;
+				}
+				.k-i-pin {
+					background-position: -11em -16em;
+				}
+				.k-i-unpin {
+					background-position: -11em -17em;
+				}
+				.k-resize-se {
+					background-position: -3em -10em;
+				}
+				.k-i-calendar {
+					background-position: -3em -11em;
+				}
+				.k-i-clock {
+					background-position: -3em -12em;
+				}
+				.k-si-plus {
+					background-position: -3em -13em;
+				}
+				.k-si-minus {
+					background-position: -3em -14em;
+				}
+				.k-check:checked {
+					background-position: -3em -2em;
+				}
+				.k-mobile-list .k-edit-field {
+					[type=checkbox] {
+						background-position: -3em -2em;
+					}
+					[type=radio] {
+						background-position: -3em -2em;
+					}
+				}
+			}
+			.k-rtl .km-pane-wrapper {
+				.k-i-expand {
+					background-position: -1em -13em;
+				}
+				.k-plus {
+					background-position: -1em -13em;
+				}
+				.k-plus-disabled {
+					background-position: -1em -13em;
+				}
+				.k-i-collapse {
+					background-position: -1em -15em;
+				}
+				.k-minus {
+					background-position: -1em -15em;
+				}
+				.k-minus-disabled {
+					background-position: -1em -15em;
+				}
+			}
+		}
+	}
+	.k-rtl {
+		.km-pane-wrapper {
+			.k-i-arrow-w {
+				background-position: 0 -1em;
+			}
+			.k-i-arrow-e {
+				background-position: 0 -3em;
+			}
+			.k-i-seek-w {
+				background-position: 0 -5em;
+			}
+			.k-i-seek-e {
+				background-position: 0 -7em;
+			}
+			.k-i-expand {
+				background-position: 0 -13em;
+			}
+			.k-plus {
+				background-position: 0 -13em;
+			}
+			.k-plus-disabled {
+				background-position: 0 -13em;
+			}
+			.k-i-collapse {
+				background-position: 0 -15em;
+			}
+			.k-minus {
+				background-position: 0 -15em;
+			}
+			.k-minus-disabled {
+				background-position: 0 -15em;
+			}
+		}
+		.k-button {
+			&:hover .km-pane-wrapper {
+				.k-i-arrow-w {
+					background-position: -1em -1em;
+				}
+				.k-i-arrow-e {
+					background-position: -1em -3em;
+				}
+				.k-i-seek-w {
+					background-position: -1em -5em;
+				}
+				.k-i-seek-e {
+					background-position: -1em -7em;
+				}
+			}
+			&:active .km-pane-wrapper {
+				.k-i-arrow-w {
+					background-position: -1em -1em;
+				}
+				.k-i-arrow-e {
+					background-position: -1em -3em;
+				}
+				.k-i-seek-w {
+					background-position: -1em -5em;
+				}
+				.k-i-seek-e {
+					background-position: -1em -7em;
+				}
+			}
+		}
+		.k-link:not(.k-state-disabled):hover>.km-pane-wrapper {
+			.k-i-arrow-w {
+				background-position: -1em -1em;
+			}
+			.k-i-arrow-e {
+				background-position: -1em -3em;
+			}
+			.k-i-seek-w {
+				background-position: -1em -5em;
+			}
+			.k-i-seek-e {
+				background-position: -1em -7em;
+			}
+		}
+		.k-state-hover>.km-pane-wrapper {
+			.k-i-arrow-w {
+				background-position: -1em -1em;
+			}
+			.k-i-arrow-e {
+				background-position: -1em -3em;
+			}
+			.k-i-seek-w {
+				background-position: -1em -5em;
+			}
+			.k-i-seek-e {
+				background-position: -1em -7em;
+			}
+		}
+		.k-state-hover>*>.km-pane-wrapper {
+			.k-i-arrow-w {
+				background-position: -1em -1em;
+			}
+			.k-i-arrow-e {
+				background-position: -1em -3em;
+			}
+			.k-i-seek-w {
+				background-position: -1em -5em;
+			}
+			.k-i-seek-e {
+				background-position: -1em -7em;
+			}
+		}
+		.k-textbox:hover .km-pane-wrapper {
+			.k-i-arrow-w {
+				background-position: -1em -1em;
+			}
+			.k-i-arrow-e {
+				background-position: -1em -3em;
+			}
+			.k-i-seek-w {
+				background-position: -1em -5em;
+			}
+			.k-i-seek-e {
+				background-position: -1em -7em;
+			}
+		}
+	}
+	.k-link:not(.k-state-disabled):hover> {
+		&.km-pane-wrapper {
+			.k-numerictextbox {
+				.k-select .k-link span {
+					&.k-i-arrow-n {
+						background-position: -1em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -1em -2em;
+					}
+				}
+				.k-link.k-state-selected span {
+					&.k-i-arrow-n {
+						background-position: -2em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -2em -2em;
+					}
+				}
+				.k-state-hover .k-link span {
+					&.k-i-arrow-n {
+						background-position: -2em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -2em -2em;
+					}
+				}
+			}
+			.k-state-selected {
+				.k-i-arrow-n {
+					background-position: -2em 0;
+				}
+				.k-i-arrow-s {
+					background-position: -2em -2em;
+				}
+			}
+			.k-i-arrow-n {
+				background-position: -1em 0;
+			}
+			.k-i-arrow-e {
+				background-position: -1em -1em;
+			}
+			.k-i-arrow-s {
+				background-position: -1em -2em;
+			}
+			.k-i-arrow-w {
+				background-position: -1em -3em;
+			}
+			.k-i-seek-n {
+				background-position: -1em -4em;
+			}
+			.k-i-seek-e {
+				background-position: -1em -5em;
+			}
+			.k-i-seek-s {
+				background-position: -1em -6em;
+			}
+			.k-i-seek-w {
+				background-position: -1em -7em;
+			}
+			.k-i-arrowhead-n {
+				background-position: -1em -16em;
+			}
+			.k-i-arrowhead-e {
+				background-position: -1em -17em;
+			}
+			.k-i-arrowhead-s {
+				background-position: -1em -18em;
+			}
+			.k-i-arrowhead-w {
+				background-position: -1em -19em;
+			}
+			.k-i-expand {
+				background-position: -1em -12em;
+			}
+			.k-plus {
+				background-position: -1em -12em;
+			}
+			.k-plus-disabled {
+				background-position: -1em -12em;
+			}
+			.k-i-expand-w {
+				background-position: -1em -13em;
+			}
+			.k-i-collapse {
+				background-position: -1em -14em;
+			}
+			.k-minus {
+				background-position: -1em -14em;
+			}
+			.k-minus-disabled {
+				background-position: -1em -14em;
+			}
+			.k-i-collapse-w {
+				background-position: -1em -15em;
+			}
+			.k-i-pencil {
+				background-position: -3em 0;
+			}
+			.k-edit {
+				background-position: -3em 0;
+			}
+			.k-i-close {
+				background-position: -3em -1em;
+			}
+			.k-delete {
+				background-position: -3em -1em;
+			}
+			.k-group-delete {
+				background-position: -3em -1em;
+			}
+			.k-si-close {
+				background-position: -11em -5em;
+			}
+			.k-i-tick {
+				background-position: -3em -2em;
+			}
+			.k-insert {
+				background-position: -3em -2em;
+			}
+			.k-update {
+				background-position: -3em -2em;
+			}
+			.k-i-cancel {
+				background-position: -3em -3em;
+			}
+			.k-cancel {
+				background-position: -3em -3em;
+			}
+			.k-denied {
+				background-position: -3em -3em;
+			}
+			.k-i-plus {
+				background-position: -3em -4em;
+			}
+			.k-add {
+				background-position: -3em -4em;
+			}
+			.k-i-funnel {
+				background-position: -3em -5em;
+			}
+			.k-filter {
+				background-position: -3em -5em;
+			}
+			.k-i-funnel-clear {
+				background-position: -3em -6em;
+			}
+			.k-clear-filter {
+				background-position: -3em -6em;
+			}
+			.k-i-refresh {
+				background-position: -3em -7em;
+			}
+			.k-i-exception {
+				background-position: -11em -19em;
+			}
+			.k-i-restore {
+				background-position: -3em -8em;
+			}
+			.k-i-maximize {
+				background-position: -3em -9em;
+			}
+			.k-i-minimize {
+				background-position: -5em -18em;
+			}
+			.k-i-pin {
+				background-position: -11em -16em;
+			}
+			.k-i-unpin {
+				background-position: -11em -17em;
+			}
+			.k-resize-se {
+				background-position: -3em -10em;
+			}
+			.k-i-calendar {
+				background-position: -3em -11em;
+			}
+			.k-i-clock {
+				background-position: -3em -12em;
+			}
+			.k-si-plus {
+				background-position: -3em -13em;
+			}
+			.k-si-minus {
+				background-position: -3em -14em;
+			}
+			.k-check:checked {
+				background-position: -3em -2em;
+			}
+			.k-mobile-list .k-edit-field {
+				[type=checkbox] {
+					background-position: -3em -2em;
+				}
+				[type=radio] {
+					background-position: -3em -2em;
+				}
+			}
+		}
+		&.k-rtl .km-pane-wrapper {
+			.k-i-expand {
+				background-position: -1em -13em;
+			}
+			.k-plus {
+				background-position: -1em -13em;
+			}
+			.k-plus-disabled {
+				background-position: -1em -13em;
+			}
+			.k-i-collapse {
+				background-position: -1em -15em;
+			}
+			.k-minus {
+				background-position: -1em -15em;
+			}
+			.k-minus-disabled {
+				background-position: -1em -15em;
+			}
+		}
+	}
+	.k-textbox:hover {
+		.km-pane-wrapper {
+			.k-numerictextbox {
+				.k-select .k-link span {
+					&.k-i-arrow-n {
+						background-position: -1em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -1em -2em;
+					}
+				}
+				.k-link.k-state-selected span {
+					&.k-i-arrow-n {
+						background-position: -2em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -2em -2em;
+					}
+				}
+				.k-state-hover .k-link span {
+					&.k-i-arrow-n {
+						background-position: -2em 0;
+					}
+					&.k-i-arrow-s {
+						background-position: -2em -2em;
+					}
+				}
+			}
+			.k-state-selected {
+				.k-i-arrow-n {
+					background-position: -2em 0;
+				}
+				.k-i-arrow-s {
+					background-position: -2em -2em;
+				}
+			}
+			.k-i-arrow-n {
+				background-position: -1em 0;
+			}
+			.k-i-arrow-e {
+				background-position: -1em -1em;
+			}
+			.k-i-arrow-s {
+				background-position: -1em -2em;
+			}
+			.k-i-arrow-w {
+				background-position: -1em -3em;
+			}
+			.k-i-seek-n {
+				background-position: -1em -4em;
+			}
+			.k-i-seek-e {
+				background-position: -1em -5em;
+			}
+			.k-i-seek-s {
+				background-position: -1em -6em;
+			}
+			.k-i-seek-w {
+				background-position: -1em -7em;
+			}
+			.k-i-arrowhead-n {
+				background-position: -1em -16em;
+			}
+			.k-i-arrowhead-e {
+				background-position: -1em -17em;
+			}
+			.k-i-arrowhead-s {
+				background-position: -1em -18em;
+			}
+			.k-i-arrowhead-w {
+				background-position: -1em -19em;
+			}
+			.k-i-expand {
+				background-position: -1em -12em;
+			}
+			.k-plus {
+				background-position: -1em -12em;
+			}
+			.k-plus-disabled {
+				background-position: -1em -12em;
+			}
+			.k-i-expand-w {
+				background-position: -1em -13em;
+			}
+			.k-i-collapse {
+				background-position: -1em -14em;
+			}
+			.k-minus {
+				background-position: -1em -14em;
+			}
+			.k-minus-disabled {
+				background-position: -1em -14em;
+			}
+			.k-i-collapse-w {
+				background-position: -1em -15em;
+			}
+			.k-i-pencil {
+				background-position: -3em 0;
+			}
+			.k-edit {
+				background-position: -3em 0;
+			}
+			.k-i-close {
+				background-position: -3em -1em;
+			}
+			.k-delete {
+				background-position: -3em -1em;
+			}
+			.k-group-delete {
+				background-position: -3em -1em;
+			}
+			.k-si-close {
+				background-position: -11em -5em;
+			}
+			.k-i-tick {
+				background-position: -3em -2em;
+			}
+			.k-insert {
+				background-position: -3em -2em;
+			}
+			.k-update {
+				background-position: -3em -2em;
+			}
+			.k-i-cancel {
+				background-position: -3em -3em;
+			}
+			.k-cancel {
+				background-position: -3em -3em;
+			}
+			.k-denied {
+				background-position: -3em -3em;
+			}
+			.k-i-plus {
+				background-position: -3em -4em;
+			}
+			.k-add {
+				background-position: -3em -4em;
+			}
+			.k-i-funnel {
+				background-position: -3em -5em;
+			}
+			.k-filter {
+				background-position: -3em -5em;
+			}
+			.k-i-funnel-clear {
+				background-position: -3em -6em;
+			}
+			.k-clear-filter {
+				background-position: -3em -6em;
+			}
+			.k-i-refresh {
+				background-position: -3em -7em;
+			}
+			.k-i-exception {
+				background-position: -11em -19em;
+			}
+			.k-i-restore {
+				background-position: -3em -8em;
+			}
+			.k-i-maximize {
+				background-position: -3em -9em;
+			}
+			.k-i-minimize {
+				background-position: -5em -18em;
+			}
+			.k-i-pin {
+				background-position: -11em -16em;
+			}
+			.k-i-unpin {
+				background-position: -11em -17em;
+			}
+			.k-resize-se {
+				background-position: -3em -10em;
+			}
+			.k-i-calendar {
+				background-position: -3em -11em;
+			}
+			.k-i-clock {
+				background-position: -3em -12em;
+			}
+			.k-si-plus {
+				background-position: -3em -13em;
+			}
+			.k-si-minus {
+				background-position: -3em -14em;
+			}
+			.k-check:checked {
+				background-position: -3em -2em;
+			}
+			.k-mobile-list .k-edit-field {
+				[type=checkbox] {
+					background-position: -3em -2em;
+				}
+				[type=radio] {
+					background-position: -3em -2em;
+				}
+			}
+		}
+		.k-rtl .km-pane-wrapper {
+			.k-i-expand {
+				background-position: -1em -13em;
+			}
+			.k-plus {
+				background-position: -1em -13em;
+			}
+			.k-plus-disabled {
+				background-position: -1em -13em;
+			}
+			.k-i-collapse {
+				background-position: -1em -15em;
+			}
+			.k-minus {
+				background-position: -1em -15em;
+			}
+			.k-minus-disabled {
+				background-position: -1em -15em;
+			}
+		}
+	}
+}
+@media all and(max-width:699px),(-ms-high-contrast:active) and(-ms-high-contrast:none) and(max-width:800px) {
+	.km-pane-wrapper {
+		.k-mobile-list {
+			textarea {
+				width: 50%;
+			}
+			.k-widget {
+				width: 50%;
+			}
+			.k-edit-field> {
+				&.k-button {
+					margin-left: 50%;
+				}
+				&.k-timezone-button {
+					margin-left: 1em;
+				}
+			}
+			select:not([multiple]) {
+				width: 50%;
+			}
+		}
+		.k-scheduler-views {
+			width: 15em;
+		}
+		.k-pager-wrap {
+			position: relative;
+			.k-pager-numbers+.k-pager-nav {
+				right: 3em;
+			}
+		}
+		.k-pager-numbers {
+			width: auto;display:block;overflow:hidden;margin-right:5.5em;float:none;text-overflow:ellipsis;height:2.4em;text-align:center;
+			li {
+				float: none;display:inline-block;
+			}
+		}
+		.k-pager-nav {
+			float: left;
+			&:first-child+.k-pager-nav+.k-pager-nav {
+				right: 3em;
+			}
+		}
+		.k-pager-info {
+			display: none;
+		}
+		*:not(.k-state-default)>input:not([type="checkbox"]):not([type="radio"]) {
+			width: 50%;
+		}
+		.k-edit-field>*:not([type="checkbox"]):not([type="radio"]):not(.k-button) {
+			width: 50%;
+		}
+		.k-nav-today a {
+			padding-left: .6em;padding-right:.6em;
+		}
+		li.k-nav-current {
+			margin-left: 0;margin-right:0;
+		}
+		.k-pager-nav+.k-pager-nav ~ .k-pager-nav {
+			position: absolute;right:.3em;top:.3em;
+		}
+	}
+}
+.km-scroll-container {
+}
+.km-touch-scrollbar {
+}
+.km-vertical-scrollbar {
+	height: 100%;right:2px;top:2px;
+}
+.km-horizontal-scrollbar {
+	width: 100%;left:2px;bottom:2px;
+}
+.k-fx-end {
+	.k-fx-next {
+	}
+	.k-fx-current {
+	}
+}
+.k-fx {
+	position: relative;
+	.k-fx-current {
+		z-index: 0;
+	}
+	.k-fx-next {
+		z-index: 1;
+	}
+	&.k-fx-overlay {
+		&.k-fx-reverse {
+			&.k-fx-start {
+				.k-fx-next {
+				}
+				.k-fx-current {
+				}
+			}
+			&.k-fx-end .k-fx-current {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translatex(100%);
+			}
+			&.k-fx-left.k-fx-end .k-fx-current {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translatex(100%);
+			}
+			&.k-fx-right.k-fx-end .k-fx-current {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translatex(-100%);
+			}
+			&.k-fx-up.k-fx-end .k-fx-current {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translatey(100%);
+			}
+			&.k-fx-down.k-fx-end .k-fx-current {
+				//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+				transform: translatey(-100%);
+			}
+		}
+		&.k-fx-start .k-fx-next {
+		}
+		&.k-fx-left.k-fx-start .k-fx-next {
+		}
+		&.k-fx-right.k-fx-start .k-fx-next {
+		}
+		&.k-fx-up.k-fx-start .k-fx-next {
+		}
+		&.k-fx-down.k-fx-start .k-fx-next {
+		}
+	}
+}
+.k-fx-hidden {
+	visibility: hidden!important;
+	* {
+		visibility: hidden!important;
+	}
+}
+.k-fx-reverse {
+	.k-fx-current {
+		z-index: 1;
+	}
+	.k-fx-next {
+		z-index: 0;
+	}
+}
+.k-fx-zoom {
+	&.k-fx-reverse {
+		&.k-fx-start {
+			.k-fx-next {
+			}
+			.k-fx-current {
+			}
+		}
+		&.k-fx-end {
+			.k-fx-next {
+			}
+			.k-fx-current {
+			}
+		}
+	}
+	&.k-fx-start .k-fx-next {
+	}
+	&.k-fx-end .k-fx-next {
+	}
+}
+.k-fx-fade {
+	&.k-fx-reverse {
+		&.k-fx-start .k-fx-current {
+			opacity: 1;
+		}
+		&.k-fx-end .k-fx-current {
+			opacity: 0;
+		}
+	}
+	&.k-fx-start .k-fx-next {
+		opacity: 0;
+	}
+	&.k-fx-end .k-fx-next {
+		opacity: 1;
+	}
+}
+.k-fx-slide {
+	&.k-fx-end {
+		.k-fx-next {
+			.km-content {
+			}
+			.km-header {
+				opacity: 1;
+			}
+			.km-footer {
+				opacity: 1;
+			}
+		}
+		.k-fx-current {
+			.km-content {
+			}
+			.km-header {
+			}
+			.km-footer {
+			}
+		}
+	}
+	&.k-fx-reverse {
+		&.k-fx-start {
+			.k-fx-current {
+				.km-content {
+				}
+				.km-header {
+					opacity: 1;
+				}
+				.km-footer {
+					opacity: 1;
+				}
+			}
+			.k-fx-next .km-content {
+			}
+		}
+		&.k-fx-end {
+			.k-fx-current {
+				.km-content {
+				}
+				.km-header {
+					opacity: 0;
+				}
+				.km-footer {
+					opacity: 0;
+				}
+			}
+			.k-fx-next .km-content {
+			}
+		}
+	}
+	&.k-fx-right {
+		&.k-fx-reverse {
+			&.k-fx-start {
+				.k-fx-current .km-content {
+				}
+				.k-fx-next .km-content {
+				}
+			}
+			&.k-fx-end {
+				.k-fx-current .km-content {
+				}
+				.k-fx-next .km-content {
+				}
+			}
+		}
+		&.k-fx-start .k-fx-next .km-content {
+		}
+		&.k-fx-end .k-fx-current .km-content {
+		}
+	}
+	&.k-fx-start .k-fx-next {
+		.km-content {
+		}
+		.km-header {
+			opacity: 0;
+		}
+		.km-footer {
+			opacity: 0;
+		}
+	}
+}
+.k-fx-tile {
+	&.k-fx-reverse {
+		&.k-fx-start {
+			.k-fx-current {
+			}
+			.k-fx-next {
+			}
+		}
+		&.k-fx-end {
+			.k-fx-current {
+			}
+			.k-fx-next {
+			}
+		}
+	}
+	&.k-fx-right {
+		&.k-fx-reverse {
+			&.k-fx-start {
+				.k-fx-current {
+				}
+				.k-fx-next {
+				}
+			}
+			&.k-fx-end {
+				.k-fx-current {
+				}
+				.k-fx-next {
+				}
+			}
+		}
+		&.k-fx-start .k-fx-next {
+		}
+		&.k-fx-end .k-fx-current {
+		}
+	}
+	&.k-fx-start .k-fx-next {
+	}
+	&.k-fx-end .k-fx-current {
+	}
+}
+.k-floatwrap:after {
+	@extend %extend_1;
+}
+.k-slider-items:after {
+	@extend %extend_1;
+}
+.k-state-highlight>.k-link {
+	color: inherit;
+}
+input[type="submit"].k-button-expand {
+	width: 100%;
+}
+input[type="button"].k-button-expand {
+	width: 100%;
+}
+input[type="reset"].k-button-expand {
+	width: 100%;
+}
+:root *> {
+	&.k-icon {
+		vertical-align: middle;
+	}
+	&.k-sprite {
+		vertical-align: middle;
+	}
+	&.k-button-group .k-tool-icon {
+		vertical-align: middle;
+	}
+}
+.k-check:checked {
+	background-position: -32px -32px;
+}
+.k-mobile-list .k-edit-field {
+	[type=checkbox] {
+		background-position: -32px -32px;
+		border: 0;font-size:inherit;width:13px;height:13px;margin:.26em 1em .26em 0;
+	}
+	[type=radio] {
+		background-position: -32px -32px;
+		border: 0;font-size:inherit;width:13px;height:13px;margin:.26em 1em .26em 0;
+	}
+}
+.k-file>.k-icon {
+	background-position: -112px -288px;
+}
+.input-group .form-control {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+.k-window>div.k-popup-edit-form {
+	padding: 1em 0;
+}
+.k-edit-field>label:first-child>input[type="checkbox"] {
+	margin-left: 0;
+}
+.k-edit-field>.k-button:first-child {
+	margin-left: 0;
+}
+.k-block>.k-header {
+	@extend %extend_7;
+	position: relative;
+	margin: -2px 0 10px -2px;
+	padding: .3em 2px;
+}
+.k-window-content>.km-scroll-container {
+	height: 100%;
+}
+.k-window-action .k-icon {
+	margin: 0;
+	vertical-align: top;
+}
+.k-grid-header-locked+.k-grid-header-wrap {
+	display: inline-block;
+	vertical-align: top;
+}
+.k-grid-content-locked+.k-grid-content {
+	display: inline-block;
+	vertical-align: top;
+}
+.k-grid-footer-locked+.k-grid-footer-wrap {
+	display: inline-block;
+	vertical-align: top;
+}
+.k-grouping-header+.k-grid-toolbar {
+	border-width: 0 0 1px;
+}
+.k-footer-template td {
+	border-style: solid;
+	border-width: 1px 0 0 1px;
+}
+.k-pager-wrap>.k-link {
+	min-width: 2em;
+	float: left;
+	margin: 0 .08333em;
+	height: 2em;
+	line-height: 2em;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 1.0833em;
+	cursor: pointer;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+}
+.k-pager-wrap>a.k-state-disabled:hover {
+	background: 0;
+	cursor: default;
+}
+form.k-filter-menu {
+	.k-widget {
+		display: block;
+	}
+	.k-textbox {
+		display: block;
+	}
+}
+.k-dirty-cell:before {
+	content: "\a0";
+	display: inline-block;
+	width: 0;
+	float: left;
+}
+.k-column-menu>.k-menu {
+	border-width: 0;
+}
+.k-columns-item .k-group {
+	max-height: 200px;
+	overflow: auto;
+}
+.k-treeview>.k-group {
+	@extend %extend_30;
+}
+.k-splitbar .k-resize-handle {
+	display: none;
+}
+.k-space-left .k-icon {
+	left: 3px;
+}
+.k-space-right .k-icon {
+	right: 3px;
+}
+.k-time-popup .k-item {
+	padding: 1px 3px;
+}
+textarea.k-textbox {
+	height: auto;
+}
+table.k-editor {
+	width: 100%;height:250px;table-layout:fixed;border-style:solid;border-width:1px;border-collapse:separate;border-spacing:4px;font-size:100%;vertical-align:top;
+}
+.k-button-wrapper .k-link:hover {
+	text-decoration: underline;
+}
+.k-progressbar-horizontal>.k-state-selected {
+	left: -1px;right:auto;top:-1px;height:100%;border-radius:4px 0 0 4px;
+}
+.k-progressbar-vertical>.k-state-selected {
+	left: -1px;bottom:-1px;width:100%;border-radius:0 0 4px 4px;
+}
+.k-slider-buttons .k-slider-items {
+	margin-left: 34px;
+}
+.k-safari .k-scheduler-layout>tbody>tr>td+td {
+	width: 100%;
+}
+.k-scheduler-monthview>tbody>tr:first-child .k-scheduler-times {
+	margin-right: 1px;
+	.k-hidden {
+		height: auto;
+	}
+}
+.k-scheduler-table>tbody>tr>.k-last {
+	border-bottom-width: 0;
+}
+.k-event-drag-hint .k-event-time {
+	display: block;
+}
+.k-task>.k-link {
+	position: absolute;top:3px;right:4px;$color_12-space:nowrap;
+}
+tr:hover>td>.k-task .k-event-delete {
+	display: inline-block;
+}
+.k-event-active .k-resize-handle {
+	visibility: visible;
+}
+.k-scheduler-quickedit .k-textbox {
+	width: 200px;
+}
+.k-scheduler-timecolumn>div>.k-i-arrow-e {
+	position: absolute;right:-4px;
+}
+.k-scheduler-edit-form>.k-edit-box:first-child .k-datetimepicker {
+	margin-right: 1em;
+}
+.k-edit-box+.k-edit-box {
+	float: right;
+}
+div[name="recurrenceRule"]>.k-dropdown {
+	width: 9em;
+}
+.k-tooltip-closable .k-tooltip-content {
+	padding-right: 20px;
+}
+.k-tooltip-validation .k-warning {
+	vertical-align: text-top;margin-right:3px;
+}
+.k-dropzone-active em {
+	visibility: visible;
+}
+.k-upload-sync .k-upload-button {
+	margin: .8em;
+}
+.k-upload-status-total .k-icon {
+	margin-left: 8px;
+}
+.k-upload .k-fail {
+	background-position: -161px -111px;
+}
+.k-breadcrumbs>.k-input {
+	width: 100%;font-size:inherit;font-family:inherit;border:0;
+}
+*:not(.km-pane)> {
+	&.km-shim {
+		.km-actionsheet-title {
+			text-align: center;line-height:3em;margin-bottom:-0.3em;
+		}
+		.km-actionsheet .k-button {
+			display: block;text-align:center;
+			font-size: 1.4em;margin:.3em 1em;
+		}
+	}
+	&.km-shim>.k-animation-container {
+		margin: 0!important;padding:0!important;left:0!important;
+	}
+}
+.km-pane-wrapper>div.km-pane {
+}

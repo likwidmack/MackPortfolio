@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Palette";
+}
+@section styles{
+    <style>
+    </style>
+}
+
+<canvas id="canvas" data-bind="animateCSS:{'background-color':sliders.hex()},timer:400"></canvas>
+<div id="paletteCanvasContainer" data-bind="windowResize:canvas.refreshCanvas">
+    <div class="row">
+        <div class="small-12 columns">
+            @Html.Partial("_title")
+        </div>
+        <div class="large-4 medium-5 large-push-8 medium-push-7 columns">
+            @Html.Partial("_canvas")
+            @Html.Partial("_sliders")
+        </div>
+        <div class="large-8 medium-7 large-pull-4 medium-pull-5 columns">
+            @Html.Partial("_body")
+        </div>
+    </div>
+    <br class="clear" />
+</div>
+
+@section scripts{
+<script type="text/javascript">
+    main.isDebugMode = true;
+
+    $(function () {
+        main.mainapp = $('#mainapp');
+        main.model = new MainModel();
+        ko.applyBindings(main.model);
+        main.model.init();
+    });
+</script>
+<script src="@Url.Content("~/Scripts/site/views/canvas.js")"></script>
+}

@@ -1,0 +1,29 @@
+﻿@model MackPortfolio.Models.ActionLayoutModel
+<nav class="top-bar header" data-topbar>
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="@Url.Action("Index", "Home")" class="clipped flip">Code Samples</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+    <section class="top-bar-section">
+        <ul class="right">
+            <li class="divider"></li>
+            <li>@Html.ActionLink("Resume", "Index", "About")</li>
+            <li class="divider"></li>
+            <li>@Html.ActionLink("Canvas & Palette", "Index", "Palette")</li>
+            <li class="divider"></li>
+            <li>@Html.ActionLink("Activities", "Index", "Activity")</li>
+            <li class="divider"></li>
+            <li>@Html.ActionLink("Random Codes", "Index", "Random")</li>
+            @* Work in Progress [NOT READY FOR VIEWING] *@
+            @*<li class="divider"></li>
+                <li>@Html.ActionLink("Galleries", "Index", "Gallery")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+        </ul>
+        @*<ul class="left">
+            <li class="divider"></li>
+            <li><span class="warning label">Work In Progress: @(Model.WIP)</span></li>
+        </ul>*@
+    </section>
+</nav>

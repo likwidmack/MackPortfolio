@@ -1,0 +1,41 @@
+﻿<section>
+    <hgroup>
+        <h2>Choose Your Background Color</h2>
+        <h3>Run Code to Randomly Change the Images</h3>
+    </hgroup>
+    <p class="objectCounter">There are <span data-bind="animateCSS:{'color':$root.sliders.complementary.inverthex()},timer:400,text:$root.canvas.objects().length"></span> objects on the canvas.</p>
+</section>
+
+<div class="row" data-bind="with:$root.sliders.complementary">
+    <div class="large-4 columns">
+        <section class="canvas-panel" data-bind="animateCSS:{'background-color':invertrgba()},timer:400">
+            <h3 class="css-force-wrap" data-bind="animateCSS:{'color':inverttext()},timer:400">Inverted Background Color</h3>
+            <p>
+                This panel background is <span data-bind="text:invertrgba"></span>. <br />
+                Hex Code: <span data-bind="text:inverthex"></span>. <br />
+                Hsl Code: <span data-bind="text:inverthsl"></span>
+            </p>
+        </section>
+    </div>
+    <div class="large-4 columns">
+        <section class="canvas-panel" data-bind="animateCSS:{'background-color':swap1rgba()},timer:400">
+            <h3 class="css-force-wrap" data-bind="animateCSS:{'color':swap1text()},timer:400">Complementary Color #1</h3>
+            <p>
+                This panel background is <span data-bind="text:swap1rgba"></span>. <br />
+                Hex Code: <span data-bind="text:swap1hex"></span>. <br />
+                Hsl Code: <span data-bind="text:swap1hsl"></span>
+            </p>
+        </section>
+    </div>
+    <div class="large-4 columns">
+        <section class="canvas-panel" data-bind="animateCSS:{'background-color':swap2rgba()},timer:400">
+            <h3 class="css-force-wrap" data-bind="animateCSS:{'color':swap2text()},timer:400">Complementary Color #2</h3>
+            <p>
+                This panel background is <span data-bind="text:swap2rgba"></span>. <br />
+                Hex Code: <span data-bind="text:swap2hex"></span>. <br />
+                Hsl Code: <span data-bind="text:swap2hsl"></span>
+            </p>
+        </section>
+    </div>
+</div>
+

@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/EditorTemplates/_Layout.cshtml";
+
+    object values = ViewData["Model"];
+    var htmlAttr = new ViewDataDictionary();
+    var propList = System.ComponentModel.TypeDescriptor.GetProperties(values);
+
+    foreach (System.ComponentModel.PropertyDescriptor descriptor in propList)
+    {
+        htmlAttr[descriptor.Name.Replace("_", "-")] = descriptor.GetValue(values);
+    }
+
+    htmlAttr["class"] = "text-box single-line";
+    var mdata = ViewData.ModelMetadata;
+    if (!String.IsNullOrEmpty(mdata.Description))
+    {
+        htmlAttr["title"] = mdata.Description;
+    }
+    if (!String.IsNullOrEmpty(mdata.Watermark))
+    {
+        htmlAttr["placeholder"] = mdata.Watermark;
+    }
+}
+@Html.TextBox("", ViewData.TemplateInfo.FormattedModelValue, htmlAttr)

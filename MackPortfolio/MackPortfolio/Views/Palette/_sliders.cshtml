@@ -1,0 +1,37 @@
+﻿<!-- ko with:sliders -->
+<section class="canvas-panel side-canvas-panel">
+    <div>
+        <h4>Select Background Color</h4>
+        <label for="canvasBgColor">Input a color:</label>
+        <div class="row collapse">
+            <div class="small-5 large-7 columns">
+                <input type="text" id="canvasBgColor" data-bind="autocompleteColor:input,value:input" />
+            </div>
+            <div class="small-3 large-2 columns">
+                <button class="button css-gradient3d-w2bv secondary postfix" data-bind="click:getInput">Go</button>
+            </div>
+            <div class="small-4 large-3 columns">
+                <button class="button css-gradient3d-w2bv postfix radius" data-bind="click:invertColor">Invert</button>
+            </div>
+            <div class="small-12 columns" style="margin-top:-1.2em"><small>ie: DarkRed, rgb(15,250, 168), #256afc</small></div>
+        </div>
+    </div>
+</section>
+<section class="canvas-panel side-canvas-panel">
+    <div>
+        <h5>Get Color by RGB Range: <span id="txtSetRGB" data-bind="text:rgb"></span></h5>
+        <div id="sldRed" class="rgb-sliders" data-bind="colorSlider:red,Opt:rgbParam"></div>
+        <div id="sldGreen" class="rgb-sliders" data-bind="colorSlider:green,Opt:rgbParam"></div>
+        <div id="sldBlue" class="rgb-sliders" data-bind="colorSlider:blue,Opt:rgbParam"></div><br />
+    </div>
+</section>
+<section class="canvas-panel side-canvas-panel">
+    <div>
+        <h5>Get Color by HSL Range: <span id="txtSetHSL" data-bind="text:hsl"></span></h5>
+        <div id="sldHue" class="hsl-sliders" title="Hue" data-bind="colorSlider:hue,Opt:hslHueParam"></div>
+        <div id="sldSat" class="hsl-sliders" title="Saturation" data-bind="colorSlider:saturation,Opt:hslParam"></div>
+        <div id="sldLum" class="hsl-sliders" title="Luminosity" data-bind="colorSlider:lightness,Opt:hslParam"></div><br />
+    </div>
+</section>
+<!-- /ko -->
+

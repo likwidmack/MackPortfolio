@@ -1,0 +1,11 @@
+﻿@{
+    object values = ViewData["Model"];
+    var htmlAttr = new ViewDataDictionary();
+
+    foreach (System.ComponentModel.PropertyDescriptor descriptor in System.ComponentModel.TypeDescriptor.GetProperties(values))
+    {
+        htmlAttr[descriptor.Name.Replace("_", "-")] = descriptor.GetValue(values);
+    }
+    //htmlAttr["type"] = "hidden";
+}
+@Html.HiddenFor(m => m, htmlAttr)

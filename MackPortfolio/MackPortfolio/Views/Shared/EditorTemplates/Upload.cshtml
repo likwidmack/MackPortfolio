@@ -1,0 +1,13 @@
+﻿
+@{
+    Layout = "~/Views/Shared/EditorTemplates/_Layout.cshtml";
+    var mdata = ViewData.ModelMetadata;
+    var name = String.IsNullOrEmpty(Model) ? String.Empty : "file";
+    var nameid = ViewData.TemplateInfo.GetFullHtmlFieldId(name);
+}
+<input type="file" id="@nameid" name="@nameid" title="@mdata.Description" placeholder="@mdata.Watermark" class="text-box file" />
+@if (!String.IsNullOrEmpty(Model))
+{
+    @Html.HiddenFor(m => m)
+    <img width="120" src="@Url.Content(Model)" />
+}

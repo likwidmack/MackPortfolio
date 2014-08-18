@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/EditorTemplates/_Layout.cshtml";
+
+    object values = ViewData["Model"];
+    var htmlAttr = new ViewDataDictionary();
+
+    foreach (System.ComponentModel.PropertyDescriptor descriptor in System.ComponentModel.TypeDescriptor.GetProperties(values))
+    {
+        htmlAttr[descriptor.Name.Replace("_", "-")] = descriptor.GetValue(values);
+    }
+
+    htmlAttr["class"] = "enum-dropdown";
+
+    var mdata = ViewData.ModelMetadata;
+    if (!String.IsNullOrEmpty(mdata.Description))
+    {
+        htmlAttr["title"] = mdata.Description;
+    }
+    if (!String.IsNullOrEmpty(mdata.Watermark))
+    {
+        htmlAttr["placeholder"] = mdata.Watermark;
+    }
+}
+
+@Html.EnumDropDownListFor(m => m, htmlAttr)
