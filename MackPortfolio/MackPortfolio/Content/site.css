@@ -6420,7 +6420,7 @@ html, body {
     text-shadow: none; }
 
 header {
-  border-bottom: 5px solid #d18929; }
+  border-bottom: 1px solid #d18929; }
   header h1, header h2, header h3 {
     text-transform: uppercase; }
   header > nav {

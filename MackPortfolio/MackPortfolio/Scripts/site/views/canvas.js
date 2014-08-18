@@ -284,7 +284,10 @@ function slidersModel() {
         return _clr.toHexString();
     }).extend({ rateLimit: 200 });
 
-    self.color.subscribe(function (colr) {
+    self.input.subscribe(function (_colr) {
+        self.getInput();
+    });
+    self.color.subscribe(function (_colr) {
         //console.log(ko.toJS(self));
     });
     self.rgb.subscribe(function (rgb) {
@@ -524,7 +527,8 @@ ko.bindingHandlers.colorSlider = {
 
 ko.bindingHandlers.autocompleteColor = {
     init: function (element, valueAccessor, allBindings, viewModel) {
-        var value = valueAccessor();
+        var value = valueAccessor(),
+            bindings = allBindings() || {};
 
         $(element).autocomplete({
             source: main.colors.getNameArray(),
