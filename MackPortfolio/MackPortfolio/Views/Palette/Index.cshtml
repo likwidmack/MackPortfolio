@@ -3,6 +3,12 @@
 }
 @section styles{
     <style>
+
+    .ui-autocomplete {
+        max-height: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
     </style>
 }
 
@@ -25,7 +31,6 @@
 
 @section scripts{
 <script type="text/javascript">
-    main.isDebugMode = true;
 
     $(function () {
         main.mainapp = $('#mainapp');

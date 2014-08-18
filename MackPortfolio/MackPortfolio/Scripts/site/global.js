@@ -86,7 +86,7 @@ function structuredClone(obj) {
 
 //#region Main Properties : common functions and callbacks
 if ('undefined' === typeof main) {
-    var main = document.getElementById("main");
+    var main = document.getElementById("mainapp");
 }
 
 main = {

@@ -18,25 +18,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MackPortfolio.Extensions", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MackPortfolio.Prototyping", "MackPortfolio.Prototyping\MackPortfolio.Prototyping.csproj", "{D349000B-CBF1-4456-A07A-CC88764F08AC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{8FEFCBCF-31CB-49C4-81AD-C9A780BC9017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MackPortfolio.DAL", "MackPortfolio.DAL\MackPortfolio.DAL.csproj", "{396C45EB-2889-40F3-AAB3-216125801A84}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://likwidmack.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = MackPortfolio.Tests\\MackPortfolio.Tests.csproj
-		SccProjectName1 = MackPortfolio.Tests
-		SccLocalPath1 = MackPortfolio.Tests
-		SccProjectUniqueName2 = MackPortfolio\\MackPortfolio.csproj
-		SccProjectName2 = MackPortfolio
-		SccLocalPath2 = MackPortfolio
-		SccProjectUniqueName3 = MackPortfolio.Extensions\\MackPortfolio.Extensions.csproj
-		SccProjectName3 = MackPortfolio.Extensions
-		SccLocalPath3 = MackPortfolio.Extensions
-		SccProjectUniqueName4 = MackPortfolio.Prototyping\\MackPortfolio.Prototyping.csproj
-		SccProjectName4 = MackPortfolio.Prototyping
-		SccLocalPath4 = MackPortfolio.Prototyping
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		AzureDev|Any CPU = AzureDev|Any CPU
 		Debug|Any CPU = Debug|Any CPU
@@ -76,8 +62,19 @@ Global
 		{D349000B-CBF1-4456-A07A-CC88764F08AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D349000B-CBF1-4456-A07A-CC88764F08AC}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
 		{D349000B-CBF1-4456-A07A-CC88764F08AC}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{396C45EB-2889-40F3-AAB3-216125801A84}.AzureDev|Any CPU.ActiveCfg = Release|Any CPU
+		{396C45EB-2889-40F3-AAB3-216125801A84}.AzureDev|Any CPU.Build.0 = Release|Any CPU
+		{396C45EB-2889-40F3-AAB3-216125801A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{396C45EB-2889-40F3-AAB3-216125801A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{396C45EB-2889-40F3-AAB3-216125801A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{396C45EB-2889-40F3-AAB3-216125801A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{396C45EB-2889-40F3-AAB3-216125801A84}.Stage|Any CPU.ActiveCfg = Release|Any CPU
+		{396C45EB-2889-40F3-AAB3-216125801A84}.Stage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{396C45EB-2889-40F3-AAB3-216125801A84} = {8FEFCBCF-31CB-49C4-81AD-C9A780BC9017}
 	EndGlobalSection
 EndGlobal

@@ -23,7 +23,9 @@
 }
 @Scripts.Render("~/libs/ko", "~/libs/site","~/libs/foundation")
 <script type="text/javascript">
-    var main = document.getElementById("mainapp");
+    if ('undefined' === typeof main) {
+        var main = document.getElementById("mainapp");
+    }
     main.isDebugMode = Boolean('@Model.isDebugMode');
     $(document).foundation();
 </script>

@@ -222,11 +222,13 @@
     </Compile>
     <Compile Include="Models\ActionLayoutModel.cs" />
     <Compile Include="Models\NotFoundViewModel.cs" />
+    <Compile Include="Models\SpeedTestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\ajax-loader.png" />
+    <Content Include="Content\images\dk-stationary.png" />
     <Content Include="Content\images\icons-18-black.png" />
     <Content Include="Content\images\icons-18-white.png" />
     <Content Include="Content\images\icons-36-black.png" />
@@ -431,6 +433,9 @@
     <Content Include="Content\images\icons-svg\user-white.svg" />
     <Content Include="Content\images\icons-svg\video-black.svg" />
     <Content Include="Content\images\icons-svg\video-white.svg" />
+    <Content Include="Content\images\lt-granite.png" />
+    <Content Include="Content\images\lt-linen.png" />
+    <Content Include="Content\images\lt-pebbled.png" />
     <Content Include="Content\jquery\jquery.mobile-1.4.2.css" />
     <Content Include="Content\jquery\jquery.mobile.external-png-1.4.2.css" />
     <Content Include="Content\jquery\jquery.mobile.external-png-1.4.2.min.css" />
@@ -912,6 +917,7 @@
     <Content Include="Content\kendo\2014.2.716\images\kendoui.ttf" />
     <Content Include="Content\kendo\2014.2.716\images\kendoui.woff" />
     <Content Include="Content\scss\site\views\_palette.scss" />
+    <Content Include="Content\scss\site\views\_home.scss" />
     <None Include="Content\site.scss" />
     <Content Include="Content\scss\_foundation.scss" />
     <Content Include="Content\scss\zfoundation\foundation\components\_xy-center.scss" />
@@ -964,6 +970,8 @@
     <Content Include="Content\scss\zfoundation\_foundation.mvc.scss" />
     <Content Include="App_Readme\Foundation_readme.md" />
     <Content Include="Ipsum_examples.txt" />
+    <Content Include="Media\milkywayband_gleason.jpg" />
+    <Content Include="Media\no_Photo.png" />
     <Content Include="Scripts\kendo\2014.1.318\cultures\kendo.culture.af-ZA.min.js" />
     <Content Include="Scripts\kendo\2014.1.318\cultures\kendo.culture.af.min.js" />
     <Content Include="Scripts\kendo\2014.1.318\cultures\kendo.culture.am-ET.min.js" />
@@ -1858,6 +1866,7 @@
     <Content Include="Scripts\rem-fix.js" />
     <Content Include="Scripts\site\global.js" />
     <Content Include="Scripts\site\views\canvas.js" />
+    <Content Include="Scripts\site\views\home.js" />
     <Content Include="Views\Error\AccessDenied.cshtml" />
     <Content Include="Views\Error\Error.cshtml" />
     <Content Include="Views\Error\Forbidden.cshtml" />
@@ -2243,6 +2252,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Media\Activity\" />
+    <Folder Include="Media\Editor\Thumbnails\" />
+    <Folder Include="Media\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
