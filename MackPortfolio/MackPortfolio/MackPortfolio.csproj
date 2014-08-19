@@ -213,6 +213,7 @@
     <Compile Include="App_Start\ODataConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActivityController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2255,6 +2256,7 @@
     <Folder Include="Media\Activity\" />
     <Folder Include="Media\Editor\Thumbnails\" />
     <Folder Include="Media\Images\" />
+    <Folder Include="Views\Activity\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

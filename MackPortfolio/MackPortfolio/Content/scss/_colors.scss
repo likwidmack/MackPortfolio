@@ -130,7 +130,7 @@ $border-invisible: 1px solid transparent;
 $border-std: 1px solid $mainborder-color;
 $border-hover: 1px solid invertShade(lighten, $mainborder-color, 13.5%);
 
-$layout-box-shadow: $shade25-color;
+$layout-box-shadow: rgba($shade85-color, .3);
 
 $box-shadow-std: 0px 1px 2px 0 $layout-box-shadow;
 $box-shadow-hover: 1px 1px 1px 0 $layout-box-shadow;

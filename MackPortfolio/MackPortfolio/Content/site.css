@@ -5929,10 +5929,10 @@ th.hide-for-touch {
   box-shadow: 0 0 0 transparent; }
 
 .css-box-shadow, .css-box-shadow-invisible:hover, .css-box-shadow-invisible.hover, .css-box-shadow-hover, .button-fx {
-  box-shadow: 0px 1px 2px 0 #bebebe; }
+  box-shadow: 0px 1px 2px 0 rgba(38, 38, 38, 0.3); }
 
 .css-box-shadow-hover:hover, .button-fx:hover, .css-box-shadow-hover.hover, .hover.button-fx {
-  box-shadow: 1px 1px 1px 0 #bebebe; }
+  box-shadow: 1px 1px 1px 0 rgba(38, 38, 38, 0.3); }
 
 .css-transition, .button-fx, .navigated-part li {
   -webkit-transition: all 200ms linear;
