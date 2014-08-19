@@ -9,7 +9,7 @@ using System.Drawing.Imaging;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Web.Helpers;
-using MackPortfolio.MediaModels.DAL;
+using MackPortfolio.DAL.MediaModels;
 
 namespace MackPortfolio.Extensions
 {
