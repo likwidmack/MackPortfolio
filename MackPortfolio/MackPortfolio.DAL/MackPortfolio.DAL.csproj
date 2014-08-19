@@ -55,6 +55,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,10 +65,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityModels\Activity.cs" />
+    <Compile Include="ActivityModels\Location.cs" />
+    <Compile Include="ActivityModels\USState.cs" />
+    <Compile Include="AppOppModels\ApplicationOpportunity.cs" />
+    <Compile Include="AppOppModels\AppLookup.cs" />
+    <Compile Include="AppOppModels\AppPlatLookup.cs" />
+    <Compile Include="AppOppModels\AppsOppDb.cs" />
+    <Compile Include="AppOppModels\AppStatus.cs" />
+    <Compile Include="AppOppModels\Customer.cs" />
+    <Compile Include="AppOppModels\CustomerIndustry.cs" />
+    <Compile Include="AppOppModels\CustomerSegment.cs" />
+    <Compile Include="AppOppModels\CustomerSubSegment.cs" />
+    <Compile Include="AppOppModels\DeviceType.cs" />
+    <Compile Include="AppOppModels\FilterSet.cs" />
+    <Compile Include="AppOppModels\GeoHierarchy.cs" />
+    <Compile Include="AppOppModels\IndustryScenario.cs" />
+    <Compile Include="AppOppModels\MSAssociate.cs" />
+    <Compile Include="AppOppModels\NativeOrWeb.cs" />
+    <Compile Include="AppOppModels\Opportunity.cs" />
+    <Compile Include="AppOppModels\OpportunityDevice.cs" />
+    <Compile Include="AppOppModels\OpportunityTeam.cs" />
+    <Compile Include="AppOppModels\OSType.cs" />
+    <Compile Include="AppOppModels\OSVersion.cs" />
+    <Compile Include="AppOppModels\Platform.cs" />
+    <Compile Include="AppOppModels\PublishersLookup.cs" />
+    <Compile Include="AppOppModels\SalesDate.cs" />
+    <Compile Include="AppOppModels\SalesStage.cs" />
+    <Compile Include="AppOppModels\SalesStageFilter.cs" />
+    <Compile Include="AppOppModels\UserApplication.cs" />
+    <Compile Include="AppOppModels\UserPublisher.cs" />
     <Compile Include="LogIt.cs" />
     <Compile Include="MackPortfolioContext.cs" />
     <Compile Include="MediaModels\MediaModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebModels\UserMessage.cs" />
+    <Compile Include="WebModels\WebContent.cs" />
+    <Compile Include="WebModels\WebContentRevision.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

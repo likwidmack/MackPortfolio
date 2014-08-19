@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MackPortfolio.DAL.ActivityModels;
+using MackPortfolio.DAL.MediaModels;
+using MackPortfolio.DAL.WebModels;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,6 +12,18 @@ namespace MackPortfolio.DAL
 {
     public class MackPortfolioContext : DbContext
     {
+        public MackPortfolioContext()
+            : base("PortfolioContext"){}
+
+        public DbSet<WebContent> Webpages { get; set; }
+        public DbSet<WebContentRevision> WebRevisions { get; set; }
+        public DbSet<UserMessage> Messages { get; set; }
+        public DbSet<Activity> Events { get; set; }
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<Media> Medias { get; set; }
+        public DbSet<Thumbnail> Thumbnails { get; set; }
+        public DbSet<Standard> Standards { get; set; }
+        public DbSet<Original> Originals { get; set; }
 
         private void ModSaveChanges()
         {
