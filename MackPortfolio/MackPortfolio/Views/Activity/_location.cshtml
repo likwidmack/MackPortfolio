@@ -1,0 +1,15 @@
+﻿@model MackPortfolio.DAL.Interfaces.Models.ActivityViewModel
+
+<div class="form-horizontal">
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.LocationId)
+
+    <div class="form-group">
+        @Html.EditorFor(model => model.Address)
+    </div>
+
+    @Html.EditorFor(model => model.Lat)
+    @Html.EditorFor(model => model.Lng)
+    @Html.EditorFor(model => model.LogMessages)
+
+</div>

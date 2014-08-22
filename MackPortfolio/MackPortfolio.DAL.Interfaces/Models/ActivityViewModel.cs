@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace MackPortfolio.DAL.Interfaces.Models
 {
-    class ActivityViewModel
+    public class ActivityViewModel
     {
         public Guid Id { get; set; }
         [Editable(false)]
@@ -18,6 +18,8 @@ namespace MackPortfolio.DAL.Interfaces.Models
         public DateTime Created { get; set; }
         [Editable(false)]
         public DateTime Modified { get; set; }
+        [Display(Name = "Is Active", Description = "Is this item currently active?")]
+        public bool IsActive { get; set; }
 
         [Required]
         [DataType(DataType.Text)]
@@ -71,7 +73,7 @@ namespace MackPortfolio.DAL.Interfaces.Models
         public float Lng { get; set; }
         [DataType("Hidden")]
         public string LogMessages { get; set; }
-        public DbGeography GeoLocation { get; set; }
+        public string GeoLocation { get; set; }
 
         //public virtual ICollection<Media> Medias { get; set; }
     }

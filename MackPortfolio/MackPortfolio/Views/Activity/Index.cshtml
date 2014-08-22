@@ -1,0 +1,49 @@
+﻿@*@model IEnumerable<MackPortfolio.DAL.Interfaces.Models.ActivityViewModel>*@
+
+@{
+    ViewBag.Title = "Activities";
+}
+@section styles{
+    <style type="text/css">
+        footer {
+            color: rgb(180,180,180);
+        }
+
+        #main {
+            background-color: rgb(100,100,100);
+            background-image: url(@Url.Content("~/Content/images/lt-linen.png"));
+            background-repeat: repeat;
+            background-position: center;
+        }
+    </style>
+}
+
+<div class="row" id="ActivityPage">
+    <div class="small-12 columns">
+        <div class="header-panel">
+            <div class="row">
+                <div class="medium-9 columns">
+                    <hgroup>
+                        <h1 class="clipped">@ViewBag.Title</h1>
+                        <h3>Whatever activity you want: blog, events, news, etc.</h3>
+                    </hgroup>
+                    <p>
+                        Ultricies. In porta, nunc pellentesque! Tristique auctor porttitor.
+                        Aliquam, cum eu vel scelerisque vel, auctor natoque in ac turpis nec, mattis?
+                        Mattis velit tincidunt ac sit aliquam, risus rhoncus! Adipiscing dapibus.
+                        Pid quis! Porta velit sit magnis, sed in, natoque auctor, in ac ac et! Proin sed, risus aenean.
+                    </p>
+                </div>
+                <div class="medium-3 columns">
+                    <section class="text-right">
+                        <br />
+                        @Html.ActionLink("Create New Article", "Details", new { page = "Modify" }, new { @class = "button radius expand css-gradient3d-w2bv css-box-shadow" })
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="ArticleList">
+            @Html.Action("_activityList")
+        </div>
+    </div>
+</div>

@@ -6585,6 +6585,34 @@ label.checkbox {
     border: 1px solid #000077;
     background: #0000ff; }
 
+#ActivityPage .custom img,
+#ActivityPage .header-panel img {
+  border: 3px ridge #3c3c3c; }
+#ActivityPage .custom p,
+#ActivityPage .custom h1,
+#ActivityPage .custom h2,
+#ActivityPage .custom h3,
+#ActivityPage .header-panel p,
+#ActivityPage .header-panel h1,
+#ActivityPage .header-panel h2,
+#ActivityPage .header-panel h3 {
+  color: #b4b4b4;
+  -webkit-text-shadow: 0px 1px 0 rgba(0, 0, 0, 0.75);
+  text-shadow: 0px 1px 0 rgba(0, 0, 0, 0.75); }
+  .lt-ie10 #ActivityPage .custom p, .lt-ie10
+  #ActivityPage .custom h1, .lt-ie10
+  #ActivityPage .custom h2, .lt-ie10
+  #ActivityPage .custom h3, .lt-ie10
+  #ActivityPage .header-panel p, .lt-ie10
+  #ActivityPage .header-panel h1, .lt-ie10
+  #ActivityPage .header-panel h2, .lt-ie10
+  #ActivityPage .header-panel h3 {
+    color: #b4b4b4; }
+#ActivityPage #map {
+  min-height: 12em;
+  height: 100%;
+  background-color: black; }
+
 #HomePage {
   max-width: 1000px; }
   #HomePage #KeyTechno li {

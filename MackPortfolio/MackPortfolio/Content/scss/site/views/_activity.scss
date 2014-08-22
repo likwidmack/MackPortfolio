@@ -1,0 +1,28 @@
+#ActivityPage {
+    .custom,
+    .header-panel {
+         img {
+            border: 3px ridge rgb(60,60,60);
+        }
+
+        p,
+        h1,
+        h2,
+        h3 {
+            color: rgb(180,180,180);
+            -webkit-text-shadow: 0px 1px 0 rgba(0,0,0,.75);
+            text-shadow: 0px 1px 0 rgba(0,0,0,.75);
+
+            .lt-ie10 & {
+                color: rgb(180,180,180);
+            }
+        }
+    }
+
+    #map {
+        min-height: 12em;
+        height: 100%;
+        background-color:black;
+    }
+
+}

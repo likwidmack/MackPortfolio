@@ -919,6 +919,7 @@
     <Content Include="Content\kendo\2014.2.716\images\kendoui.woff" />
     <Content Include="Content\scss\site\views\_palette.scss" />
     <Content Include="Content\scss\site\views\_home.scss" />
+    <Content Include="Content\scss\site\views\_activity.scss" />
     <None Include="Content\site.scss" />
     <Content Include="Content\scss\_foundation.scss" />
     <Content Include="Content\scss\zfoundation\foundation\components\_xy-center.scss" />
@@ -1866,6 +1867,7 @@
     <Content Include="Scripts\ko\ko.kendo.js" />
     <Content Include="Scripts\rem-fix.js" />
     <Content Include="Scripts\site\global.js" />
+    <Content Include="Scripts\site\views\activity.js" />
     <Content Include="Scripts\site\views\canvas.js" />
     <Content Include="Scripts\site\views\home.js" />
     <Content Include="Views\Error\AccessDenied.cshtml" />
@@ -2111,6 +2113,11 @@
     <Content Include="Views\Palette\_canvas.cshtml" />
     <Content Include="Views\Palette\_sliders.cshtml" />
     <Content Include="Views\Palette\_title.cshtml" />
+    <Content Include="Views\Activity\Details.cshtml" />
+    <Content Include="Views\Activity\Index.cshtml" />
+    <Content Include="Views\Activity\Modify.cshtml" />
+    <Content Include="Views\Activity\_activityList.cshtml" />
+    <Content Include="Views\Activity\_location.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -2256,13 +2263,20 @@
     <Folder Include="Media\Activity\" />
     <Folder Include="Media\Editor\Thumbnails\" />
     <Folder Include="Media\Images\" />
-    <Folder Include="Views\Activity\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MackPortfolio.DAL.Interfaces\MackPortfolio.DAL.Interfaces.csproj">
+      <Project>{68df500b-e4d6-4e45-8448-39dbc5db0b9d}</Project>
+      <Name>MackPortfolio.DAL.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MackPortfolio.DAL.Repositories\MackPortfolio.DAL.Repositories.csproj">
+      <Project>{db2b445e-fb1c-4c83-bc2b-fc91f89b1285}</Project>
+      <Name>MackPortfolio.DAL.Repositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MackPortfolio.Extensions\MackPortfolio.Extensions.csproj">
       <Project>{74fd75b2-8c7e-4063-a02f-b6cd5fa5a86d}</Project>
       <Name>MackPortfolio.Extensions</Name>
