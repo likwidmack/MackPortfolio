@@ -3,12 +3,17 @@
 }
 @section styles{
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<style>
+<style type="text/css">
+    @@keyframes animatedBackground {
+	    from { background-position: 0 100%; }
+	    to { background-position: 100% 0; }
+    }
     #mainapp {
-        background-color:rgb(215,215,215);
-        background-image: url(@Url.Content("~/Content/images/dk-stationary.png"));
+        background-color:rgb(115,115,115);
+        background-image: url(@Url.Content("~/Content/images/lt-granite.png"));
         background-repeat: repeat;
         background-position:center;
+        animation: animatedBackground 150s linear infinite;
     }
 </style>
 }

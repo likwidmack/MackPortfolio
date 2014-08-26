@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MackPortfolio.Controllers
 {
-    public class ErrorController : Controller
+    public class ErrorController : BaseController
     {
         // GET: /Error/
         public ActionResult Index()
