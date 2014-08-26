@@ -30,12 +30,12 @@ namespace MackPortfolio
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             var modernizr = new ScriptBundle("~/libs/modernizr").Include("~/Scripts/modernizr-*");
-            modernizr.CdnPath = "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js";
+            modernizr.CdnPath = "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js";
             modernizr.CdnFallbackExpression = "window.Modernizr";
             bundles.Add(modernizr);
 
             var knockout = new ScriptBundle("~/libs/knockout").Include("~/Scripts/knockout-{version}.js");
-            knockout.CdnPath = "//cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js";
+            knockout.CdnPath = "//cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js";
             knockout.CdnFallbackExpression = "window.ko";
             bundles.Add(knockout);
 

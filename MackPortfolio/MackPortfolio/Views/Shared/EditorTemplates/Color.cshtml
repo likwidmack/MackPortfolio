@@ -1,4 +1,32 @@
-﻿@{
-    ViewData["type"] = "color";
+﻿@model string
+@{
+    Layout = "~/Views/Shared/EditorTemplates/_Layout.cshtml";
+
+    object values = ViewData["Model"];
+    var htmlAttr = new ViewDataDictionary();
+
+    foreach (System.ComponentModel.PropertyDescriptor descriptor in System.ComponentModel.TypeDescriptor.GetProperties(values))
+    {
+        htmlAttr[descriptor.Name.Replace("_", "-")] = descriptor.GetValue(values);
+    }
+
+    htmlAttr["class"] = "color-picker";
+    htmlAttr["data-hiddenId"] = ViewData.TemplateInfo.GetFullHtmlFieldId(String.Empty);
+
+    var mdata = ViewData.ModelMetadata;
+    if (!String.IsNullOrEmpty(mdata.Description))
+    {
+        htmlAttr["title"] = mdata.Description;
+    }
+    if (!String.IsNullOrEmpty(mdata.Watermark))
+    {
+        htmlAttr["placeholder"] = mdata.Watermark;
+    }
 }
-@Html.Partial("~/Views/Shared/EditorTemplates/HtmlInput.cshtml")
+@(Html.Kendo().FlatColorPicker()
+    .Name(ViewData.TemplateInfo.GetFullHtmlFieldId(String.Empty)+"_ColorPicker")
+    .HtmlAttributes(htmlAttr)
+    .Value(ViewData.TemplateInfo.FormattedModelValue.ToString())
+    .Events(e => e.Change("onColorChange"))
+)
+@(Html.HiddenFor(m => m))

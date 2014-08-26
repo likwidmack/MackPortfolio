@@ -84,6 +84,18 @@ function structuredClone(obj) {
     return clonedObj;
 }
 
+function onEditorChange(e) {
+    console.log(this);
+    var id = $(this).prop("data-hiddenId");
+    $('#' + id).val(this.encodedValue());
+}
+
+function onColorChange(e) {
+    console.log(this);
+    var id = $(this).prop("data-hiddenId");
+    $('#' + id).val(this.value());
+}
+
 //#region Main Properties : common functions and callbacks
 if ('undefined' === typeof main) {
     var main = document.getElementById("mainapp");

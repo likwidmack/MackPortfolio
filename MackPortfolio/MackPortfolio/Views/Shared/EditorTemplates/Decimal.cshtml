@@ -1,4 +1,5 @@
-﻿@{ 
+﻿@model decimal?
+@{ 
     Layout = "~/Views/Shared/EditorTemplates/_Layout.cshtml"; 
    
     object formattedValue;
@@ -12,6 +13,7 @@
     }
     
     object values = ViewData["Model"];
+    var mdata = ViewData.ModelMetadata;
     var htmlAttr = new ViewDataDictionary();
 
     foreach (System.ComponentModel.PropertyDescriptor descriptor in System.ComponentModel.TypeDescriptor.GetProperties(values))
@@ -19,6 +21,16 @@
         htmlAttr[descriptor.Name.Replace("_", "-")] = descriptor.GetValue(values);
     }
 
-    htmlAttr["class"] = "text-box single-line";
+    htmlAttr["class"] = "text-box numeric";
+
+    if (!String.IsNullOrEmpty(mdata.Description))
+    {
+        htmlAttr["title"] = mdata.Description;
+    }
+    if (!String.IsNullOrEmpty(mdata.Watermark))
+    {
+        htmlAttr["placeholder"] = mdata.Watermark;
+    }
 }
-@(Html.Kendo().NumericTextBoxFor<decimal>(m=>m).HtmlAttributes(htmlAttr))
+@(Html.Kendo().NumericTextBoxFor(m=>m)
+    .HtmlAttributes(htmlAttr))
